@@ -16,6 +16,8 @@
 		1CD999081B2F6B90000968A1 /* KidsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD999071B2F6B90000968A1 /* KidsTableViewController.swift */; };
 		1CD9990A1B2F7251000968A1 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD999091B2F7251000968A1 /* CreateProfileViewController.swift */; };
 		1CD9990C1B2F93B3000968A1 /* KidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */; };
+		E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121401B30B2E000B4DBAD /* QuizViewController.swift */; };
+		E49121451B30B44400B4DBAD /* FIleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121441B30B44400B4DBAD /* FIleManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		1CD999071B2F6B90000968A1 /* KidsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsTableViewController.swift; sourceTree = "<group>"; };
 		1CD999091B2F7251000968A1 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidTableViewCell.swift; sourceTree = "<group>"; };
+		E49121401B30B2E000B4DBAD /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewController.swift; path = ../QuizViewController.swift; sourceTree = "<group>"; };
+		E49121441B30B44400B4DBAD /* FIleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FIleManager.swift; path = ../FIleManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		1CD998E21B2F69FA000968A1 /* Psico-Kids */ = {
 			isa = PBXGroup;
 			children = (
+				E49121441B30B44400B4DBAD /* FIleManager.swift */,
 				1CD998E51B2F69FA000968A1 /* AppDelegate.swift */,
 				1CD998E71B2F69FA000968A1 /* ViewController.swift */,
 				1CD998E91B2F69FA000968A1 /* Main.storyboard */,
@@ -91,6 +96,7 @@
 				1CD998E31B2F69FA000968A1 /* Supporting Files */,
 				1CD999071B2F6B90000968A1 /* KidsTableViewController.swift */,
 				1CD999091B2F7251000968A1 /* CreateProfileViewController.swift */,
+				E49121401B30B2E000B4DBAD /* QuizViewController.swift */,
 				1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */,
 			);
 			path = "Psico-Kids";
@@ -225,7 +231,9 @@
 			files = (
 				1CD9990A1B2F7251000968A1 /* CreateProfileViewController.swift in Sources */,
 				1CD998E81B2F69FA000968A1 /* ViewController.swift in Sources */,
+				E49121451B30B44400B4DBAD /* FIleManager.swift in Sources */,
 				1CD998E61B2F69FA000968A1 /* AppDelegate.swift in Sources */,
+				E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */,
 				1CD9990C1B2F93B3000968A1 /* KidTableViewCell.swift in Sources */,
 				1CD999081B2F6B90000968A1 /* KidsTableViewController.swift in Sources */,
 			);
