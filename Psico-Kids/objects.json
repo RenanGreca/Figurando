@@ -1,0 +1,34 @@
+{
+    "objects": [
+                {
+                "id": "1",
+                "image": "carro.png",
+                "name": "carro",
+                "sound": "carro.mid"
+                },
+                {
+                "id": "2",
+                "image": "panela.png",
+                "name": "panela",
+                "sound": "panela.mid"
+                },
+                {
+                "id": "3",
+                "image": "cadeira.png",
+                "name": "cadeira",
+                "sound": "cadeira.mid"
+                },
+                {
+                "id": "4",
+                "image": "casa.png",
+                "name": "casa",
+                "sound": "casa.mid"
+                },
+                {
+                "id": "5",
+                "image": "maca.png",
+                "name": "Maçã",
+                "sound": "maca.mid"
+                }
+                ]
+}

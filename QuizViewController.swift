@@ -14,26 +14,44 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var questionImageView: UIImageView!
     @IBOutlet weak var questionLabel: UILabel!
     
-    @IBOutlet weak var option1ImageView: UIImageView!
-    @IBOutlet weak var option1Label: UILabel!
-    
-    @IBOutlet weak var option2ImageView: UIImageView!
-    @IBOutlet weak var option2Label: UILabel!
-    
-    @IBOutlet weak var option3ImageView: UIImageView!
-    @IBOutlet weak var option3Label: UILabel!
-    
-    var questionsJSON: JSON = []
 
+    @IBOutlet weak var option1Button: UIButton!
+    @IBOutlet weak var option2Button: UIButton!
+    @IBOutlet weak var option3Button: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        questionsJSON =  loadJSONData(loadDataFromFile("questions", "txt"), "objects")
+
+        ObjectList.Static.instance.populate()
+        nextQuestion()
+    
+    }
+    
+    func nextQuestion(){
 
         
-        questionLabel.text = "aaaaaa"
-        // Do any additional setup after loading the view.
+        
+        var objects : Array<Object> = ObjectList.Static.instance.getRandomObjects(3)
+        
+        
+        var indexObjectToIdentify = Int(arc4random_uniform(UInt32(objects.count)))
+        
+        questionLabel.text = "Qual a imagem da palavra \(objects[indexObjectToIdentify].name)?"
+
+        
+        
+        option1Button.setTitle("\(objects[0].name)", forState: .Normal)
+        option2Button.setTitle("\(objects[1].name)", forState: .Normal)
+        option3Button.setTitle("\(objects[2].name)", forState: .Normal)
+
+        
+//        option1Label.text = "\(objects[0].name)"
+//        option1Label.text = "\(objects[0].name)"
+//        option1Label.text = "\(objects[0].name)"
+
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -18,7 +18,11 @@ class ObjectList {
     }
 
     func populate() -> Bool {
-        if let data = NSData(contentsOfFile: "objects.json") {
+    
+        var error:NSErrorPointer = NSErrorPointer();
+        
+        if let data = NSData(contentsOfFile: "objects.json", options: NSDataReadingOptions(), error: error) {
+            println(error)
             let json = JSON(data: data)
             
             if let objects = json["objects"].arrayValue as? Array {
@@ -49,7 +53,7 @@ class ObjectList {
         
         for(var i=0; i<count; i++) {
             // Repeat while the random element is already in the random list
-            repeat {
+            do {
                 random = true
                 r = Int(arc4random_uniform(UInt32(_objects.count)))
                 object = _objects[r]

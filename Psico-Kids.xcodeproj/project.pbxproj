@@ -19,7 +19,7 @@
 		1F2CEF171B30C763006B3D6D /* ObjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CEF151B30C763006B3D6D /* ObjectList.swift */; };
 		1F2CEF181B30C763006B3D6D /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CEF161B30C763006B3D6D /* Object.swift */; };
 		3357A676F696D40E73491E79 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F556C33CECEDD25E7DD652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		E43B17EF1B30C1FD004EDDAD /* questions.txt in Resources */ = {isa = PBXBuildFile; fileRef = E43B17EE1B30C1FD004EDDAD /* questions.txt */; };
+		E43B17F11B30D1F5004EDDAD /* objects.json in Resources */ = {isa = PBXBuildFile; fileRef = E43B17F01B30D1F5004EDDAD /* objects.json */; };
 		E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121401B30B2E000B4DBAD /* QuizViewController.swift */; };
 		E49121451B30B44400B4DBAD /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121441B30B44400B4DBAD /* FileManager.swift */; };
 /* End PBXBuildFile section */
@@ -53,7 +53,7 @@
 		340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		55F556C33CECEDD25E7DD652 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD421ACDD95BA0F95168C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		E43B17EE1B30C1FD004EDDAD /* questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = questions.txt; sourceTree = "<group>"; };
+		E43B17F01B30D1F5004EDDAD /* objects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = objects.json; sourceTree = "<group>"; };
 		E49121401B30B2E000B4DBAD /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewController.swift; path = ../QuizViewController.swift; sourceTree = "<group>"; };
 		E49121441B30B44400B4DBAD /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileManager.swift; path = ../FileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				1F2CEF191B30C769006B3D6D /* Model */,
-				E43B17EE1B30C1FD004EDDAD /* questions.txt */,
 				E49121441B30B44400B4DBAD /* FileManager.swift */,
 				1CD998E51B2F69FA000968A1 /* AppDelegate.swift */,
 				1F2CEF131B30C736006B3D6D /* ViewControllers */,
@@ -163,6 +162,7 @@
 			children = (
 				1F2CEF151B30C763006B3D6D /* ObjectList.swift */,
 				1F2CEF161B30C763006B3D6D /* Object.swift */,
+				E43B17F01B30D1F5004EDDAD /* objects.json */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 			files = (
 				1CD998EB1B2F69FA000968A1 /* Main.storyboard in Resources */,
 				1CD998F01B2F69FA000968A1 /* LaunchScreen.xib in Resources */,
-				E43B17EF1B30C1FD004EDDAD /* questions.txt in Resources */,
+				E43B17F11B30D1F5004EDDAD /* objects.json in Resources */,
 				1CD998ED1B2F69FA000968A1 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
