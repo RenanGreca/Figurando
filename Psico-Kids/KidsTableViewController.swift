@@ -71,15 +71,37 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
         return itemsPerSection
     }
     
-//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        
-//        
-//    }
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if orderedkidsList[section].count != 0{
+            return ((toString(orderedkidsList[section][0][0]) as NSString).substringToIndex(1)).uppercaseString
+        }else{
+            return ""
+        }
+    }
 
+    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [AnyObject]! {
+        var indexTitles = Array<AnyObject>()
+        
+        // Indice com todo o alfabeto
+        indexTitles = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+        
+        // Indice apenas com secoes preenchidas
+        
+//        for item in orderedkidsList{
+//            if item.count != 0{
+//                indexTitles.append(((toString(item[0][0]) as NSString).substringToIndex(1)).uppercaseString)
+//            }
+//        }
+        
+        return indexTitles
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
     // MARK: - Table view data source
 
@@ -110,6 +132,12 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
 
         cell.profilePic.image = UIImage(contentsOfFile: filePath)
         
+        cell.profilePic.layer.cornerRadius = cell.profilePic.frame.size.width / 2;
+        cell.profilePic.clipsToBounds = true;
+        
+        cell.profilePic.layer.borderWidth = 3.0
+        cell.profilePic.layer.borderColor = UIColor.blackColor().CGColor
+        
         return cell
     }
 
@@ -121,17 +149,43 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             // Delete the row from the data source
+            orderedkidsList.removeAtIndex([indexPath.section][indexPath.row])
+            
+            let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
+            var filePath = documentsPath[0]
+            filePath = filePath.stringByAppendingString("/KidsList.csv")
+            
+            kidsList.removeAll(keepCapacity: true)
+            for items in orderedkidsList{
+                kidsList.append(items)
+            }
+            
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            kidsList.removeLast()
+            
+            var wholeData = String()
+//            for kids in kidsList{
+//                if kids.count != 0{
+//                    wholeData = wholeData.stringByAppendingString((kids[0] as! String) + ";")
+//                    wholeData = wholeData.stringByAppendingString((kids[1] as! String) + ";")
+//                    wholeData = wholeData.stringByAppendingString((kids[2] as! String) + ";")
+//                    wholeData = wholeData.stringByAppendingString((kids[3] as! String) + ";")
+//                    wholeData = wholeData.stringByAppendingString((kids[4] as! String) + ";")
+//                    wholeData = wholeData.stringByAppendingString((kids[5] as! String) + "$")
+//                }
+//            }
+//            wholeData.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
