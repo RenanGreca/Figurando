@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Foundation
+
 
 var kidsList: Array = Array <AnyObject>()
+var orderedkidsList: Array = Array<AnyObject>()
 
 class KidsTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -44,22 +47,34 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
         for item in arrayOfEverything{
             kidsList.append((item as! String).componentsSeparatedByString(";"))
         }
+        kidsList.removeLast()
         
-        var orderedkidsList = [AnyObject].self
-        for item in kidsList{
-            
-        }
+        orderedkidsList = [   orderByLetter("A"), orderByLetter("B"), orderByLetter("C"), orderByLetter("D"),
+            orderByLetter("E"), orderByLetter("F"), orderByLetter("G"), orderByLetter("H"), orderByLetter("I"), orderByLetter("J"),
+            orderByLetter("K"), orderByLetter("L"), orderByLetter("M"), orderByLetter("N"), orderByLetter("O"), orderByLetter("P"),
+            orderByLetter("Q"), orderByLetter("R"), orderByLetter("S"), orderByLetter("T"), orderByLetter("U"), orderByLetter("V"),
+            orderByLetter("W"), orderByLetter("X"), orderByLetter("Y"), orderByLetter("Z")]
         
         
+        print(orderedkidsList)
     }
     
-    func orderByLetter (Letter: String){
+    func orderByLetter (Letter: String) -> Array<AnyObject>{
+        var itemsPerSection = Array<AnyObject>()
         for item in kidsList{
-            
+            if (((toString(item[0]) as NSString).substringToIndex(1)).uppercaseString as NSString).isEqualToString(Letter){
+                itemsPerSection.append(item)
+            }
                 
             
         }
+        return itemsPerSection
     }
+    
+//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        
+//        
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -71,13 +86,13 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return kidsList.count-1
+        return orderedkidsList.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return kidsList[section].count
+        return orderedkidsList[section].count
     }
 
     
@@ -85,13 +100,13 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
         
         let cell = tableView.dequeueReusableCellWithIdentifier("kidCell", forIndexPath: indexPath) as! KidTableViewCell
 
-        cell.kidsName?.text = (kidsList[indexPath.section][1] as! String)
-        cell.kidsAge?.text = (kidsList[indexPath.section][2] as! String).stringByAppendingString(" anos")
-        cell.parentsContact?.text = (kidsList[indexPath.section][6] as! String)
+        cell.kidsName?.text = (orderedkidsList[indexPath.section][indexPath.row][0] as! String)
+        cell.kidsAge?.text = (orderedkidsList[indexPath.section][indexPath.row][1] as! String).stringByAppendingString(" anos")
+        cell.parentsContact?.text = (orderedkidsList[indexPath.section][indexPath.row][5] as! String)
         
         let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
         var filePath = documentsPath[0]
-        filePath = filePath.stringByAppendingString("/" + (kidsList[indexPath.section][1] as! String) + (kidsList[indexPath.section][6] as! String) + ".png")
+        filePath = filePath.stringByAppendingString("/" + (orderedkidsList[indexPath.section][indexPath.row][0] as! String) + (orderedkidsList[indexPath.section][indexPath.row][5] as! String) + ".png")
 
         cell.profilePic.image = UIImage(contentsOfFile: filePath)
         
