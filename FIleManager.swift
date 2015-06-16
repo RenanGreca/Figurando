@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 func loadStringFromFile(fileName: String, fileExtention: String) -> String{
     let path = NSBundle.mainBundle().pathForResource(fileName, ofType: fileExtention)

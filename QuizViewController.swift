@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class QuizViewController: UIViewController {
 
@@ -22,10 +23,16 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var option3ImageView: UIImageView!
     @IBOutlet weak var option3Label: UILabel!
     
+    var questionsJSON: JSON = []
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        questionsJSON =  loadJSONData(loadDataFromFile("questions", "txt"), "objects")
+
+        
+        questionLabel.text = "aaaaaa"
         // Do any additional setup after loading the view.
     }
 
@@ -34,7 +41,14 @@ class QuizViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(animated: Bool) {
+        
+//        let value = UIInterfaceOrientation.LandscapeLeft.rawValue
+//        UIDevice.currentDevice().setValue(value, forKey: "orientation")
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 
