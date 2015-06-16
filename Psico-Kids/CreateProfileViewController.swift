@@ -49,7 +49,7 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
         
         var newProfile = String(contentsOfFile: filePath, encoding: NSUTF8StringEncoding, error: nil)!
 
-        newProfile = newProfile.stringByAppendingString(";" + kidsName.text +
+        newProfile = newProfile.stringByAppendingString(     kidsName.text +
                                                         ";" + kidsAge.text +
                                                         ";" + kidsGender.text +
                                                         ";" + fathersName.text +

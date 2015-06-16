@@ -38,34 +38,36 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pow-VR-da5">
-                                            <rect key="frame" x="33" y="16" width="117.5" height="117.5"/>
+                                            <rect key="frame" x="33" y="16" width="118" height="118"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="pow-VR-da5" secondAttribute="height" multiplier="1:1" id="7n8-Rm-9CV"/>
                                                 <constraint firstAttribute="height" constant="117.5" id="vhf-Uv-83o"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vx2-EE-K4U">
-                                            <rect key="frame" x="176" y="16" width="81" height="35"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <rect key="frame" x="176" y="14" width="148" height="37"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00 anos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbg-GA-OFY">
-                                            <rect key="frame" x="176" y="59" width="61" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="176" y="50" width="61" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Telefone de Contato" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xio-sW-4aH">
-                                            <rect key="frame" x="176" y="112" width="155" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Telefone de Contato" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xio-sW-4aH">
+                                            <rect key="frame" x="176" y="92" width="155" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="pow-VR-da5" firstAttribute="leading" secondItem="iZS-e8-PWC" secondAttribute="leadingMargin" constant="25" id="0Ye-Au-wIq"/>
+                                        <constraint firstItem="Xio-sW-4aH" firstAttribute="leading" secondItem="pow-VR-da5" secondAttribute="trailing" constant="25" id="7cu-je-Z24"/>
                                         <constraint firstItem="Jbg-GA-OFY" firstAttribute="leading" secondItem="pow-VR-da5" secondAttribute="trailing" constant="25.5" id="9YY-wa-s6W"/>
+                                        <constraint firstItem="Xio-sW-4aH" firstAttribute="top" secondItem="Jbg-GA-OFY" secondAttribute="bottom" constant="21" id="Fvv-Br-oE5"/>
                                         <constraint firstAttribute="centerY" secondItem="pow-VR-da5" secondAttribute="centerY" id="ShT-Bs-FZn"/>
                                         <constraint firstItem="Vx2-EE-K4U" firstAttribute="leading" secondItem="pow-VR-da5" secondAttribute="trailing" constant="25.5" id="ZUz-8L-jfU"/>
                                         <constraint firstItem="Vx2-EE-K4U" firstAttribute="centerY" secondItem="pow-VR-da5" secondAttribute="centerY" constant="-48.25" id="bJo-gM-fwX"/>
