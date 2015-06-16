@@ -1,0 +1,16 @@
+{
+"objects": [
+{
+"id": "1",
+"image": "carro.png",
+"name": "Carro",
+"sound": "carro.mid"
+},
+{
+"id": "2",
+"image": "maca.png",
+"name": "Maçã",
+"sound": "maca.mid"
+}
+]
+}
