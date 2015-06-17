@@ -19,10 +19,10 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var option2Button: UIButton!
     @IBOutlet weak var option3Button: UIButton!
     
-    enum QuizModes: Int {
+    enum QuestionTypes: Int {
         case soundToText, soundToImage, imageToText, textToImage
         
-        static func random() -> QuizModes {  // I called this "maximumRawValue" in the post
+        static func random() -> QuestionTypes {  // I called this "maximumRawValue" in the post
             var max: Int = 0
             while let _ = self(rawValue: ++max) {}
             
@@ -35,7 +35,6 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
         ObjectList.Static.instance.populate()
         nextQuestion()
     
@@ -46,7 +45,7 @@ class QuizViewController: UIViewController {
         let objects : Array<Object> = ObjectList.Static.instance.getRandomObjects(3)
         
         let indexObjectToIdentify = Int(arc4random_uniform(UInt32(objects.count)))
-        let quizMode: QuizModes = QuizModes.random()
+        let quizMode: QuestionTypes = QuestionTypes.random()
         
         switch quizMode {
         case .imageToText:
@@ -58,12 +57,13 @@ class QuizViewController: UIViewController {
         case .soundToText:
             questionLabel.text = "Qual foi a palavra ouvida?"
         }
+
     
-        if quizMode == QuizModes.imageToText || quizMode == QuizModes.soundToText {
+        if quizMode == QuestionTypes.imageToText || quizMode == QuestionTypes.soundToText {
             option1Button.setTitle("\(objects[0].name)", forState: .Normal)
             option2Button.setTitle("\(objects[1].name)", forState: .Normal)
             option3Button.setTitle("\(objects[2].name)", forState: .Normal)
-        } else if quizMode == QuizModes.textToImage || quizMode == QuizModes.soundToImage {
+        } else if quizMode == QuestionTypes.textToImage || quizMode == QuestionTypes.soundToImage {
             option1Button.setImage(UIImage(contentsOfFile: "\(objects[0].img)"), forState: UIControlState.Normal)
             option2Button.setImage(UIImage(contentsOfFile: "\(objects[1].img)"), forState: UIControlState.Normal)
             option3Button.setImage(UIImage(contentsOfFile: "\(objects[2].img)"), forState: UIControlState.Normal)
