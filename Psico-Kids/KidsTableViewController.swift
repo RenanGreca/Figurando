@@ -11,13 +11,15 @@ import Foundation
 
 
 var kidsList: Array = Array <AnyObject>()
-var orderedkidsList: Array = Array<AnyObject>()
+var orderedkidsList: NSMutableArray = NSMutableArray()
 
 class KidsTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var kidsTableView: UITableView!
     
     override func viewWillAppear(animated: Bool) {
+        print("uerererere")
+        readAllDataFromFiles()
         tableView.reloadData()
     }
     
@@ -27,13 +29,21 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
         kidsTableView.delegate = self
         kidsTableView.dataSource = self
         
-
+        readAllDataFromFiles()
+        
+    }
+    func readAllDataFromFiles (){
+        
+        kidsList.removeAll(keepCapacity: true)
+        orderedkidsList.removeAllObjects()
+        
+        
         let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
         var filePath = documentsPath[0]
         filePath = filePath.stringByAppendingString("/KidsList.csv")
         
         var dataFromFile = String()
-
+        
         if !(NSFileManager.defaultManager().fileExistsAtPath(filePath)) {
             NSFileManager.defaultManager().createFileAtPath(filePath, contents: nil, attributes: nil)
             let initialValues = ""
@@ -42,30 +52,56 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
             dataFromFile = String(contentsOfFile: filePath, encoding: NSUTF8StringEncoding, error: nil)!
         }
         
-        var arrayOfEverything: NSArray = dataFromFile.componentsSeparatedByString("$")
         
+        
+        
+        var arrayOfEverything: NSArray = dataFromFile.componentsSeparatedByString("$")
         for item in arrayOfEverything{
             kidsList.append((item as! String).componentsSeparatedByString(";"))
         }
+        
+        
         kidsList.removeLast()
         
-        orderedkidsList = [   orderByLetter("A"), orderByLetter("B"), orderByLetter("C"), orderByLetter("D"),
-            orderByLetter("E"), orderByLetter("F"), orderByLetter("G"), orderByLetter("H"), orderByLetter("I"), orderByLetter("J"),
-            orderByLetter("K"), orderByLetter("L"), orderByLetter("M"), orderByLetter("N"), orderByLetter("O"), orderByLetter("P"),
-            orderByLetter("Q"), orderByLetter("R"), orderByLetter("S"), orderByLetter("T"), orderByLetter("U"), orderByLetter("V"),
-            orderByLetter("W"), orderByLetter("X"), orderByLetter("Y"), orderByLetter("Z")]
-        
-        
-        print(orderedkidsList)
+        orderedkidsList = [ orderByLetter("A"),
+            orderByLetter("B"),
+            orderByLetter("C"),
+            orderByLetter("D"),
+            orderByLetter("E"),
+            orderByLetter("F"),
+            orderByLetter("G"),
+            orderByLetter("H"),
+            orderByLetter("I"),
+            orderByLetter("J"),
+            orderByLetter("K"),
+            orderByLetter("L"),
+            orderByLetter("M"),
+            orderByLetter("N"),
+            orderByLetter("O"),
+            orderByLetter("P"),
+            orderByLetter("Q"),
+            orderByLetter("R"),
+            orderByLetter("S"),
+            orderByLetter("T"),
+            orderByLetter("U"),
+            orderByLetter("V"),
+            orderByLetter("W"),
+            orderByLetter("X"),
+            orderByLetter("Y"),
+            orderByLetter("Z")]
     }
     
-    func orderByLetter (Letter: String) -> Array<AnyObject>{
-        var itemsPerSection = Array<AnyObject>()
+    
+    
+    
+    
+    func orderByLetter (Letter: String) -> NSMutableArray{
+        var itemsPerSection = NSMutableArray()
         for item in kidsList{
             if (((toString(item[0]) as NSString).substringToIndex(1)).uppercaseString as NSString).isEqualToString(Letter){
-                itemsPerSection.append(item)
+                itemsPerSection.addObject(item)
             }
-                
+            
             
         }
         return itemsPerSection
@@ -78,7 +114,7 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
             return ""
         }
     }
-
+    
     override func sectionIndexTitlesForTableView(tableView: UITableView) -> [AnyObject]! {
         var indexTitles = Array<AnyObject>()
         
@@ -87,41 +123,41 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
         
         // Indice apenas com secoes preenchidas
         
-//        for item in orderedkidsList{
-//            if item.count != 0{
-//                indexTitles.append(((toString(item[0][0]) as NSString).substringToIndex(1)).uppercaseString)
-//            }
-//        }
+        //        for item in orderedkidsList{
+        //            if item.count != 0{
+        //                indexTitles.append(((toString(item[0][0]) as NSString).substringToIndex(1)).uppercaseString)
+        //            }
+        //        }
         
         return indexTitles
     }
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     // MARK: - Table view data source
-
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return orderedkidsList.count
     }
-
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return orderedkidsList[section].count
     }
-
+    
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("kidCell", forIndexPath: indexPath) as! KidTableViewCell
-
+        
         cell.kidsName?.text = (orderedkidsList[indexPath.section][indexPath.row][0] as! String)
         cell.kidsAge?.text = (orderedkidsList[indexPath.section][indexPath.row][1] as! String).stringByAppendingString(" anos")
         cell.parentsContact?.text = (orderedkidsList[indexPath.section][indexPath.row][5] as! String)
@@ -129,7 +165,7 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
         let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
         var filePath = documentsPath[0]
         filePath = filePath.stringByAppendingString("/" + (orderedkidsList[indexPath.section][indexPath.row][0] as! String) + (orderedkidsList[indexPath.section][indexPath.row][5] as! String) + ".png")
-
+        
         cell.profilePic.image = UIImage(contentsOfFile: filePath)
         
         cell.profilePic.layer.cornerRadius = cell.profilePic.frame.size.width / 2;
@@ -140,76 +176,80 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
         
         return cell
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
+    // Return NO if you do not want the specified item to be editable.
+    return true
     }
     */
-
+    
     
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            // Delete the row from the data source
-            orderedkidsList.removeAtIndex([indexPath.section][indexPath.row])
+            
+            orderedkidsList[indexPath.section].removeObjectAtIndex(indexPath.row)
+            
             
             let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
             var filePath = documentsPath[0]
             filePath = filePath.stringByAppendingString("/KidsList.csv")
             
+            
+            
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            
+            var wholeData = String()
             kidsList.removeAll(keepCapacity: true)
+            
             for items in orderedkidsList{
                 kidsList.append(items)
             }
             
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            print(kidsList)
             
-            kidsList.removeLast()
-            
-            var wholeData = String()
-//            for kids in kidsList{
-//                if kids.count != 0{
-//                    wholeData = wholeData.stringByAppendingString((kids[0] as! String) + ";")
-//                    wholeData = wholeData.stringByAppendingString((kids[1] as! String) + ";")
-//                    wholeData = wholeData.stringByAppendingString((kids[2] as! String) + ";")
-//                    wholeData = wholeData.stringByAppendingString((kids[3] as! String) + ";")
-//                    wholeData = wholeData.stringByAppendingString((kids[4] as! String) + ";")
-//                    wholeData = wholeData.stringByAppendingString((kids[5] as! String) + "$")
-//                }
-//            }
-//            wholeData.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+            for kids in kidsList{
+                if kids.count > 0{
+                    wholeData = wholeData.stringByAppendingString((kids[0][0] as! String) + ";")
+                    wholeData = wholeData.stringByAppendingString((kids[0][1] as! String) + ";")
+                    wholeData = wholeData.stringByAppendingString((kids[0][2] as! String) + ";")
+                    wholeData = wholeData.stringByAppendingString((kids[0][3] as! String) + ";")
+                    wholeData = wholeData.stringByAppendingString((kids[0][4] as! String) + ";")
+                    wholeData = wholeData.stringByAppendingString((kids[0][5] as! String) + "$")
+                }
+            }
+            wholeData.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
+            tableView.reloadData()
+        }
     }
     
-
+    
     /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
+    
     }
     */
-
+    
     /*
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
+    // Return NO if you do not want the item to be re-orderable.
+    return true
     }
     */
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
