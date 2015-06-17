@@ -16,6 +16,7 @@
 		1CD999081B2F6B90000968A1 /* KidsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD999071B2F6B90000968A1 /* KidsTableViewController.swift */; };
 		1CD9990A1B2F7251000968A1 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD999091B2F7251000968A1 /* CreateProfileViewController.swift */; };
 		1CD9990C1B2F93B3000968A1 /* KidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */; };
+		1CE64C451B30FBEA00989645 /* KidProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE64C441B30FBE900989645 /* KidProfileViewController.swift */; };
 		1F2CEF171B30C763006B3D6D /* ObjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CEF151B30C763006B3D6D /* ObjectList.swift */; };
 		1F2CEF181B30C763006B3D6D /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CEF161B30C763006B3D6D /* Object.swift */; };
 		1FA4C8FB1B30EF6E0044A86A /* emoji in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4C8FA1B30EF6E0044A86A /* emoji */; };
@@ -49,6 +50,7 @@
 		1CD999071B2F6B90000968A1 /* KidsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsTableViewController.swift; sourceTree = "<group>"; };
 		1CD999091B2F7251000968A1 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidTableViewCell.swift; sourceTree = "<group>"; };
+		1CE64C441B30FBE900989645 /* KidProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidProfileViewController.swift; sourceTree = "<group>"; };
 		1F2CEF151B30C763006B3D6D /* ObjectList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectList.swift; sourceTree = "<group>"; };
 		1F2CEF161B30C763006B3D6D /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		1FA4C8FA1B30EF6E0044A86A /* emoji */ = {isa = PBXFileReference; lastKnownFileType = folder; path = emoji; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				1CD999091B2F7251000968A1 /* CreateProfileViewController.swift */,
 				E49121401B30B2E000B4DBAD /* QuizViewController.swift */,
 				1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */,
+				1CE64C441B30FBE900989645 /* KidProfileViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				1CD9990A1B2F7251000968A1 /* CreateProfileViewController.swift in Sources */,
 				1CD998E81B2F69FA000968A1 /* ViewController.swift in Sources */,
 				E49121451B30B44400B4DBAD /* FileManager.swift in Sources */,
+				1CE64C451B30FBEA00989645 /* KidProfileViewController.swift in Sources */,
 				1CD998E61B2F69FA000968A1 /* AppDelegate.swift in Sources */,
 				1F2CEF181B30C763006B3D6D /* Object.swift in Sources */,
 				E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */,

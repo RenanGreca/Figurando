@@ -13,6 +13,8 @@ var profilePicture = NSData()
 class CreateProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var selectPhoto: UIImageView!
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
     @IBOutlet weak var kidsName: UITextField!
     @IBOutlet weak var kidsAge: UITextField!
     @IBOutlet weak var kidsGender: UITextField!
@@ -28,6 +30,28 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
         tap.delegate = self
         selectPhoto.addGestureRecognizer(tap)
         
+        
+        selectPhoto.layer.cornerRadius = selectPhoto.frame.size.width / 2;
+        selectPhoto.clipsToBounds = true;
+        
+        selectPhoto.layer.borderWidth = 3.0
+        selectPhoto.layer.borderColor = UIColor.whiteColor().CGColor
+        
+        if isItEditing {
+            kidsName.text = orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][0] as? String
+            kidsAge.text = orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][1] as? String
+            kidsGender.text = orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][2] as? String
+            fathersName.text = orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][3] as? String
+            mothersName.text = orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][4] as? String
+            parentsNumber.text = orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][5] as? String
+            
+            let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
+            var filePath = documentsPath[0]
+            filePath = filePath.stringByAppendingString("/" + (orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][0] as! String) + (orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][5] as! String) + ".png")
+            
+            selectPhoto.image = UIImage(contentsOfFile: filePath)
+            backgroundImage.image = UIImage(contentsOfFile: filePath)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,9 +67,18 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
         var filePath = documentsPath[0]
         
         var imagePath = filePath.stringByAppendingString("/" + kidsName.text + parentsNumber.text + ".png")
+        profilePicture = UIImagePNGRepresentation(selectPhoto.image)
         profilePicture.writeToFile(imagePath, atomically: true)
         
         filePath = filePath.stringByAppendingString("/KidsList.csv")
+        
+        
+        if isItEditing {
+            
+            orderedkidsList[selectedIndexPath.section].removeObjectAtIndex(selectedIndexPath.row)
+            updateCVSData()
+            readAllDataFromFiles()
+        }
         
         var newProfile = String(contentsOfFile: filePath, encoding: NSUTF8StringEncoding, error: nil)!
 
@@ -57,6 +90,7 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
                                                         ";" + parentsNumber.text + ";$")
 
         newProfile.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
+    
         
         self.navigationController?.popViewControllerAnimated(true)
     }
@@ -70,7 +104,7 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
         
         picker.modalPresentationStyle = UIModalPresentationStyle.Popover
         picker.popoverPresentationController?.sourceView = selectPhoto
-        picker.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.Right
+        picker.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.Down
         
         
         var chooseImageSource = UIAlertController(title: "Selecione a fonte da imagem",
@@ -98,6 +132,7 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
         
         chooseImageSource.modalPresentationStyle = UIModalPresentationStyle.Popover
         chooseImageSource.popoverPresentationController?.sourceView = selectPhoto
+        chooseImageSource.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.Down
         
         
         self.presentViewController(chooseImageSource, animated: true, completion: nil)
@@ -107,7 +142,10 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
             var selectedImage: UIImage = info[UIImagePickerControllerEditedImage] as! UIImage
+        
             self.selectPhoto.image = selectedImage
+            self.backgroundImage.image = selectedImage
+        
             profilePicture = UIImagePNGRepresentation(selectedImage)
             
             picker.dismissViewControllerAnimated(true, completion: nil)
