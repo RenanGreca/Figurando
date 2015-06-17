@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tWJ-6x-NY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E2y-Bp-Trz">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -383,6 +383,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="wzq-jZ-cKL"/>
                                 </constraints>
                                 <state key="normal" image="0030.png">
+                                    <color key="titleColor" red="0.41960784309999999" green="0.61960784310000006" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -398,6 +399,7 @@
                                     <constraint firstAttribute="width" constant="160" id="qWJ-jD-yLu"/>
                                 </constraints>
                                 <state key="normal" image="0030.png">
+                                    <color key="titleColor" red="0.41960784309999999" green="0.61960784310000006" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -408,6 +410,7 @@
                                     <constraint firstAttribute="height" constant="160" id="w9B-iF-7qX"/>
                                 </constraints>
                                 <state key="normal" image="0030.png">
+                                    <color key="titleColor" red="0.41960784309999999" green="0.61960784310000006" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
