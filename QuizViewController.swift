@@ -19,6 +19,18 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var option2Button: UIButton!
     @IBOutlet weak var option3Button: UIButton!
     
+    enum QuizModes: Int {
+        case soundToText, soundToImage, imageToText, textToImage
+        
+        static func random() -> QuizModes {  // I called this "maximumRawValue" in the post
+            var max: Int = 0
+            while let _ = self(rawValue: ++max) {}
+            
+            let rand = Int(arc4random_uniform(UInt32(max)))
+            return self(rawValue: rand)!
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,23 +41,33 @@ class QuizViewController: UIViewController {
     
     }
     
-    func nextQuestion(){
-
+    func nextQuestion() {
         
+        let objects : Array<Object> = ObjectList.Static.instance.getRandomObjects(3)
         
-        var objects : Array<Object> = ObjectList.Static.instance.getRandomObjects(3)
+        let indexObjectToIdentify = Int(arc4random_uniform(UInt32(objects.count)))
+        let quizMode: QuizModes = QuizModes.random()
         
-        
-        var indexObjectToIdentify = Int(arc4random_uniform(UInt32(objects.count)))
-        
-        questionLabel.text = "Qual a imagem da palavra \(objects[indexObjectToIdentify].name)?"
-
-        
-        
-        option1Button.setTitle("\(objects[0].name)", forState: .Normal)
-        option2Button.setTitle("\(objects[1].name)", forState: .Normal)
-        option3Button.setTitle("\(objects[2].name)", forState: .Normal)
-
+        switch quizMode {
+        case .imageToText:
+            questionLabel.text = "Qual é a palavra da imagem abaixo?"
+        case .textToImage:
+            questionLabel.text = "Qual é a imagem da palavra \(objects[indexObjectToIdentify].name)?"
+        case .soundToImage:
+            questionLabel.text = "Qual é a imagem da palavra ouvida?"
+        case .soundToText:
+            questionLabel.text = "Qual foi a palavra ouvida?"
+        }
+    
+        if quizMode == QuizModes.imageToText || quizMode == QuizModes.soundToText {
+            option1Button.setTitle("\(objects[0].name)", forState: .Normal)
+            option2Button.setTitle("\(objects[1].name)", forState: .Normal)
+            option3Button.setTitle("\(objects[2].name)", forState: .Normal)
+        } else if quizMode == QuizModes.textToImage || quizMode == QuizModes.soundToImage {
+            option1Button.setImage(UIImage(contentsOfFile: "\(objects[0].img)"), forState: UIControlState.Normal)
+            option2Button.setImage(UIImage(contentsOfFile: "\(objects[1].img)"), forState: UIControlState.Normal)
+            option3Button.setImage(UIImage(contentsOfFile: "\(objects[2].img)"), forState: UIControlState.Normal)
+        }
         
 //        option1Label.text = "\(objects[0].name)"
 //        option1Label.text = "\(objects[0].name)"

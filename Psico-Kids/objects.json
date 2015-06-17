@@ -2,33 +2,33 @@
     "objects": [
                 {
                 "id": "1",
-                "image": "carro.png",
+                "image": "emoji/1f697",
                 "name": "carro",
-                "sound": "carro.mid"
+                "sound": "carro.mp3"
                 },
                 {
                 "id": "2",
-                "image": "panela.png",
-                "name": "panela",
-                "sound": "panela.mid"
+                "image": "emoji/270f",
+                "name": "lápis",
+                "sound": "lapis.mp3"
                 },
                 {
                 "id": "3",
-                "image": "cadeira.png",
-                "name": "cadeira",
-                "sound": "cadeira.mid"
+                "image": "emoji/260e",
+                "name": "telefone",
+                "sound": "telefone.mp3"
                 },
                 {
                 "id": "4",
-                "image": "casa.png",
-                "name": "casa",
-                "sound": "casa.mid"
+                "image": "emoji/2708",
+                "name": "avião",
+                "sound": "aviao.mp3"
                 },
                 {
                 "id": "5",
-                "image": "maca.png",
-                "name": "Maçã",
-                "sound": "maca.mid"
+                "image": "emoji/2600",
+                "name": "sol",
+                "sound": "sol.mp3"
                 }
-                ]
+            ]
 }

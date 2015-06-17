@@ -21,7 +21,9 @@ class ObjectList {
     
         var error:NSErrorPointer = NSErrorPointer();
         
-        if let data = NSData(contentsOfFile: "objects.json", options: NSDataReadingOptions(), error: error) {
+        let path = NSBundle.mainBundle().pathForResource("objects", ofType: "json")
+        
+        if let data = NSData(contentsOfFile: path!, options: .DataReadingMappedIfSafe, error: error) {
             println(error)
             let json = JSON(data: data)
             
@@ -29,7 +31,7 @@ class ObjectList {
                 
                 for object in objects {
                     let name = object["name"].stringValue as String
-                    let img = object["img"].stringValue as String
+                    let img = object["image"].stringValue as String
                     let sound = object["sound"].stringValue as String
                     
                     _objects.append(Object(name: name, img: img, sound: sound))

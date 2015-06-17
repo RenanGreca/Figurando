@@ -18,6 +18,7 @@
 		1CD9990C1B2F93B3000968A1 /* KidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */; };
 		1F2CEF171B30C763006B3D6D /* ObjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CEF151B30C763006B3D6D /* ObjectList.swift */; };
 		1F2CEF181B30C763006B3D6D /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CEF161B30C763006B3D6D /* Object.swift */; };
+		1FA4C8FB1B30EF6E0044A86A /* emoji in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4C8FA1B30EF6E0044A86A /* emoji */; };
 		3357A676F696D40E73491E79 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F556C33CECEDD25E7DD652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E43B17F11B30D1F5004EDDAD /* objects.json in Resources */ = {isa = PBXBuildFile; fileRef = E43B17F01B30D1F5004EDDAD /* objects.json */; };
 		E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121401B30B2E000B4DBAD /* QuizViewController.swift */; };
@@ -50,6 +51,7 @@
 		1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidTableViewCell.swift; sourceTree = "<group>"; };
 		1F2CEF151B30C763006B3D6D /* ObjectList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectList.swift; sourceTree = "<group>"; };
 		1F2CEF161B30C763006B3D6D /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		1FA4C8FA1B30EF6E0044A86A /* emoji */ = {isa = PBXFileReference; lastKnownFileType = folder; path = emoji; sourceTree = "<group>"; };
 		340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		55F556C33CECEDD25E7DD652 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD421ACDD95BA0F95168C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		1CD998E21B2F69FA000968A1 /* Psico-Kids */ = {
 			isa = PBXGroup;
 			children = (
+				1FA4C8FA1B30EF6E0044A86A /* emoji */,
 				1F2CEF191B30C769006B3D6D /* Model */,
 				E49121441B30B44400B4DBAD /* FileManager.swift */,
 				1CD998E51B2F69FA000968A1 /* AppDelegate.swift */,
@@ -237,7 +240,7 @@
 				TargetAttributes = {
 					1CD998DF1B2F69FA000968A1 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = M396QE659G;
+						DevelopmentTeam = 6E3MXG6BSH;
 					};
 					1CD998F41B2F69FA000968A1 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -270,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CD998EB1B2F69FA000968A1 /* Main.storyboard in Resources */,
+				1FA4C8FB1B30EF6E0044A86A /* emoji in Resources */,
 				1CD998F01B2F69FA000968A1 /* LaunchScreen.xib in Resources */,
 				E43B17F11B30D1F5004EDDAD /* objects.json in Resources */,
 				1CD998ED1B2F69FA000968A1 /* Images.xcassets in Resources */,
