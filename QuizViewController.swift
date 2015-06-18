@@ -75,6 +75,18 @@ class QuizViewController: UIViewController {
 
         
     }
+    @IBAction func option1ButtonPressed(sender: AnyObject) {
+        
+        nextQuestion()
+    }
+    @IBAction func option2ButtonPressed(sender: AnyObject) {
+        
+        nextQuestion()
+    }
+    @IBAction func option3ButtonPressed(sender: AnyObject) {
+        
+        nextQuestion()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
