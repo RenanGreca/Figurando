@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C9870511B34746500E54093 /* KidProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9870501B34746500E54093 /* KidProfileViewController.swift */; };
 		1CD998E61B2F69FA000968A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD998E51B2F69FA000968A1 /* AppDelegate.swift */; };
 		1CD998E81B2F69FA000968A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD998E71B2F69FA000968A1 /* ViewController.swift */; };
 		1CD998EB1B2F69FA000968A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD998E91B2F69FA000968A1 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C9870501B34746500E54093 /* KidProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidProfileViewController.swift; sourceTree = "<group>"; };
 		1CD998E01B2F69FA000968A1 /* Psico-Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Psico-Kids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD998E41B2F69FA000968A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CD998E51B2F69FA000968A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				1CD999091B2F7251000968A1 /* CreateProfileViewController.swift */,
 				E49121401B30B2E000B4DBAD /* QuizViewController.swift */,
 				1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */,
+				1C9870501B34746500E54093 /* KidProfileViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				1CD9990A1B2F7251000968A1 /* CreateProfileViewController.swift in Sources */,
 				1CD998E81B2F69FA000968A1 /* ViewController.swift in Sources */,
 				E49121451B30B44400B4DBAD /* FileManager.swift in Sources */,
+				1C9870511B34746500E54093 /* KidProfileViewController.swift in Sources */,
 				1CD998E61B2F69FA000968A1 /* AppDelegate.swift in Sources */,
 				1F2CEF181B30C763006B3D6D /* Object.swift in Sources */,
 				E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */,

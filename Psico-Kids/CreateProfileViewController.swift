@@ -22,6 +22,7 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var mothersName: UITextField!
     @IBOutlet weak var parentsNumber: UITextField!
     
+    @IBOutlet weak var yPositionForProfilePic: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,6 +53,10 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
             selectPhoto.image = UIImage(contentsOfFile: filePath)
             backgroundImage.image = UIImage(contentsOfFile: filePath)
         }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"keyboardWillAppear:", name: UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"keyboardWillDisappear:", name: UIKeyboardWillHideNotification, object: nil)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +64,15 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
         // Dispose of any resources that can be recreated.
     }
     
+    func keyboardWillAppear(notification: NSNotification){
+        yPositionForProfilePic.constant += 120
+        self.view.center.y -= 250
+    }
+    
+    func keyboardWillDisappear(notification: NSNotification){
+            yPositionForProfilePic.constant -= 120
+            self.view.center.y += 250
+    }
     
     
     @IBAction func saveData(sender: AnyObject) {
