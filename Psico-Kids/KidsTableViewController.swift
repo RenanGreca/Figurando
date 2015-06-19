@@ -13,12 +13,16 @@ import Foundation
 var kidsList: Array = Array <AnyObject>()
 var orderedkidsList: NSMutableArray = NSMutableArray()
 
+var selectedIndexPath = NSIndexPath()
+var isItEditing = Bool()
+
+
 class KidsTableViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var kidsTableView: UITableView!
     
     override func viewWillAppear(animated: Bool) {
-        print("uerererere")
+        isItEditing = false
         readAllDataFromFiles()
         tableView.reloadData()
     }
@@ -32,80 +36,7 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
         readAllDataFromFiles()
         
     }
-    func readAllDataFromFiles (){
-        
-        kidsList.removeAll(keepCapacity: true)
-        orderedkidsList.removeAllObjects()
-        
-        
-        let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
-        var filePath = documentsPath[0]
-        filePath = filePath.stringByAppendingString("/KidsList.csv")
-        
-        var dataFromFile = String()
-        
-        if !(NSFileManager.defaultManager().fileExistsAtPath(filePath)) {
-            NSFileManager.defaultManager().createFileAtPath(filePath, contents: nil, attributes: nil)
-            let initialValues = ""
-            initialValues.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
-        }else{
-            dataFromFile = String(contentsOfFile: filePath, encoding: NSUTF8StringEncoding, error: nil)!
-        }
-        
-        
-        
-        
-        var arrayOfEverything: NSArray = dataFromFile.componentsSeparatedByString("$")
-        for item in arrayOfEverything{
-            kidsList.append((item as! String).componentsSeparatedByString(";"))
-        }
-        
-        
-        kidsList.removeLast()
-        
-        orderedkidsList = [ orderByLetter("A"),
-            orderByLetter("B"),
-            orderByLetter("C"),
-            orderByLetter("D"),
-            orderByLetter("E"),
-            orderByLetter("F"),
-            orderByLetter("G"),
-            orderByLetter("H"),
-            orderByLetter("I"),
-            orderByLetter("J"),
-            orderByLetter("K"),
-            orderByLetter("L"),
-            orderByLetter("M"),
-            orderByLetter("N"),
-            orderByLetter("O"),
-            orderByLetter("P"),
-            orderByLetter("Q"),
-            orderByLetter("R"),
-            orderByLetter("S"),
-            orderByLetter("T"),
-            orderByLetter("U"),
-            orderByLetter("V"),
-            orderByLetter("W"),
-            orderByLetter("X"),
-            orderByLetter("Y"),
-            orderByLetter("Z")]
-    }
     
-    
-    
-    
-    
-    func orderByLetter (Letter: String) -> NSMutableArray{
-        var itemsPerSection = NSMutableArray()
-        for item in kidsList{
-            if (((toString(item[0]) as NSString).substringToIndex(1)).uppercaseString as NSString).isEqualToString(Letter){
-                itemsPerSection.addObject(item)
-            }
-            
-            
-        }
-        return itemsPerSection
-    }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if orderedkidsList[section].count != 0{
@@ -193,39 +124,19 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
             orderedkidsList[indexPath.section].removeObjectAtIndex(indexPath.row)
             
             
-            let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
-            var filePath = documentsPath[0]
-            filePath = filePath.stringByAppendingString("/KidsList.csv")
-            
             
             
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
+            updateCVSData()
             
-            var wholeData = String()
-            kidsList.removeAll(keepCapacity: true)
-            
-            for items in orderedkidsList{
-                kidsList.append(items)
-            }
-            
-            print(kidsList)
-            
-            for kids in kidsList{
-                if kids.count > 0{
-                    wholeData = wholeData.stringByAppendingString((kids[0][0] as! String) + ";")
-                    wholeData = wholeData.stringByAppendingString((kids[0][1] as! String) + ";")
-                    wholeData = wholeData.stringByAppendingString((kids[0][2] as! String) + ";")
-                    wholeData = wholeData.stringByAppendingString((kids[0][3] as! String) + ";")
-                    wholeData = wholeData.stringByAppendingString((kids[0][4] as! String) + ";")
-                    wholeData = wholeData.stringByAppendingString((kids[0][5] as! String) + "$")
-                }
-            }
-            wholeData.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
             tableView.reloadData()
         }
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedIndexPath = indexPath
+    }
     
     /*
     // Override to support rearranging the table view.
@@ -252,4 +163,108 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
     }
     */
     
+}
+
+func updateCVSData () {
+    
+    
+    let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
+    var filePath = documentsPath[0]
+    filePath = filePath.stringByAppendingString("/KidsList.csv")
+    
+    
+    var wholeData = String()
+    kidsList.removeAll(keepCapacity: true)
+    
+    for items in orderedkidsList{
+        kidsList.append(items)
+    }
+    
+    
+    for kids in kidsList{
+        if kids.count > 0{
+            wholeData = wholeData.stringByAppendingString((kids[0][0] as! String) + ";")
+            wholeData = wholeData.stringByAppendingString((kids[0][1] as! String) + ";")
+            wholeData = wholeData.stringByAppendingString((kids[0][2] as! String) + ";")
+            wholeData = wholeData.stringByAppendingString((kids[0][3] as! String) + ";")
+            wholeData = wholeData.stringByAppendingString((kids[0][4] as! String) + ";")
+            wholeData = wholeData.stringByAppendingString((kids[0][5] as! String) + "$")
+        }
+    }
+    wholeData.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
+}
+
+func readAllDataFromFiles (){
+    
+    kidsList.removeAll(keepCapacity: true)
+    orderedkidsList.removeAllObjects()
+    
+    
+    let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
+    var filePath = documentsPath[0]
+    filePath = filePath.stringByAppendingString("/KidsList.csv")
+    
+    var dataFromFile = String()
+    
+    if !(NSFileManager.defaultManager().fileExistsAtPath(filePath)) {
+        NSFileManager.defaultManager().createFileAtPath(filePath, contents: nil, attributes: nil)
+        let initialValues = ""
+        initialValues.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
+    }else{
+        dataFromFile = String(contentsOfFile: filePath, encoding: NSUTF8StringEncoding, error: nil)!
+    }
+    
+    
+    
+    
+    var arrayOfEverything: NSArray = dataFromFile.componentsSeparatedByString("$")
+    for item in arrayOfEverything{
+        kidsList.append((item as! String).componentsSeparatedByString(";"))
+    }
+    
+    
+    kidsList.removeLast()
+    
+    orderedkidsList = [ orderByLetter("A"),
+        orderByLetter("B"),
+        orderByLetter("C"),
+        orderByLetter("D"),
+        orderByLetter("E"),
+        orderByLetter("F"),
+        orderByLetter("G"),
+        orderByLetter("H"),
+        orderByLetter("I"),
+        orderByLetter("J"),
+        orderByLetter("K"),
+        orderByLetter("L"),
+        orderByLetter("M"),
+        orderByLetter("N"),
+        orderByLetter("O"),
+        orderByLetter("P"),
+        orderByLetter("Q"),
+        orderByLetter("R"),
+        orderByLetter("S"),
+        orderByLetter("T"),
+        orderByLetter("U"),
+        orderByLetter("V"),
+        orderByLetter("W"),
+        orderByLetter("X"),
+        orderByLetter("Y"),
+        orderByLetter("Z")]
+}
+
+
+
+
+
+func orderByLetter (Letter: String) -> NSMutableArray{
+    var itemsPerSection = NSMutableArray()
+    for item in kidsList{
+        if (((toString(item[0]) as NSString).substringToIndex(1)).uppercaseString as NSString).isEqualToString(Letter){
+            itemsPerSection.addObject(item)
+        }
+        
+        
+    }
+    return itemsPerSection
 }
