@@ -24,6 +24,7 @@
 		E43B17F11B30D1F5004EDDAD /* objects.json in Resources */ = {isa = PBXBuildFile; fileRef = E43B17F01B30D1F5004EDDAD /* objects.json */; };
 		E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121401B30B2E000B4DBAD /* QuizViewController.swift */; };
 		E49121451B30B44400B4DBAD /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121441B30B44400B4DBAD /* FileManager.swift */; };
+		E49885B31B348EE100A5AFEC /* QuestionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49885B21B348EE100A5AFEC /* QuestionRecord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		E43B17F01B30D1F5004EDDAD /* objects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = objects.json; sourceTree = "<group>"; };
 		E49121401B30B2E000B4DBAD /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewController.swift; path = ../QuizViewController.swift; sourceTree = "<group>"; };
 		E49121441B30B44400B4DBAD /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileManager.swift; path = ../FileManager.swift; sourceTree = "<group>"; };
+		E49885B21B348EE100A5AFEC /* QuestionRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionRecord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				1F2CEF161B30C763006B3D6D /* Object.swift */,
 				E43B17F01B30D1F5004EDDAD /* objects.json */,
 				1C9870531B347DF400E54093 /* BringingHeader.h */,
+				E49885B21B348EE100A5AFEC /* QuestionRecord.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */,
 				1CD9990C1B2F93B3000968A1 /* KidTableViewCell.swift in Sources */,
 				1F2CEF171B30C763006B3D6D /* ObjectList.swift in Sources */,
+				E49885B31B348EE100A5AFEC /* QuestionRecord.swift in Sources */,
 				1CD999081B2F6B90000968A1 /* KidsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

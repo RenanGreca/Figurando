@@ -19,6 +19,15 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var option2Button: UIButton!
     @IBOutlet weak var option3Button: UIButton!
     
+    
+    
+    var records: Array<QuestionRecord> = []
+    
+    var objects : Array<Object> = []
+    var indexObjectToIdentify : Int = 0
+    var quizMode: QuestionTypes?
+    var buttonPressed: Int?
+    
     enum QuestionTypes: Int {
         case soundToText, soundToImage, imageToText, textToImage
         
@@ -43,14 +52,17 @@ class QuizViewController: UIViewController {
     func nextQuestion() {
         clearOptions()
         
-        let objects : Array<Object> = ObjectList.Static.instance.getRandomObjects(3)
         
-        let indexObjectToIdentify = Int(arc4random_uniform(UInt32(objects.count)))
-        let quizMode: QuestionTypes = QuestionTypes.random()
+        objects  = ObjectList.Static.instance.getRandomObjects(3)
         
-        switch quizMode {
+        indexObjectToIdentify = Int(arc4random_uniform(UInt32(objects.count)))
+       
+        quizMode = QuestionTypes.random()
+        switch quizMode! {
         case .imageToText:
             questionLabel.text = "Qual é a palavra da imagem abaixo?"
+            questionImageView.image = UIImage(contentsOfFile: "\(objects[indexObjectToIdentify].img)")
+
         case .textToImage:
             questionLabel.text = "Qual é a imagem da palavra \(objects[indexObjectToIdentify].name)?"
         case .soundToImage:
@@ -78,22 +90,38 @@ class QuizViewController: UIViewController {
     }
     
     func clearOptions(){
+        questionImageView.image = nil
         option1Button.setImage(nil, forState: UIControlState.Normal)
         option2Button.setImage(nil, forState: UIControlState.Normal)
         option3Button.setImage(nil, forState: UIControlState.Normal)
 
     }
     
-    @IBAction func option1ButtonPressed(sender: AnyObject) {
+    func recordAnswer(){
+
         
+        var questionRecord = QuestionRecord(objectToIdentify: objects[indexObjectToIdentify].name, option1: objects[0].name, option2: objects[1].name, option3: objects[2].name, selectedOption: buttonPressed!, elapsedTimeInSeconds: 0, questionType: quizMode!.rawValue)
+        
+        println("Asked: \(objects[indexObjectToIdentify].name), Object selected: \(objects[buttonPressed! - 1].name)")
+        
+    }
+    
+    @IBAction func option1ButtonPressed(sender: AnyObject) {
+        buttonPressed = 1
+        recordAnswer()
+
         nextQuestion()
     }
     @IBAction func option2ButtonPressed(sender: AnyObject) {
+        buttonPressed = 2
         
+        recordAnswer()
         nextQuestion()
     }
     @IBAction func option3ButtonPressed(sender: AnyObject) {
+        buttonPressed = 3
         
+        recordAnswer()
         nextQuestion()
     }
 
