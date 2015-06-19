@@ -8,7 +8,7 @@
 
 import UIKit
 
-class KidProfileViewController: UIViewController {
+class KidProfileViewController: UIViewController{
 
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var profileImage: UIImageView!
