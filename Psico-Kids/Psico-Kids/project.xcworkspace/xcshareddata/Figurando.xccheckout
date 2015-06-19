@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AAC62929-D4A4-42E6-8970-29066326462C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Figurando</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3DB519CAA10CB00A8A66ACC3C49A7DE018ACDF3E</key>
+		<string>https://bitbucket.org/samucortez/mini-challenge-2-xcode-nao-beta.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Psico-Kids/Figurando.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3DB519CAA10CB00A8A66ACC3C49A7DE018ACDF3E</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/samucortez/mini-challenge-2-xcode-nao-beta.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3DB519CAA10CB00A8A66ACC3C49A7DE018ACDF3E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3DB519CAA10CB00A8A66ACC3C49A7DE018ACDF3E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mini-challenge-2-xcode-nao-beta</string>
+		</dict>
+	</array>
+</dict>
+</plist>
