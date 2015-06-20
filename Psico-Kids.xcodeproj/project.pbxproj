@@ -69,6 +69,57 @@
 		1F62D72D1B35AA8100522021 /* troféu.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D6FB1B35AA8100522021 /* troféu.png */; };
 		1F62D72E1B35AA8100522021 /* vaca.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D6FC1B35AA8100522021 /* vaca.png */; };
 		1F62D72F1B35AA8100522021 /* vestido.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D6FD1B35AA8100522021 /* vestido.png */; };
+		1F62D7641B35B1F600522021 /* anel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7311B35B1F500522021 /* anel.mp3 */; };
+		1F62D7651B35B1F600522021 /* árvore.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7321B35B1F500522021 /* árvore.mp3 */; };
+		1F62D7661B35B1F600522021 /* avião.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7331B35B1F500522021 /* avião.mp3 */; };
+		1F62D7671B35B1F600522021 /* balão.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7341B35B1F500522021 /* balão.mp3 */; };
+		1F62D7681B35B1F600522021 /* banana.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7351B35B1F500522021 /* banana.mp3 */; };
+		1F62D7691B35B1F600522021 /* barco.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7361B35B1F500522021 /* barco.mp3 */; };
+		1F62D76A1B35B1F600522021 /* bicicleta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7371B35B1F500522021 /* bicicleta.mp3 */; };
+		1F62D76B1B35B1F600522021 /* bola.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7381B35B1F500522021 /* bola.mp3 */; };
+		1F62D76C1B35B1F600522021 /* calça.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7391B35B1F500522021 /* calça.mp3 */; };
+		1F62D76D1B35B1F600522021 /* camihão.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D73A1B35B1F500522021 /* camihão.mp3 */; };
+		1F62D76E1B35B1F600522021 /* camisa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D73B1B35B1F500522021 /* camisa.mp3 */; };
+		1F62D76F1B35B1F600522021 /* carro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D73C1B35B1F500522021 /* carro.mp3 */; };
+		1F62D7701B35B1F600522021 /* casa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D73D1B35B1F500522021 /* casa.mp3 */; };
+		1F62D7711B35B1F600522021 /* chapéu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D73E1B35B1F500522021 /* chapéu.mp3 */; };
+		1F62D7721B35B1F600522021 /* chuva.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D73F1B35B1F500522021 /* chuva.mp3 */; };
+		1F62D7731B35B1F600522021 /* coelho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7401B35B1F500522021 /* coelho.mp3 */; };
+		1F62D7741B35B1F600522021 /* dado.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7411B35B1F500522021 /* dado.mp3 */; };
+		1F62D7751B35B1F600522021 /* flor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7421B35B1F500522021 /* flor.mp3 */; };
+		1F62D7761B35B1F600522021 /* foguete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7431B35B1F500522021 /* foguete.mp3 */; };
+		1F62D7771B35B1F600522021 /* folha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7441B35B1F500522021 /* folha.mp3 */; };
+		1F62D7781B35B1F600522021 /* frase1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7451B35B1F500522021 /* frase1.mp3 */; };
+		1F62D7791B35B1F600522021 /* frase2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7461B35B1F500522021 /* frase2.mp3 */; };
+		1F62D77A1B35B1F600522021 /* frase3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7471B35B1F500522021 /* frase3.mp3 */; };
+		1F62D77B1B35B1F600522021 /* frase4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7481B35B1F500522021 /* frase4.mp3 */; };
+		1F62D77C1B35B1F600522021 /* gato.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7491B35B1F500522021 /* gato.mp3 */; };
+		1F62D77D1B35B1F600522021 /* guarda-chuva.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D74A1B35B1F500522021 /* guarda-chuva.mp3 */; };
+		1F62D77E1B35B1F600522021 /* lápis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D74B1B35B1F500522021 /* lápis.mp3 */; };
+		1F62D77F1B35B1F600522021 /* livro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D74C1B35B1F500522021 /* livro.mp3 */; };
+		1F62D7801B35B1F600522021 /* lua.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D74D1B35B1F500522021 /* lua.mp3 */; };
+		1F62D7811B35B1F600522021 /* maçã.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D74E1B35B1F500522021 /* maçã.mp3 */; };
+		1F62D7821B35B1F600522021 /* mala.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D74F1B35B1F500522021 /* mala.mp3 */; };
+		1F62D7831B35B1F600522021 /* martelo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7501B35B1F500522021 /* martelo.mp3 */; };
+		1F62D7841B35B1F600522021 /* milho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7511B35B1F500522021 /* milho.mp3 */; };
+		1F62D7851B35B1F600522021 /* morango.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7521B35B1F500522021 /* morango.mp3 */; };
+		1F62D7861B35B1F600522021 /* nuvem.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7531B35B1F500522021 /* nuvem.mp3 */; };
+		1F62D7871B35B1F600522021 /* óculos.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7541B35B1F500522021 /* óculos.mp3 */; };
+		1F62D7881B35B1F600522021 /* olhos.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7551B35B1F600522021 /* olhos.mp3 */; };
+		1F62D7891B35B1F600522021 /* orelha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7561B35B1F600522021 /* orelha.mp3 */; };
+		1F62D78A1B35B1F600522021 /* planeta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7571B35B1F600522021 /* planeta.mp3 */; };
+		1F62D78B1B35B1F600522021 /* porco.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7581B35B1F600522021 /* porco.mp3 */; };
+		1F62D78C1B35B1F600522021 /* porta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7591B35B1F600522021 /* porta.mp3 */; };
+		1F62D78D1B35B1F600522021 /* prédio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D75A1B35B1F600522021 /* prédio.mp3 */; };
+		1F62D78E1B35B1F600522021 /* relógio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D75B1B35B1F600522021 /* relógio.mp3 */; };
+		1F62D78F1B35B1F600522021 /* sapato.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D75C1B35B1F600522021 /* sapato.mp3 */; };
+		1F62D7901B35B1F600522021 /* sol.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D75D1B35B1F600522021 /* sol.mp3 */; };
+		1F62D7911B35B1F600522021 /* sorvete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D75E1B35B1F600522021 /* sorvete.mp3 */; };
+		1F62D7921B35B1F600522021 /* tesoura.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D75F1B35B1F600522021 /* tesoura.mp3 */; };
+		1F62D7931B35B1F600522021 /* troféu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7601B35B1F600522021 /* troféu.mp3 */; };
+		1F62D7941B35B1F600522021 /* vaca.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7611B35B1F600522021 /* vaca.mp3 */; };
+		1F62D7951B35B1F600522021 /* vestido.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7621B35B1F600522021 /* vestido.mp3 */; };
+		1F62D7961B35B1F600522021 /* xícara.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7631B35B1F600522021 /* xícara.mp3 */; };
 		1FE92A281B34DCAB00D96A15 /* CHUBBY.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */; };
 		3357A676F696D40E73491E79 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F556C33CECEDD25E7DD652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E43B17F11B30D1F5004EDDAD /* objects.json in Resources */ = {isa = PBXBuildFile; fileRef = E43B17F01B30D1F5004EDDAD /* objects.json */; };
@@ -155,6 +206,57 @@
 		1F62D6FB1B35AA8100522021 /* troféu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "troféu.png"; sourceTree = "<group>"; };
 		1F62D6FC1B35AA8100522021 /* vaca.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vaca.png; sourceTree = "<group>"; };
 		1F62D6FD1B35AA8100522021 /* vestido.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vestido.png; sourceTree = "<group>"; };
+		1F62D7311B35B1F500522021 /* anel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = anel.mp3; sourceTree = "<group>"; };
+		1F62D7321B35B1F500522021 /* árvore.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "árvore.mp3"; sourceTree = "<group>"; };
+		1F62D7331B35B1F500522021 /* avião.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "avião.mp3"; sourceTree = "<group>"; };
+		1F62D7341B35B1F500522021 /* balão.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "balão.mp3"; sourceTree = "<group>"; };
+		1F62D7351B35B1F500522021 /* banana.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = banana.mp3; sourceTree = "<group>"; };
+		1F62D7361B35B1F500522021 /* barco.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = barco.mp3; sourceTree = "<group>"; };
+		1F62D7371B35B1F500522021 /* bicicleta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bicicleta.mp3; sourceTree = "<group>"; };
+		1F62D7381B35B1F500522021 /* bola.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bola.mp3; sourceTree = "<group>"; };
+		1F62D7391B35B1F500522021 /* calça.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "calça.mp3"; sourceTree = "<group>"; };
+		1F62D73A1B35B1F500522021 /* camihão.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "camihão.mp3"; sourceTree = "<group>"; };
+		1F62D73B1B35B1F500522021 /* camisa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = camisa.mp3; sourceTree = "<group>"; };
+		1F62D73C1B35B1F500522021 /* carro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = carro.mp3; sourceTree = "<group>"; };
+		1F62D73D1B35B1F500522021 /* casa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = casa.mp3; sourceTree = "<group>"; };
+		1F62D73E1B35B1F500522021 /* chapéu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "chapéu.mp3"; sourceTree = "<group>"; };
+		1F62D73F1B35B1F500522021 /* chuva.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chuva.mp3; sourceTree = "<group>"; };
+		1F62D7401B35B1F500522021 /* coelho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coelho.mp3; sourceTree = "<group>"; };
+		1F62D7411B35B1F500522021 /* dado.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dado.mp3; sourceTree = "<group>"; };
+		1F62D7421B35B1F500522021 /* flor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flor.mp3; sourceTree = "<group>"; };
+		1F62D7431B35B1F500522021 /* foguete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = foguete.mp3; sourceTree = "<group>"; };
+		1F62D7441B35B1F500522021 /* folha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = folha.mp3; sourceTree = "<group>"; };
+		1F62D7451B35B1F500522021 /* frase1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = frase1.mp3; sourceTree = "<group>"; };
+		1F62D7461B35B1F500522021 /* frase2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = frase2.mp3; sourceTree = "<group>"; };
+		1F62D7471B35B1F500522021 /* frase3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = frase3.mp3; sourceTree = "<group>"; };
+		1F62D7481B35B1F500522021 /* frase4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = frase4.mp3; sourceTree = "<group>"; };
+		1F62D7491B35B1F500522021 /* gato.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gato.mp3; sourceTree = "<group>"; };
+		1F62D74A1B35B1F500522021 /* guarda-chuva.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "guarda-chuva.mp3"; sourceTree = "<group>"; };
+		1F62D74B1B35B1F500522021 /* lápis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "lápis.mp3"; sourceTree = "<group>"; };
+		1F62D74C1B35B1F500522021 /* livro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = livro.mp3; sourceTree = "<group>"; };
+		1F62D74D1B35B1F500522021 /* lua.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lua.mp3; sourceTree = "<group>"; };
+		1F62D74E1B35B1F500522021 /* maçã.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "maçã.mp3"; sourceTree = "<group>"; };
+		1F62D74F1B35B1F500522021 /* mala.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mala.mp3; sourceTree = "<group>"; };
+		1F62D7501B35B1F500522021 /* martelo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = martelo.mp3; sourceTree = "<group>"; };
+		1F62D7511B35B1F500522021 /* milho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = milho.mp3; sourceTree = "<group>"; };
+		1F62D7521B35B1F500522021 /* morango.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = morango.mp3; sourceTree = "<group>"; };
+		1F62D7531B35B1F500522021 /* nuvem.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nuvem.mp3; sourceTree = "<group>"; };
+		1F62D7541B35B1F500522021 /* óculos.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "óculos.mp3"; sourceTree = "<group>"; };
+		1F62D7551B35B1F600522021 /* olhos.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = olhos.mp3; sourceTree = "<group>"; };
+		1F62D7561B35B1F600522021 /* orelha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = orelha.mp3; sourceTree = "<group>"; };
+		1F62D7571B35B1F600522021 /* planeta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = planeta.mp3; sourceTree = "<group>"; };
+		1F62D7581B35B1F600522021 /* porco.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = porco.mp3; sourceTree = "<group>"; };
+		1F62D7591B35B1F600522021 /* porta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = porta.mp3; sourceTree = "<group>"; };
+		1F62D75A1B35B1F600522021 /* prédio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "prédio.mp3"; sourceTree = "<group>"; };
+		1F62D75B1B35B1F600522021 /* relógio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "relógio.mp3"; sourceTree = "<group>"; };
+		1F62D75C1B35B1F600522021 /* sapato.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sapato.mp3; sourceTree = "<group>"; };
+		1F62D75D1B35B1F600522021 /* sol.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sol.mp3; sourceTree = "<group>"; };
+		1F62D75E1B35B1F600522021 /* sorvete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sorvete.mp3; sourceTree = "<group>"; };
+		1F62D75F1B35B1F600522021 /* tesoura.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tesoura.mp3; sourceTree = "<group>"; };
+		1F62D7601B35B1F600522021 /* troféu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "troféu.mp3"; sourceTree = "<group>"; };
+		1F62D7611B35B1F600522021 /* vaca.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = vaca.mp3; sourceTree = "<group>"; };
+		1F62D7621B35B1F600522021 /* vestido.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = vestido.mp3; sourceTree = "<group>"; };
+		1F62D7631B35B1F600522021 /* xícara.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "xícara.mp3"; sourceTree = "<group>"; };
 		1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = CHUBBY.TTF; sourceTree = "<group>"; };
 		340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		55F556C33CECEDD25E7DD652 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +309,7 @@
 		1CD998E21B2F69FA000968A1 /* Psico-Kids */ = {
 			isa = PBXGroup;
 			children = (
+				1F62D7301B35B17E00522021 /* sounds */,
 				1F62D6CB1B35A99900522021 /* emoji */,
 				1F2CEF191B30C769006B3D6D /* Model */,
 				E49121441B30B44400B4DBAD /* FileManager.swift */,
@@ -336,6 +439,64 @@
 			name = emoji;
 			sourceTree = "<group>";
 		};
+		1F62D7301B35B17E00522021 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1F62D7311B35B1F500522021 /* anel.mp3 */,
+				1F62D7321B35B1F500522021 /* árvore.mp3 */,
+				1F62D7331B35B1F500522021 /* avião.mp3 */,
+				1F62D7341B35B1F500522021 /* balão.mp3 */,
+				1F62D7351B35B1F500522021 /* banana.mp3 */,
+				1F62D7361B35B1F500522021 /* barco.mp3 */,
+				1F62D7371B35B1F500522021 /* bicicleta.mp3 */,
+				1F62D7381B35B1F500522021 /* bola.mp3 */,
+				1F62D7391B35B1F500522021 /* calça.mp3 */,
+				1F62D73A1B35B1F500522021 /* camihão.mp3 */,
+				1F62D73B1B35B1F500522021 /* camisa.mp3 */,
+				1F62D73C1B35B1F500522021 /* carro.mp3 */,
+				1F62D73D1B35B1F500522021 /* casa.mp3 */,
+				1F62D73E1B35B1F500522021 /* chapéu.mp3 */,
+				1F62D73F1B35B1F500522021 /* chuva.mp3 */,
+				1F62D7401B35B1F500522021 /* coelho.mp3 */,
+				1F62D7411B35B1F500522021 /* dado.mp3 */,
+				1F62D7421B35B1F500522021 /* flor.mp3 */,
+				1F62D7431B35B1F500522021 /* foguete.mp3 */,
+				1F62D7441B35B1F500522021 /* folha.mp3 */,
+				1F62D7451B35B1F500522021 /* frase1.mp3 */,
+				1F62D7461B35B1F500522021 /* frase2.mp3 */,
+				1F62D7471B35B1F500522021 /* frase3.mp3 */,
+				1F62D7481B35B1F500522021 /* frase4.mp3 */,
+				1F62D7491B35B1F500522021 /* gato.mp3 */,
+				1F62D74A1B35B1F500522021 /* guarda-chuva.mp3 */,
+				1F62D74B1B35B1F500522021 /* lápis.mp3 */,
+				1F62D74C1B35B1F500522021 /* livro.mp3 */,
+				1F62D74D1B35B1F500522021 /* lua.mp3 */,
+				1F62D74E1B35B1F500522021 /* maçã.mp3 */,
+				1F62D74F1B35B1F500522021 /* mala.mp3 */,
+				1F62D7501B35B1F500522021 /* martelo.mp3 */,
+				1F62D7511B35B1F500522021 /* milho.mp3 */,
+				1F62D7521B35B1F500522021 /* morango.mp3 */,
+				1F62D7531B35B1F500522021 /* nuvem.mp3 */,
+				1F62D7541B35B1F500522021 /* óculos.mp3 */,
+				1F62D7551B35B1F600522021 /* olhos.mp3 */,
+				1F62D7561B35B1F600522021 /* orelha.mp3 */,
+				1F62D7571B35B1F600522021 /* planeta.mp3 */,
+				1F62D7581B35B1F600522021 /* porco.mp3 */,
+				1F62D7591B35B1F600522021 /* porta.mp3 */,
+				1F62D75A1B35B1F600522021 /* prédio.mp3 */,
+				1F62D75B1B35B1F600522021 /* relógio.mp3 */,
+				1F62D75C1B35B1F600522021 /* sapato.mp3 */,
+				1F62D75D1B35B1F600522021 /* sol.mp3 */,
+				1F62D75E1B35B1F600522021 /* sorvete.mp3 */,
+				1F62D75F1B35B1F600522021 /* tesoura.mp3 */,
+				1F62D7601B35B1F600522021 /* troféu.mp3 */,
+				1F62D7611B35B1F600522021 /* vaca.mp3 */,
+				1F62D7621B35B1F600522021 /* vestido.mp3 */,
+				1F62D7631B35B1F600522021 /* xícara.mp3 */,
+			);
+			name = sounds;
+			sourceTree = "<group>";
+		};
 		77F90B21E011A35335DD801A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,57 +599,108 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F62D78F1B35B1F600522021 /* sapato.mp3 in Resources */,
+				1F62D77E1B35B1F600522021 /* lápis.mp3 in Resources */,
+				1F62D7891B35B1F600522021 /* orelha.mp3 in Resources */,
+				1F62D76D1B35B1F600522021 /* camihão.mp3 in Resources */,
+				1F62D77C1B35B1F600522021 /* gato.mp3 in Resources */,
+				1F62D7831B35B1F600522021 /* martelo.mp3 in Resources */,
 				1F62D72F1B35AA8100522021 /* vestido.png in Resources */,
+				1F62D7851B35B1F600522021 /* morango.mp3 in Resources */,
+				1F62D7921B35B1F600522021 /* tesoura.mp3 in Resources */,
 				1F62D71C1B35AA8100522021 /* nariz.png in Resources */,
+				1F62D78A1B35B1F600522021 /* planeta.mp3 in Resources */,
 				1F62D7271B35AA8100522021 /* sol.png in Resources */,
 				1F62D72E1B35AA8100522021 /* vaca.png in Resources */,
+				1F62D7821B35B1F600522021 /* mala.mp3 in Resources */,
 				1F62D7261B35AA8100522021 /* sapato.png in Resources */,
 				1F62D70D1B35AA8100522021 /* coelho.png in Resources */,
 				1F62D71E1B35AA8100522021 /* óculos.png in Resources */,
 				1F62D7011B35AA8100522021 /* balão.png in Resources */,
 				1FE92A281B34DCAB00D96A15 /* CHUBBY.TTF in Resources */,
+				1F62D77A1B35B1F600522021 /* frase3.mp3 in Resources */,
+				1F62D7881B35B1F600522021 /* olhos.mp3 in Resources */,
 				1F62D7221B35AA8100522021 /* porco.png in Resources */,
 				1F62D6FF1B35AA8100522021 /* árvore.png in Resources */,
+				1F62D7671B35B1F600522021 /* balão.mp3 in Resources */,
 				1CD998EB1B2F69FA000968A1 /* Main.storyboard in Resources */,
 				1F62D71A1B35AA8100522021 /* milho.png in Resources */,
+				1F62D7931B35B1F600522021 /* troféu.mp3 in Resources */,
+				1F62D77B1B35B1F600522021 /* frase4.mp3 in Resources */,
 				1F62D7281B35AA8100522021 /* som1.png in Resources */,
+				1F62D7721B35B1F600522021 /* chuva.mp3 in Resources */,
+				1F62D7951B35B1F600522021 /* vestido.mp3 in Resources */,
 				1F62D7201B35AA8100522021 /* orelha.png in Resources */,
 				1F62D7021B35AA8100522021 /* banana.png in Resources */,
 				1F62D7121B35AA8100522021 /* gato.png in Resources */,
+				1F62D7941B35B1F600522021 /* vaca.mp3 in Resources */,
 				1F62D72B1B35AA8100522021 /* sorvete.png in Resources */,
+				1F62D76E1B35B1F600522021 /* camisa.mp3 in Resources */,
+				1F62D78B1B35B1F600522021 /* porco.mp3 in Resources */,
 				1CD998F01B2F69FA000968A1 /* LaunchScreen.xib in Resources */,
+				1F62D78E1B35B1F600522021 /* relógio.mp3 in Resources */,
+				1F62D7801B35B1F600522021 /* lua.mp3 in Resources */,
 				1F62D7061B35AA8100522021 /* calça.png in Resources */,
+				1F62D7911B35B1F600522021 /* sorvete.mp3 in Resources */,
+				1F62D77F1B35B1F600522021 /* livro.mp3 in Resources */,
 				1F62D7001B35AA8100522021 /* avião.png in Resources */,
 				1F62D7151B35AA8100522021 /* livro.png in Resources */,
 				1F62D7241B35AA8100522021 /* prédio.png in Resources */,
+				1F62D7791B35B1F600522021 /* frase2.mp3 in Resources */,
 				E43B17F11B30D1F5004EDDAD /* objects.json in Resources */,
+				1F62D7871B35B1F600522021 /* óculos.mp3 in Resources */,
 				1F62D72D1B35AA8100522021 /* troféu.png in Resources */,
+				1F62D7811B35B1F600522021 /* maçã.mp3 in Resources */,
+				1F62D7691B35B1F600522021 /* barco.mp3 in Resources */,
 				1F62D72A1B35AA8100522021 /* som3.png in Resources */,
 				1F62D7251B35AA8100522021 /* relógio.png in Resources */,
 				1F62D70F1B35AA8100522021 /* flor.png in Resources */,
+				1F62D7681B35B1F600522021 /* banana.mp3 in Resources */,
+				1F62D78D1B35B1F600522021 /* prédio.mp3 in Resources */,
+				1F62D7781B35B1F600522021 /* frase1.mp3 in Resources */,
 				1F62D7041B35AA8100522021 /* bicicleta.png in Resources */,
+				1F62D77D1B35B1F600522021 /* guarda-chuva.mp3 in Resources */,
+				1F62D7701B35B1F600522021 /* casa.mp3 in Resources */,
+				1F62D7841B35B1F600522021 /* milho.mp3 in Resources */,
+				1F62D76F1B35B1F600522021 /* carro.mp3 in Resources */,
 				1F62D7051B35AA8100522021 /* bola.png in Resources */,
+				1F62D7741B35B1F600522021 /* dado.mp3 in Resources */,
+				1F62D7961B35B1F600522021 /* xícara.mp3 in Resources */,
 				1F62D70C1B35AA8100522021 /* chuva.png in Resources */,
 				1F62D71B1B35AA8100522021 /* morango.png in Resources */,
+				1F62D7751B35B1F600522021 /* flor.mp3 in Resources */,
+				1F62D7771B35B1F600522021 /* folha.mp3 in Resources */,
+				1F62D76C1B35B1F600522021 /* calça.mp3 in Resources */,
+				1F62D7651B35B1F600522021 /* árvore.mp3 in Resources */,
 				1F62D7291B35AA8100522021 /* som2.png in Resources */,
 				1F62D70E1B35AA8100522021 /* dado.png in Resources */,
 				1F62D70B1B35AA8100522021 /* chapéu.png in Resources */,
 				1F62D7191B35AA8100522021 /* martelo.png in Resources */,
 				1F62D71D1B35AA8100522021 /* nuvem.png in Resources */,
 				1F62D7161B35AA8100522021 /* lua.png in Resources */,
+				1F62D7661B35B1F600522021 /* avião.mp3 in Resources */,
 				1F62D7141B35AA8100522021 /* lápis.png in Resources */,
 				1F62D70A1B35AA8100522021 /* casa.png in Resources */,
 				1F62D7081B35AA8100522021 /* camisa.png in Resources */,
 				1F62D7181B35AA8100522021 /* mala.png in Resources */,
 				1F62D7091B35AA8100522021 /* carro.png in Resources */,
 				1F62D7031B35AA8100522021 /* barco.png in Resources */,
+				1F62D78C1B35B1F600522021 /* porta.mp3 in Resources */,
+				1F62D7861B35B1F600522021 /* nuvem.mp3 in Resources */,
+				1F62D7711B35B1F600522021 /* chapéu.mp3 in Resources */,
+				1F62D76A1B35B1F600522021 /* bicicleta.mp3 in Resources */,
 				1F62D7231B35AA8100522021 /* porta.png in Resources */,
 				1CD998ED1B2F69FA000968A1 /* Images.xcassets in Resources */,
+				1F62D7641B35B1F600522021 /* anel.mp3 in Resources */,
 				1F62D7211B35AA8100522021 /* planeta.png in Resources */,
 				1F62D7131B35AA8100522021 /* guarda-chuva.png in Resources */,
 				1F62D7101B35AA8100522021 /* foguete.png in Resources */,
+				1F62D76B1B35B1F600522021 /* bola.mp3 in Resources */,
+				1F62D7901B35B1F600522021 /* sol.mp3 in Resources */,
 				1F62D7111B35AA8100522021 /* folha.png in Resources */,
 				1F62D7071B35AA8100522021 /* caminhão.png in Resources */,
+				1F62D7761B35B1F600522021 /* foguete.mp3 in Resources */,
+				1F62D7731B35B1F600522021 /* coelho.mp3 in Resources */,
 				1F62D6FE1B35AA8100522021 /* anel.png in Resources */,
 				1F62D72C1B35AA8100522021 /* tesoura.png in Resources */,
 				1F62D71F1B35AA8100522021 /* olhos.png in Resources */,
