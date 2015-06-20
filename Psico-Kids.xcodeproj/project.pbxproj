@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C9870511B34746500E54093 /* KidProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9870501B34746500E54093 /* KidProfileViewController.swift */; };
 		1CD998E61B2F69FA000968A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD998E51B2F69FA000968A1 /* AppDelegate.swift */; };
 		1CD998E81B2F69FA000968A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD998E71B2F69FA000968A1 /* ViewController.swift */; };
 		1CD998EB1B2F69FA000968A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD998E91B2F69FA000968A1 /* Main.storyboard */; };
@@ -16,14 +17,15 @@
 		1CD999081B2F6B90000968A1 /* KidsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD999071B2F6B90000968A1 /* KidsTableViewController.swift */; };
 		1CD9990A1B2F7251000968A1 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD999091B2F7251000968A1 /* CreateProfileViewController.swift */; };
 		1CD9990C1B2F93B3000968A1 /* KidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */; };
-		1CE64C451B30FBEA00989645 /* KidProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CE64C441B30FBE900989645 /* KidProfileViewController.swift */; };
 		1F2CEF171B30C763006B3D6D /* ObjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CEF151B30C763006B3D6D /* ObjectList.swift */; };
 		1F2CEF181B30C763006B3D6D /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CEF161B30C763006B3D6D /* Object.swift */; };
 		1FA4C8FB1B30EF6E0044A86A /* emoji in Resources */ = {isa = PBXBuildFile; fileRef = 1FA4C8FA1B30EF6E0044A86A /* emoji */; };
+		1FE92A281B34DCAB00D96A15 /* CHUBBY.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */; };
 		3357A676F696D40E73491E79 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F556C33CECEDD25E7DD652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E43B17F11B30D1F5004EDDAD /* objects.json in Resources */ = {isa = PBXBuildFile; fileRef = E43B17F01B30D1F5004EDDAD /* objects.json */; };
 		E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121401B30B2E000B4DBAD /* QuizViewController.swift */; };
 		E49121451B30B44400B4DBAD /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121441B30B44400B4DBAD /* FileManager.swift */; };
+		E49885B31B348EE100A5AFEC /* QuestionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49885B21B348EE100A5AFEC /* QuestionRecord.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C9870501B34746500E54093 /* KidProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidProfileViewController.swift; sourceTree = "<group>"; };
+		1C9870531B347DF400E54093 /* BringingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BringingHeader.h; sourceTree = "<group>"; };
 		1CD998E01B2F69FA000968A1 /* Psico-Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Psico-Kids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD998E41B2F69FA000968A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CD998E51B2F69FA000968A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,16 +54,17 @@
 		1CD999071B2F6B90000968A1 /* KidsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidsTableViewController.swift; sourceTree = "<group>"; };
 		1CD999091B2F7251000968A1 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
 		1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidTableViewCell.swift; sourceTree = "<group>"; };
-		1CE64C441B30FBE900989645 /* KidProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidProfileViewController.swift; sourceTree = "<group>"; };
 		1F2CEF151B30C763006B3D6D /* ObjectList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectList.swift; sourceTree = "<group>"; };
 		1F2CEF161B30C763006B3D6D /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
 		1FA4C8FA1B30EF6E0044A86A /* emoji */ = {isa = PBXFileReference; lastKnownFileType = folder; path = emoji; sourceTree = "<group>"; };
+		1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = CHUBBY.TTF; sourceTree = "<group>"; };
 		340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		55F556C33CECEDD25E7DD652 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD421ACDD95BA0F95168C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E43B17F01B30D1F5004EDDAD /* objects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = objects.json; sourceTree = "<group>"; };
 		E49121401B30B2E000B4DBAD /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewController.swift; path = ../QuizViewController.swift; sourceTree = "<group>"; };
 		E49121441B30B44400B4DBAD /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileManager.swift; path = ../FileManager.swift; sourceTree = "<group>"; };
+		E49885B21B348EE100A5AFEC /* QuestionRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionRecord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +154,7 @@
 				1CD999091B2F7251000968A1 /* CreateProfileViewController.swift */,
 				E49121401B30B2E000B4DBAD /* QuizViewController.swift */,
 				1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */,
-				1CE64C441B30FBE900989645 /* KidProfileViewController.swift */,
+				1C9870501B34746500E54093 /* KidProfileViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 		1F2CEF141B30C744006B3D6D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */,
 				1CD998E91B2F69FA000968A1 /* Main.storyboard */,
 				1CD998EE1B2F69FA000968A1 /* LaunchScreen.xib */,
 			);
@@ -169,6 +175,8 @@
 				1F2CEF151B30C763006B3D6D /* ObjectList.swift */,
 				1F2CEF161B30C763006B3D6D /* Object.swift */,
 				E43B17F01B30D1F5004EDDAD /* objects.json */,
+				1C9870531B347DF400E54093 /* BringingHeader.h */,
+				E49885B21B348EE100A5AFEC /* QuestionRecord.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -275,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE92A281B34DCAB00D96A15 /* CHUBBY.TTF in Resources */,
 				1CD998EB1B2F69FA000968A1 /* Main.storyboard in Resources */,
 				1FA4C8FB1B30EF6E0044A86A /* emoji in Resources */,
 				1CD998F01B2F69FA000968A1 /* LaunchScreen.xib in Resources */,
@@ -348,12 +357,13 @@
 				1CD9990A1B2F7251000968A1 /* CreateProfileViewController.swift in Sources */,
 				1CD998E81B2F69FA000968A1 /* ViewController.swift in Sources */,
 				E49121451B30B44400B4DBAD /* FileManager.swift in Sources */,
-				1CE64C451B30FBEA00989645 /* KidProfileViewController.swift in Sources */,
+				1C9870511B34746500E54093 /* KidProfileViewController.swift in Sources */,
 				1CD998E61B2F69FA000968A1 /* AppDelegate.swift in Sources */,
 				1F2CEF181B30C763006B3D6D /* Object.swift in Sources */,
 				E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */,
 				1CD9990C1B2F93B3000968A1 /* KidTableViewCell.swift in Sources */,
 				1F2CEF171B30C763006B3D6D /* ObjectList.swift in Sources */,
+				E49885B31B348EE100A5AFEC /* QuestionRecord.swift in Sources */,
 				1CD999081B2F6B90000968A1 /* KidsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,8 +446,10 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Psico-Kids/BringingHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -474,14 +486,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Psico-Kids/BringingHeader.h";
 				TARGETED_DEVICE_FAMILY = 2;
+				USER_HEADER_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		1CD999001B2F69FA000968A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9AFD421ACDD95BA0F95168C0 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -490,6 +504,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -504,11 +519,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
 		1CD999031B2F69FA000968A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -522,12 +539,14 @@
 				INFOPLIST_FILE = "Psico-KidsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Psico-Kids/BringingHeader.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Psico-Kids.app/Psico-Kids";
 			};
 			name = Debug;
 		};
 		1CD999041B2F69FA000968A1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -537,6 +556,7 @@
 				INFOPLIST_FILE = "Psico-KidsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Psico-Kids/BringingHeader.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Psico-Kids.app/Psico-Kids";
 			};
 			name = Release;

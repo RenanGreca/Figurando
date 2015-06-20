@@ -10,8 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    @IBOutlet weak var btnJogar: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        btnJogar.titleLabel!.font = UIFont(name: "ChubbyCheeks", size: 34)!
+        
+        //self.navigationController?.navigationBar.titleTextAttributes = attributes
         // Do any additional setup after loading the view, typically from a nib.
     }
 
