@@ -12,10 +12,10 @@ class Object {
     var img: String
     var sound: String
     
-    init(name: String, img: String, sound: String) {
+    init(name: String) {
         self.name = name
-        self.img = NSBundle.mainBundle().pathForResource(img, ofType: "png")!
-        self.sound = sound
+        self.img = NSBundle.mainBundle().pathForResource(name, ofType: "png")!
+        self.sound = ""// NSBundle.mainBundle().pathForResource(name, ofType: "mp3")!
     }
     
 }

@@ -1,34 +1,52 @@
 {
-    "objects": [
-                {
-                "id": "1",
-                "image": "emoji/1f697",
-                "name": "carro",
-                "sound": "carro.mp3"
-                },
-                {
-                "id": "2",
-                "image": "emoji/270f",
-                "name": "lápis",
-                "sound": "lapis.mp3"
-                },
-                {
-                "id": "3",
-                "image": "emoji/260e",
-                "name": "telefone",
-                "sound": "telefone.mp3"
-                },
-                {
-                "id": "4",
-                "image": "emoji/2708",
-                "name": "avião",
-                "sound": "aviao.mp3"
-                },
-                {
-                "id": "5",
-                "image": "emoji/2600",
-                "name": "sol",
-                "sound": "sol.mp3"
-                }
-            ]
+    "objects":
+        [
+         "balão",
+         "relógio",
+         "martelo",
+         "porta",
+         "tesoura",
+         "lápis",
+         "livro",
+         "dado",
+         "bola",
+         "troféu",
+         "sorvete",
+         "maçã",
+         "morango",
+         "banana",
+         "milho",
+         "casa",
+         "prédio",
+         "barco",
+         "foguete",
+         "avião",
+         "carro",
+         "caminhão",
+         "bicicleta",
+         "orelha",
+         "olhos",
+         "nariz",
+         "chapéu",
+         "sapato",
+         "camisa",
+         "vestido",
+         "calça",
+         "mala",
+         "óculos",
+         "guarda-chuva",
+         "anel",
+         "vaca",
+         "coelho",
+         "gato",
+         "porco",
+         "flor",
+         "folha",
+         "árvore",
+         "lua",
+         "planeta",
+         "nuvem",
+         "chuva",
+         "sol"
+        ]
 }

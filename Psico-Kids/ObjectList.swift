@@ -29,12 +29,9 @@ class ObjectList {
             
             if let objects = json["objects"].arrayValue as? Array {
                 
-                for object in objects {
-                    let name = object["name"].stringValue as String
-                    let img = object["image"].stringValue as String
-                    let sound = object["sound"].stringValue as String
-                    
-                    _objects.append(Object(name: name, img: img, sound: sound))
+                for name in objects {
+                    let o = Object(name: name.stringValue)
+                    _objects.append(o)
                 }
                 
             }
