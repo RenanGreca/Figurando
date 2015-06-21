@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1C9870511B34746500E54093 /* KidProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9870501B34746500E54093 /* KidProfileViewController.swift */; };
+		1C9870A81B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1C9870A61B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig */; };
+		1C9870A91B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1C9870A61B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig */; };
+		1C9870AA1B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */; };
+		1C9870AB1B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */; };
+		1C9870AD1B36FF4C00E54093 /* MagicPie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9870AC1B36FF4C00E54093 /* MagicPie.framework */; };
+		1C9870AF1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9870AE1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework */; };
 		1CD998E61B2F69FA000968A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD998E51B2F69FA000968A1 /* AppDelegate.swift */; };
 		1CD998E81B2F69FA000968A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD998E71B2F69FA000968A1 /* ViewController.swift */; };
 		1CD998EB1B2F69FA000968A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD998E91B2F69FA000968A1 /* Main.storyboard */; };
@@ -122,10 +128,12 @@
 		1F62D7961B35B1F600522021 /* xícara.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7631B35B1F600522021 /* xícara.mp3 */; };
 		1FE92A281B34DCAB00D96A15 /* CHUBBY.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */; };
 		3357A676F696D40E73491E79 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F556C33CECEDD25E7DD652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		A4055622520074DF462E617C /* Pods_Psico_KidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9136F11B6A22A9A9DD2C017D /* Pods_Psico_KidsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		E43B17F11B30D1F5004EDDAD /* objects.json in Resources */ = {isa = PBXBuildFile; fileRef = E43B17F01B30D1F5004EDDAD /* objects.json */; };
 		E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121401B30B2E000B4DBAD /* QuizViewController.swift */; };
 		E49121451B30B44400B4DBAD /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121441B30B44400B4DBAD /* FileManager.swift */; };
 		E49885B31B348EE100A5AFEC /* QuestionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49885B21B348EE100A5AFEC /* QuestionRecord.swift */; };
+		FA7C5931E4D200736AC9BE67 /* Pods_Psico_Kids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB967F466B5751415E7F2FC3 /* Pods_Psico_Kids.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +149,10 @@
 /* Begin PBXFileReference section */
 		1C9870501B34746500E54093 /* KidProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidProfileViewController.swift; sourceTree = "<group>"; };
 		1C9870531B347DF400E54093 /* BringingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BringingHeader.h; sourceTree = "<group>"; };
+		1C9870A61B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-Psico-Kids.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Psico-Kids/Pods-Psico-Kids.debug.xcconfig"; sourceTree = "<group>"; };
+		1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-Psico-Kids.release.xcconfig"; path = "Pods/Target Support Files/Pods-Psico-Kids/Pods-Psico-Kids.release.xcconfig"; sourceTree = "<group>"; };
+		1C9870AC1B36FF4C00E54093 /* MagicPie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MagicPie.framework; path = "Pods/../build/Debug-iphoneos/Pods-Psico-Kids/MagicPie.framework"; sourceTree = "<group>"; };
+		1C9870AE1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_Psico_KidsTests.framework; path = "Pods/../build/Debug-iphoneos/Pods_Psico_KidsTests.framework"; sourceTree = "<group>"; };
 		1CD998E01B2F69FA000968A1 /* Psico-Kids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Psico-Kids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD998E41B2F69FA000968A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1CD998E51B2F69FA000968A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -260,7 +272,11 @@
 		1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = CHUBBY.TTF; sourceTree = "<group>"; };
 		340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		55F556C33CECEDD25E7DD652 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9136F11B6A22A9A9DD2C017D /* Pods_Psico_KidsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Psico_KidsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD421ACDD95BA0F95168C0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A89ED258C4C71E76006A5D6F /* Pods-Psico-KidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Psico-KidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Psico-KidsTests/Pods-Psico-KidsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AB967F466B5751415E7F2FC3 /* Pods_Psico_Kids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Psico_Kids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3D7175110DD9D777E1BD516 /* Pods-Psico-KidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Psico-KidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Psico-KidsTests/Pods-Psico-KidsTests.release.xcconfig"; sourceTree = "<group>"; };
 		E43B17F01B30D1F5004EDDAD /* objects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = objects.json; sourceTree = "<group>"; };
 		E49121401B30B2E000B4DBAD /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuizViewController.swift; path = ../QuizViewController.swift; sourceTree = "<group>"; };
 		E49121441B30B44400B4DBAD /* FileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileManager.swift; path = ../FileManager.swift; sourceTree = "<group>"; };
@@ -272,7 +288,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C9870AF1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework in Frameworks */,
+				1C9870AD1B36FF4C00E54093 /* MagicPie.framework in Frameworks */,
 				3357A676F696D40E73491E79 /* Pods.framework in Frameworks */,
+				FA7C5931E4D200736AC9BE67 /* Pods_Psico_Kids.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +299,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4055622520074DF462E617C /* Pods_Psico_KidsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +520,11 @@
 		77F90B21E011A35335DD801A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C9870AE1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework */,
+				1C9870AC1B36FF4C00E54093 /* MagicPie.framework */,
 				55F556C33CECEDD25E7DD652 /* Pods.framework */,
+				AB967F466B5751415E7F2FC3 /* Pods_Psico_Kids.framework */,
+				9136F11B6A22A9A9DD2C017D /* Pods_Psico_KidsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -508,8 +532,12 @@
 		EBD9A09A59EFD27EBF9A4A6A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				1C9870A61B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig */,
+				1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */,
 				9AFD421ACDD95BA0F95168C0 /* Pods.debug.xcconfig */,
 				340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */,
+				A89ED258C4C71E76006A5D6F /* Pods-Psico-KidsTests.debug.xcconfig */,
+				D3D7175110DD9D777E1BD516 /* Pods-Psico-KidsTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -541,9 +569,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CD999021B2F69FA000968A1 /* Build configuration list for PBXNativeTarget "Psico-KidsTests" */;
 			buildPhases = (
+				7A116E2E1F1182A55C9B199C /* Check Pods Manifest.lock */,
 				1CD998F11B2F69FA000968A1 /* Sources */,
 				1CD998F21B2F69FA000968A1 /* Frameworks */,
 				1CD998F31B2F69FA000968A1 /* Resources */,
+				F0444B9226BBD6C89C8D5938 /* Embed Pods Frameworks */,
+				2D0A1FBA5A119472CD8F5E2C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -614,6 +645,7 @@
 				1F62D72E1B35AA8100522021 /* vaca.png in Resources */,
 				1F62D7821B35B1F600522021 /* mala.mp3 in Resources */,
 				1F62D7261B35AA8100522021 /* sapato.png in Resources */,
+				1C9870A81B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig in Resources */,
 				1F62D70D1B35AA8100522021 /* coelho.png in Resources */,
 				1F62D71E1B35AA8100522021 /* óculos.png in Resources */,
 				1F62D7011B35AA8100522021 /* balão.png in Resources */,
@@ -664,6 +696,7 @@
 				1F62D7841B35B1F600522021 /* milho.mp3 in Resources */,
 				1F62D76F1B35B1F600522021 /* carro.mp3 in Resources */,
 				1F62D7051B35AA8100522021 /* bola.png in Resources */,
+				1C9870AA1B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig in Resources */,
 				1F62D7741B35B1F600522021 /* dado.mp3 in Resources */,
 				1F62D7961B35B1F600522021 /* xícara.mp3 in Resources */,
 				1F62D70C1B35AA8100522021 /* chuva.png in Resources */,
@@ -712,6 +745,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C9870AB1B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig in Resources */,
+				1C9870A91B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,7 +765,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Psico-Kids/Pods-Psico-Kids-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2CC43CEEF8DDD323642E2BE6 /* Copy Pods Resources */ = {
@@ -745,7 +780,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Psico-Kids/Pods-Psico-Kids-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2D0A1FBA5A119472CD8F5E2C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Psico-KidsTests/Pods-Psico-KidsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A116E2E1F1182A55C9B199C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E92C991C0180AAAB863028D7 /* Check Pods Manifest.lock */ = {
@@ -761,6 +826,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0444B9226BBD6C89C8D5938 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Psico-KidsTests/Pods-Psico-KidsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -911,11 +991,16 @@
 		};
 		1CD999001B2F69FA000968A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */;
+			baseConfigurationReference = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Psico-Kids",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "Psico-Kids/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -926,11 +1011,16 @@
 		};
 		1CD999011B2F69FA000968A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */;
+			baseConfigurationReference = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Psico-Kids",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "Psico-Kids/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -941,7 +1031,7 @@
 		};
 		1CD999031B2F69FA000968A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */;
+			baseConfigurationReference = D3D7175110DD9D777E1BD516 /* Pods-Psico-KidsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -962,7 +1052,7 @@
 		};
 		1CD999041B2F69FA000968A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */;
+			baseConfigurationReference = D3D7175110DD9D777E1BD516 /* Pods-Psico-KidsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
