@@ -45,7 +45,7 @@ typedef enum ShowTitles
 @property (nonatomic, assign) float startAngle;//default 0
 @property (nonatomic, assign) float endAngle;//default 360
 @property (nonatomic, assign) float animationDuration;//default 0.6
-@property (nonatomic, assign) ShowTitle showTitles;//defaul ShowTitleNever
+@property (nonatomic, assign) ShowTitle showTitles;//default ShowTitleNever
 
 @property (nonatomic, copy) NSString*(^transformTitleBlock)(PieElement* val, float percent);
 
@@ -53,7 +53,7 @@ typedef enum ShowTitles
 - (void)setStartAngle:(float)startAngle endAngle:(float)endAngle animated:(BOOL)isAnimated;
 
 - (PieElement*)pieElemInPoint:(CGPoint)point;
-
+- (int)indexOfSliceFromPoint:(CGPoint)point;
 //you can redefine draw elements
 - (void)drawElement:(PieElement*)elem path:(CGPathRef)path context:(CGContextRef)ctx;
 
