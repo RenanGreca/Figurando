@@ -128,6 +128,7 @@
 		1F62D7951B35B1F600522021 /* vestido.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7621B35B1F600522021 /* vestido.mp3 */; };
 		1F62D7961B35B1F600522021 /* xícara.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7631B35B1F600522021 /* xícara.mp3 */; };
 		1F62D7981B35C0A300522021 /* xícara.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7971B35C0A300522021 /* xícara.png */; };
+		1FE0E8BF1B3841C1002984D7 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0E8BE1B3841C1002984D7 /* Functions.swift */; };
 		1FE92A281B34DCAB00D96A15 /* CHUBBY.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */; };
 		3357A676F696D40E73491E79 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F556C33CECEDD25E7DD652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6CC7CA8A1B38436C00045F23 /* marca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7CA891B38436C00045F23 /* marca.jpg */; };
@@ -274,6 +275,7 @@
 		1F62D7621B35B1F600522021 /* vestido.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = vestido.mp3; sourceTree = "<group>"; };
 		1F62D7631B35B1F600522021 /* xícara.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "xícara.mp3"; sourceTree = "<group>"; };
 		1F62D7971B35C0A300522021 /* xícara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xícara.png"; sourceTree = "<group>"; };
+		1FE0E8BE1B3841C1002984D7 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = CHUBBY.TTF; sourceTree = "<group>"; };
 		340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		55F556C33CECEDD25E7DD652 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -409,6 +411,7 @@
 		1F2CEF191B30C769006B3D6D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1FE0E8BE1B3841C1002984D7 /* Functions.swift */,
 				1F2CEF151B30C763006B3D6D /* ObjectList.swift */,
 				1F2CEF161B30C763006B3D6D /* Object.swift */,
 				E43B17F01B30D1F5004EDDAD /* objects.json */,
@@ -881,6 +884,7 @@
 				1F2CEF171B30C763006B3D6D /* ObjectList.swift in Sources */,
 				E49885B31B348EE100A5AFEC /* QuestionRecord.swift in Sources */,
 				1CD999081B2F6B90000968A1 /* KidsTableViewController.swift in Sources */,
+				1FE0E8BF1B3841C1002984D7 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
