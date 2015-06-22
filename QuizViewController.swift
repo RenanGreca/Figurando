@@ -22,14 +22,18 @@ class QuizViewController: UIViewController {
     
     var records: Array<QuestionRecord> = []
     var timerCounter = 0
-    var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: QuizViewController.self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
-    
+
     var objects : Array<Object> = []
     var indexObjectToIdentify : Int = 0
     var quizMode: QuestionTypes?
     var buttonPressed: Int?
     var audioPlayer = AVAudioPlayer()
     
+    var seconds = 0.0
+    var timer = NSTimer()
+    
+    var questionToRead: String?
+
     enum QuestionTypes: Int {
         case soundToText, soundToImage, imageToText, textToImage
         
@@ -71,17 +75,20 @@ class QuizViewController: UIViewController {
             questionLabel.text = "Qual é a imagem da palavra \(objects[indexObjectToIdentify].name)?"
         case .soundToImage:
             questionLabel.text = "Qual é a imagem da palavra ouvida?"
+            questionToRead = "frase3"
+            
             let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
              audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
             audioPlayer.play()
+            
+            repeatSound()
         case .soundToText:
             questionLabel.text = "Qual foi a palavra ouvida?"
+            questionToRead = "frase4"
             
-            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
-            audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
-            audioPlayer.play()
             
-            println("Duracao da palavra \(objects)")
+            repeatSound()
+            println("Duracao da palavra \(audioPlayer.duration)")
         }
 
     
@@ -102,9 +109,32 @@ class QuizViewController: UIViewController {
         
     }
 //    
-//    func repeatSound(){
-//        var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("play"), userInfo: nil, repeats: true)
-//    }
+    func repeatSound(){
+        let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), questionToRead, "mp3", nil)
+        audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
+        audioPlayer.play()
+
+        setupTimer()
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "doCountdown:", userInfo: nil, repeats: true)
+    
+    }
+    
+    
+    func setupTimer()  {
+        seconds = audioPlayer.duration - 1
+    }
+    
+    func doCountdown(timer: NSTimer) {
+        if(seconds > 0)  {
+            seconds--
+        }else{
+            //timer.invalidate()
+            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
+            audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
+            audioPlayer.play()
+            timer.invalidate()
+        }
+    }
     
     
     func clearOptions(){
