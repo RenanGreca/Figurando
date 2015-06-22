@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        application.statusBarStyle = .LightContent
+        application.statusBarStyle = UIStatusBarStyle.LightContent
 
         let attributes = [NSFontAttributeName: UIFont(name: "ChubbyCheeks", size: 34)!,
             NSForegroundColorAttributeName: UIColor(red: 247.0/255.0, green: 240.0/255.0, blue: 213.0/255.0, alpha: 1.0)]

@@ -32,15 +32,17 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
         super.viewDidLoad()
         let tap = UITapGestureRecognizer(target: self, action: Selector("selectPie:"))
         tap.numberOfTapsRequired = 1
-        viewGraph.addGestureRecognizer(tap)
+        self.view.addGestureRecognizer(tap)
         
         
         
         
         
-        graph.frame = CGRectMake(30, 30, 400, 400)
-        
-        
+        graph.frame = CGRectMake(10, 10, 400, 400)
+        graph.maxRadius = 150
+        graph.minRadius = 25
+        graph.startAngle = 180
+        graph.endAngle = 0
         
         var elementOne = PieElement(value: 20, color: UIColor(red: 228/255, green: 241/255, blue: 254/255, alpha: 1))
         var elementTwo = PieElement(value: 20, color: UIColor(red: 197/255, green: 239/255, blue: 247/255, alpha: 1))
@@ -107,19 +109,20 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
     }
     
     func selectPie (tap : UIGestureRecognizer) {
-        let pointOnGraph = tap.locationInView(self.viewGraph)
+        let pointOnGraph = tap.locationInView(viewGraph)
         let elementOfGraph = graph.pieElemInPoint(pointOnGraph)
         
         if (elementOfGraph != nil){
-            if !(elementOfGraph.centrOffset == 2 || shouldMovePie){
+            print("elemento isnt nil")
+            if (elementOfGraph.centrOffset == 2 && shouldMovePie){
                 PieElement.animateChanges{
-                    elementOfGraph.centrOffset += 20
+                    elementOfGraph.centrOffset = 22
                 }
                 shouldMovePie = false
                 updatePieSliceInfo(pointOnGraph)
             }else{
                 PieElement.animateChanges{
-                    elementOfGraph.centrOffset -= 20
+                    elementOfGraph.centrOffset = 2
                 }
                 shouldMovePie = true
             }

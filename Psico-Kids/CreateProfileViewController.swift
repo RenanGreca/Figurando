@@ -22,9 +22,16 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var mothersName: UITextField!
     @IBOutlet weak var parentsNumber: UITextField!
     
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     @IBOutlet weak var yPositionForProfilePic: NSLayoutConstraint!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        saveButton.enabled = false
+        
+        selectPhoto.image = UIImage(named: "child.jpg")
+        selectPhoto.contentMode = UIViewContentMode.ScaleAspectFit
 
         var tap = UITapGestureRecognizer(target: self, action: Selector("tapped:"))
         tap.numberOfTapsRequired = 1
@@ -72,8 +79,21 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
     func keyboardWillDisappear(notification: NSNotification){
             yPositionForProfilePic.constant -= 120
             self.view.center.y += 250
+    
     }
     
+    func checkIfTextFieldsAreNotEmpty () {
+        
+        if ((count(kidsName.text) != 0) &&
+            (count(kidsAge.text) != 0) &&
+            (count(kidsGender.text) != 0) &&
+            (count(fathersName.text) != 0) &&
+            (count(mothersName.text) != 0) &&
+            (count(parentsNumber.text) != 0)){
+                saveButton.enabled = true
+        }
+        
+    }
     
     @IBAction func saveData(sender: AnyObject) {
         
@@ -89,6 +109,7 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
         
         if isItEditing {
             
+            checkIfTextFieldsAreNotEmpty()
             orderedkidsList[selectedIndexPath.section].removeObjectAtIndex(selectedIndexPath.row)
             updateCVSData()
             readAllDataFromFiles()

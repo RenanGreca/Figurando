@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tWJ-6x-NY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tWJ-6x-NY0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -238,6 +238,7 @@
                         <outlet property="kidsName" destination="ycK-we-GXM" id="3Ud-Y6-fAb"/>
                         <outlet property="mothersName" destination="zqX-z7-wId" id="5XI-Ni-FIE"/>
                         <outlet property="parentsNumber" destination="T8u-i9-R0d" id="CVj-Hq-9jy"/>
+                        <outlet property="saveButton" destination="bII-WD-J4P" id="RiG-or-ZDk"/>
                         <outlet property="selectPhoto" destination="Jjx-eB-St8" id="pc0-8c-sEJ"/>
                         <outlet property="yPositionForProfilePic" destination="ToT-dD-71t" id="eyJ-TT-FWW"/>
                     </connections>
@@ -324,21 +325,21 @@
                                         <rect key="frame" x="205" y="76" width="163" height="33.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantidade de vezes jogadas: XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgc-iF-wMg">
                                         <rect key="frame" x="122" y="129" width="346" height="29"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Média de segundos por partida: XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McC-EI-PPa">
                                         <rect key="frame" x="120" y="165.5" width="363.5" height="29"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -390,8 +391,11 @@
                         <outlet property="ageAndGenderOfKid" destination="eTE-Ci-m59" id="skT-lZ-9n0"/>
                         <outlet property="backgroundImage" destination="sfH-1b-CCf" id="Eo0-Tf-to6"/>
                         <outlet property="contactOfKid" destination="hhe-Dd-IuB" id="1c1-cd-xnY"/>
+                        <outlet property="levelNumber" destination="Wey-n2-yTF" id="axl-3A-SYE"/>
+                        <outlet property="medTimes" destination="McC-EI-PPa" id="cHL-u9-gcm"/>
                         <outlet property="nameOfKid" destination="680-I0-XTt" id="48d-dJ-Bvo"/>
                         <outlet property="parentsOfKid" destination="taI-4A-hmu" id="RNe-nr-Ob2"/>
+                        <outlet property="playedTimes" destination="hgc-iF-wMg" id="B2b-iQ-2sz"/>
                         <outlet property="profileImage" destination="GY9-qJ-o7W" id="46I-34-rEm"/>
                         <outlet property="viewGraph" destination="owO-PJ-D3F" id="EWA-ZQ-c5v"/>
                     </connections>
