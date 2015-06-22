@@ -74,21 +74,16 @@ class QuizViewController: UIViewController {
         case .textToImage:
             questionLabel.text = "Qual é a imagem da palavra \(objects[indexObjectToIdentify].name)?"
         case .soundToImage:
+            
             questionLabel.text = "Qual é a imagem da palavra ouvida?"
             questionToRead = "frase3"
-            
-            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
-             audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
-            audioPlayer.play()
-            
             repeatSound()
+            
         case .soundToText:
+            
             questionLabel.text = "Qual foi a palavra ouvida?"
             questionToRead = "frase4"
-            
-            
             repeatSound()
-            println("Duracao da palavra \(audioPlayer.duration)")
         }
 
     
@@ -121,14 +116,13 @@ class QuizViewController: UIViewController {
     
     
     func setupTimer()  {
-        seconds = audioPlayer.duration - 1
+        seconds = audioPlayer.duration - 2
     }
     
     func doCountdown(timer: NSTimer) {
         if(seconds > 0)  {
             seconds--
         }else{
-            //timer.invalidate()
             let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
             audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
             audioPlayer.play()

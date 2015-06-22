@@ -44,7 +44,7 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
         graph.startAngle = 180
         graph.endAngle = 0
         
-        var elementOne = PieElement(value: 20, color: UIColor(red: 228/255, green: 241/255, blue: 254/255, alpha: 1))
+        var elementOne = PieElement(value: 50, color: UIColor(red: 228/255, green: 241/255, blue: 254/255, alpha: 1))
         var elementTwo = PieElement(value: 20, color: UIColor(red: 197/255, green: 239/255, blue: 247/255, alpha: 1))
         var elementThree = PieElement(value: 20, color: UIColor(red: 107/255, green: 185/255, blue: 240/255, alpha: 1))
         var elementFour = PieElement(value: 20, color: UIColor(red: 100/255, green: 185/255, blue: 240/255, alpha: 1))
