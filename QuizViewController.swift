@@ -22,8 +22,7 @@ class QuizViewController: UIViewController {
     
     var records: Array<QuestionRecord> = []
     var timerCounter = 0
-    var relogioQuestoes = NSTimer.scheduledTimerWithTimeInterval(1, target: QuizViewController.self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
-    
+    var questionTimer = NSTimer()
 
 
     var objects : Array<Object> = []
@@ -37,6 +36,8 @@ class QuizViewController: UIViewController {
     
     var questionToRead: String?
 
+    
+    
     enum QuestionTypes: Int {
         case soundToText, soundToImage, imageToText, textToImage
         
@@ -69,6 +70,9 @@ class QuizViewController: UIViewController {
         indexObjectToIdentify = Int(arc4random_uniform(UInt32(objects.count)))
         quizMode = QuestionTypes.random()
         
+        
+        questionTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+
         
         switch quizMode! {
         case .imageToText:
@@ -139,7 +143,7 @@ class QuizViewController: UIViewController {
         option1Button.setImage(nil, forState: UIControlState.Normal)
         option2Button.setImage(nil, forState: UIControlState.Normal)
         option3Button.setImage(nil, forState: UIControlState.Normal)
-        relogioQuestoes.invalidate()
+        questionTimer.invalidate()
         timerCounter = 0
 
     }
@@ -148,7 +152,10 @@ class QuizViewController: UIViewController {
 
         var questionRecord = QuestionRecord(objectToIdentify: objects[indexObjectToIdentify].name, option1: objects[0].name, option2: objects[1].name, option3: objects[2].name, selectedOption: buttonPressed!, elapsedTimeInSeconds: timerCounter, questionType: quizMode!.rawValue)
         
-        println("Asked: \(objects[indexObjectToIdentify].name), Object selected: \(objects[buttonPressed! - 1].name)")
+        records.append(questionRecord)
+        
+        
+        println("Asked: \(objects[indexObjectToIdentify].name), Object selected: \(objects[buttonPressed! - 1].name), time taken: \(timerCounter)")
         
     }
     
