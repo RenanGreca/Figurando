@@ -22,8 +22,9 @@ class QuizViewController: UIViewController {
     
     var records: Array<QuestionRecord> = []
     var timerCounter = 0
-    var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: QuizViewController.self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
-    
+    var questionTimer = NSTimer()
+
+
     var objects : Array<Object> = []
     var indexObjectToIdentify : Int = 0
     var quizMode: QuestionTypes?
@@ -32,6 +33,13 @@ class QuizViewController: UIViewController {
     var modes: Array<QuestionTypes> = []
     var mode: Int = 0
     var numberOfQuestions: Int = 0
+    
+    var seconds = 0.0
+    var timer = NSTimer()
+    
+    var questionToRead: String?
+
+    
     
     enum QuestionTypes: Int {
         case soundToText, soundToImage, imageToText, textToImage
@@ -75,6 +83,9 @@ class QuizViewController: UIViewController {
         //quizMode = QuestionTypes.random()
         quizMode = modes[mode++]
         
+        questionTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+
+        
         switch quizMode! {
         case .imageToText:
             questionLabel.text = "Qual é a palavra da imagem abaixo?"
@@ -82,18 +93,16 @@ class QuizViewController: UIViewController {
         case .textToImage:
             questionLabel.text = "Qual é a imagem da palavra \(objects[indexObjectToIdentify].name)?"
         case .soundToImage:
+            
             questionLabel.text = "Qual é a imagem da palavra ouvida?"
-            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
-             audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
-            audioPlayer.play()
+            questionToRead = "frase3"
+            repeatSound()
+            
         case .soundToText:
+            
             questionLabel.text = "Qual foi a palavra ouvida?"
-            
-            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
-            audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
-            audioPlayer.play()
-            
-            println("Duracao da palavra \(objects)")
+            questionToRead = "frase4"
+            repeatSound()
         }
 
     
@@ -114,9 +123,31 @@ class QuizViewController: UIViewController {
         numberOfQuestions++
     }
 //    
-//    func repeatSound(){
-//        var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("play"), userInfo: nil, repeats: true)
-//    }
+    func repeatSound(){
+        let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), questionToRead, "mp3", nil)
+        audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
+        audioPlayer.play()
+
+        setupTimer()
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "doCountdown:", userInfo: nil, repeats: true)
+    
+    }
+    
+    
+    func setupTimer()  {
+        seconds = audioPlayer.duration - 2
+    }
+    
+    func doCountdown(timer: NSTimer) {
+        if(seconds > 0)  {
+            seconds--
+        }else{
+            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
+            audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
+            audioPlayer.play()
+            timer.invalidate()
+        }
+    }
     
     
     func clearOptions(){
@@ -124,7 +155,7 @@ class QuizViewController: UIViewController {
         option1Button.setImage(nil, forState: UIControlState.Normal)
         option2Button.setImage(nil, forState: UIControlState.Normal)
         option3Button.setImage(nil, forState: UIControlState.Normal)
-        timer.invalidate()
+        questionTimer.invalidate()
         timerCounter = 0
 
     }
@@ -133,7 +164,10 @@ class QuizViewController: UIViewController {
 
         var questionRecord = QuestionRecord(objectToIdentify: objects[indexObjectToIdentify].name, option1: objects[0].name, option2: objects[1].name, option3: objects[2].name, selectedOption: buttonPressed!, elapsedTimeInSeconds: timerCounter, questionType: quizMode!.rawValue)
         
-        println("Asked: \(objects[indexObjectToIdentify].name), Object selected: \(objects[buttonPressed! - 1].name)")
+        records.append(questionRecord)
+        
+        
+        println("Asked: \(objects[indexObjectToIdentify].name), Object selected: \(objects[buttonPressed! - 1].name), time taken: \(timerCounter)")
         
     }
     
