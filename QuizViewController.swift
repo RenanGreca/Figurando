@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import AVFoundation
 
 class QuizViewController: UIViewController {
 
@@ -20,11 +21,25 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var option3Button: UIButton!
     
     var records: Array<QuestionRecord> = []
-    
+    var timerCounter = 0
+    var questionTimer = NSTimer()
+
+
     var objects : Array<Object> = []
     var indexObjectToIdentify : Int = 0
     var quizMode: QuestionTypes?
     var buttonPressed: Int?
+    var audioPlayer = AVAudioPlayer()
+    var modes: Array<QuestionTypes> = []
+    var mode: Int = 0
+    var numberOfQuestions: Int = 0
+    
+    var seconds = 0.0
+    var timer = NSTimer()
+    
+    var questionToRead: String?
+
+    
     
     enum QuestionTypes: Int {
         case soundToText, soundToImage, imageToText, textToImage
@@ -44,15 +59,32 @@ class QuizViewController: UIViewController {
 
         ObjectList.Static.instance.populate()
         nextQuestion()
+        
+        modes = [.soundToText, .soundToImage, .imageToText, .textToImage]
+        modes = modes + modes + modes + modes
+        modes.shuffle()
     
+    }
+    
+    func updateTimer() {
+        timerCounter++
     }
     
     func nextQuestion() {
         clearOptions()
+
+        if numberOfQuestions >= 12 {
+            println("Faça alguma coisa aqui")
+            return
+        }
         
         objects = ObjectList.Static.instance.getRandomObjects(3)
         indexObjectToIdentify = Int(arc4random_uniform(UInt32(objects.count)))
-        quizMode = QuestionTypes.random()
+        //quizMode = QuestionTypes.random()
+        quizMode = modes[mode++]
+        
+        questionTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+
         
         switch quizMode! {
         case .imageToText:
@@ -61,9 +93,16 @@ class QuizViewController: UIViewController {
         case .textToImage:
             questionLabel.text = "Qual é a imagem da palavra \(objects[indexObjectToIdentify].name)?"
         case .soundToImage:
+            
             questionLabel.text = "Qual é a imagem da palavra ouvida?"
+            questionToRead = "frase3"
+            repeatSound()
+            
         case .soundToText:
+            
             questionLabel.text = "Qual foi a palavra ouvida?"
+            questionToRead = "frase4"
+            repeatSound()
         }
 
     
@@ -81,22 +120,54 @@ class QuizViewController: UIViewController {
 //        option1Label.text = "\(objects[0].name)"
 //        option1Label.text = "\(objects[0].name)"
 
-        
+        numberOfQuestions++
     }
+//    
+    func repeatSound(){
+        let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), questionToRead, "mp3", nil)
+        audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
+        audioPlayer.play()
+
+        setupTimer()
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "doCountdown:", userInfo: nil, repeats: true)
+    
+    }
+    
+    
+    func setupTimer()  {
+        seconds = audioPlayer.duration - 2
+    }
+    
+    func doCountdown(timer: NSTimer) {
+        if(seconds > 0)  {
+            seconds--
+        }else{
+            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
+            audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
+            audioPlayer.play()
+            timer.invalidate()
+        }
+    }
+    
     
     func clearOptions(){
         questionImageView.image = nil
         option1Button.setImage(nil, forState: UIControlState.Normal)
         option2Button.setImage(nil, forState: UIControlState.Normal)
         option3Button.setImage(nil, forState: UIControlState.Normal)
+        questionTimer.invalidate()
+        timerCounter = 0
 
     }
     
     func recordAnswer(){
 
-        var questionRecord = QuestionRecord(objectToIdentify: objects[indexObjectToIdentify].name, option1: objects[0].name, option2: objects[1].name, option3: objects[2].name, selectedOption: buttonPressed!, elapsedTimeInSeconds: 0, questionType: quizMode!.rawValue)
+        var questionRecord = QuestionRecord(objectToIdentify: objects[indexObjectToIdentify].name, option1: objects[0].name, option2: objects[1].name, option3: objects[2].name, selectedOption: buttonPressed!, elapsedTimeInSeconds: timerCounter, questionType: quizMode!.rawValue)
         
-        println("Asked: \(objects[indexObjectToIdentify].name), Object selected: \(objects[buttonPressed! - 1].name)")
+        records.append(questionRecord)
+        
+        
+        println("Asked: \(objects[indexObjectToIdentify].name), Object selected: \(objects[buttonPressed! - 1].name), time taken: \(timerCounter)")
         
     }
     
