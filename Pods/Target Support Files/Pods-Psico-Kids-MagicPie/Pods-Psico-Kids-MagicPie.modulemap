@@ -1,0 +1,6 @@
+framework module MagicPie {
+  umbrella header "Pods-Psico-Kids-MagicPie-umbrella.h"
+
+  export *
+  module * { export * }
+}

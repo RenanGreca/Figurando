@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import AVFoundation
 
 class QuizViewController: UIViewController {
 
@@ -20,11 +21,14 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var option3Button: UIButton!
     
     var records: Array<QuestionRecord> = []
+    var timerCounter = 0
+    var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: QuizViewController.self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
     
     var objects : Array<Object> = []
     var indexObjectToIdentify : Int = 0
     var quizMode: QuestionTypes?
     var buttonPressed: Int?
+    var audioPlayer = AVAudioPlayer()
     
     enum QuestionTypes: Int {
         case soundToText, soundToImage, imageToText, textToImage
@@ -47,12 +51,17 @@ class QuizViewController: UIViewController {
     
     }
     
+    func updateTimer() {
+        timerCounter++
+    }
+    
     func nextQuestion() {
         clearOptions()
         
         objects = ObjectList.Static.instance.getRandomObjects(3)
         indexObjectToIdentify = Int(arc4random_uniform(UInt32(objects.count)))
         quizMode = QuestionTypes.random()
+        
         
         switch quizMode! {
         case .imageToText:
@@ -62,8 +71,17 @@ class QuizViewController: UIViewController {
             questionLabel.text = "Qual é a imagem da palavra \(objects[indexObjectToIdentify].name)?"
         case .soundToImage:
             questionLabel.text = "Qual é a imagem da palavra ouvida?"
+            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
+             audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
+            audioPlayer.play()
         case .soundToText:
             questionLabel.text = "Qual foi a palavra ouvida?"
+            
+            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
+            audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
+            audioPlayer.play()
+            
+            println("Duracao da palavra \(objects)")
         }
 
     
@@ -83,18 +101,25 @@ class QuizViewController: UIViewController {
 
         
     }
+//    
+//    func repeatSound(){
+//        var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("play"), userInfo: nil, repeats: true)
+//    }
+    
     
     func clearOptions(){
         questionImageView.image = nil
         option1Button.setImage(nil, forState: UIControlState.Normal)
         option2Button.setImage(nil, forState: UIControlState.Normal)
         option3Button.setImage(nil, forState: UIControlState.Normal)
+        timer.invalidate()
+        timerCounter = 0
 
     }
     
     func recordAnswer(){
 
-        var questionRecord = QuestionRecord(objectToIdentify: objects[indexObjectToIdentify].name, option1: objects[0].name, option2: objects[1].name, option3: objects[2].name, selectedOption: buttonPressed!, elapsedTimeInSeconds: 0, questionType: quizMode!.rawValue)
+        var questionRecord = QuestionRecord(objectToIdentify: objects[indexObjectToIdentify].name, option1: objects[0].name, option2: objects[1].name, option3: objects[2].name, selectedOption: buttonPressed!, elapsedTimeInSeconds: timerCounter, questionType: quizMode!.rawValue)
         
         println("Asked: \(objects[indexObjectToIdentify].name), Object selected: \(objects[buttonPressed! - 1].name)")
         
