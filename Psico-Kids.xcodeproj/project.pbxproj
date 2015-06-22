@@ -618,6 +618,7 @@
 				TargetAttributes = {
 					1CD998DF1B2F69FA000968A1 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = TQ57BUPEGC;
 					};
 					1CD998F41B2F69FA000968A1 = {
 						CreatedOnToolsVersion = 6.3.2;

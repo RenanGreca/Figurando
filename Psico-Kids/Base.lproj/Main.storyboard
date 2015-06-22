@@ -14,7 +14,7 @@
             <objects>
                 <tableViewController id="Vgm-EQ-V1K" customClass="KidsTableViewController" customModule="Psico_Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="22" sectionFooterHeight="22" id="EQd-bF-Xbe">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,7 +82,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Figurando" id="xyz-5g-hL0">
-                        <barButtonItem key="leftBarButtonItem" title="Configurar" id="cqb-tv-iPV"/>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="uxk-Be-gy5">
                             <connections>
                                 <segue destination="3mu-XH-z1e" kind="show" id="P6O-uy-PsX"/>
@@ -106,20 +105,20 @@
                         <viewControllerLayoutGuide type="bottom" id="y0p-MN-MWo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="HtZ-E2-cUQ">
-                        <rect key="frame" x="0.0" y="0.0" width="1200" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gzc-x1-MkY">
-                                <rect key="frame" x="0.0" y="64" width="1200" height="300"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="300"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="2PY-D6-BFT"/>
                                 </constraints>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VhS-3b-ris">
-                                <rect key="frame" x="0.0" y="64" width="1200" height="300"/>
+                                <rect key="frame" x="0.0" y="64" width="768" height="300"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UzI-4p-lhI">
-                                    <rect key="frame" x="0.0" y="0.0" width="1200" height="300"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="300"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <animations/>
                                 </view>
@@ -228,8 +227,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="1200" height="600"/>
                     <connections>
                         <outlet property="backgroundImage" destination="Gzc-x1-MkY" id="Awg-6O-DVi"/>
                         <outlet property="fathersName" destination="aQb-2U-oTA" id="aHb-HR-uKR"/>
@@ -245,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bsT-2X-w0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="966"/>
+            <point key="canvasLocation" x="1251" y="1520"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="eBN-tz-hnk">
@@ -256,11 +253,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wCv-RQ-wU4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="XWf-9M-ICh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sfH-1b-CCf">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfH-1b-CCf">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="252"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="208" id="30M-mp-usM"/>
@@ -272,10 +269,10 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFv-Ce-GO1">
-                                <rect key="frame" x="-700" y="0.0" width="2000" height="250"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CFv-Ce-GO1">
+                                <rect key="frame" x="-896" y="0.0" width="2560" height="252"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5l7-59-2Ea">
-                                    <rect key="frame" x="0.0" y="0.0" width="2000" height="250"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="2560" height="252"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <animations/>
                                 </view>
@@ -318,38 +315,50 @@
                                 <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owO-PJ-D3F">
-                                <rect key="frame" x="16" y="250" width="568" height="286"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="owO-PJ-D3F">
+                                <rect key="frame" x="16" y="250" width="736" height="712"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primeira Fase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wey-n2-yTF">
-                                        <rect key="frame" x="205" y="76" width="163" height="34"/>
+                                        <rect key="frame" x="373" y="76" width="163" height="34"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantidade de vezes jogadas: XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgc-iF-wMg">
-                                        <rect key="frame" x="122" y="129" width="346" height="29"/>
+                                        <rect key="frame" x="290" y="129" width="346" height="29"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Média de segundos por partida: XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McC-EI-PPa">
-                                        <rect key="frame" x="120" y="166" width="364" height="29"/>
+                                        <rect key="frame" x="288" y="166" width="364" height="29"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Url-n7-Bh6">
+                                        <rect key="frame" x="325" y="612" width="86" height="30"/>
+                                        <state key="normal" title="Aplicar teste">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="E2y-Bp-Trz" kind="show" id="SIg-k3-Ky8"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstItem="Url-n7-Bh6" firstAttribute="centerX" secondItem="owO-PJ-D3F" secondAttribute="centerX" id="Azg-jc-wTT"/>
                                     <constraint firstItem="Wey-n2-yTF" firstAttribute="centerX" secondItem="hgc-iF-wMg" secondAttribute="centerX" constant="-8.5" id="GcW-aM-6Cx"/>
                                     <constraint firstAttribute="trailing" secondItem="Wey-n2-yTF" secondAttribute="trailing" constant="200" id="P0N-h2-sqL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Url-n7-Bh6" secondAttribute="bottom" constant="70" id="Tsc-G4-6mf"/>
                                     <constraint firstItem="Wey-n2-yTF" firstAttribute="top" secondItem="owO-PJ-D3F" secondAttribute="top" constant="76" id="hk3-aX-5Xb"/>
                                     <constraint firstItem="McC-EI-PPa" firstAttribute="centerX" secondItem="hgc-iF-wMg" secondAttribute="centerX" constant="6.5" id="w8O-qw-OAT"/>
                                     <constraint firstItem="McC-EI-PPa" firstAttribute="top" secondItem="hgc-iF-wMg" secondAttribute="bottom" constant="8" id="wIN-D5-diF"/>
+                                    <constraint firstItem="Url-n7-Bh6" firstAttribute="top" secondItem="owO-PJ-D3F" secondAttribute="top" constant="612" id="wwP-rv-I4r"/>
                                     <constraint firstItem="hgc-iF-wMg" firstAttribute="top" secondItem="Wey-n2-yTF" secondAttribute="bottom" constant="19.5" id="zX7-pG-NNL"/>
                                 </constraints>
                             </view>
@@ -402,13 +411,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yr-rR-gho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="221"/>
+            <point key="canvasLocation" x="1731" y="221"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tdp-4P-fhp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tWJ-6x-NY0" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="768" height="1024"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="isL-Mq-3HE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -416,57 +427,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="3yr-J6-MDI" kind="relationship" relationship="rootViewController" id="3dU-Lv-EVW"/>
+                        <segue destination="Vgm-EQ-V1K" kind="relationship" relationship="rootViewController" id="rfc-tA-oQo"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VNP-1l-TUG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1075" y="213"/>
-        </scene>
-        <!--Figurando-->
-        <scene sceneID="GF9-SM-AX9">
-            <objects>
-                <viewController id="3yr-J6-MDI" customClass="ViewController" customModule="Psico_Kids" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NQh-yn-YKQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="inZ-R0-pjm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="TI7-9q-SDh">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIY-zI-9Ju">
-                                <rect key="frame" x="279" y="253" width="43" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Jogar!">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="E2y-Bp-Trz" kind="show" id="mQx-O6-Wsl"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="pIY-zI-9Ju" secondAttribute="centerX" id="SaC-c5-tqj"/>
-                            <constraint firstAttribute="centerY" secondItem="pIY-zI-9Ju" secondAttribute="centerY" id="iLK-RV-l5U"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Figurando" id="Rv3-j7-21w">
-                        <barButtonItem key="rightBarButtonItem" title="Crianças" id="SHH-JG-Ukl">
-                            <connections>
-                                <segue destination="Vgm-EQ-V1K" kind="show" id="u8F-al-yvH"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="btnJogar" destination="pIY-zI-9Ju" id="XWu-07-sZc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KOj-yI-LAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-223" y="213"/>
+            <point key="canvasLocation" x="-451" y="221"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="PcJ-Q0-Sjc">
@@ -480,7 +446,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0030.png" translatesAutoresizingMaskIntoConstraints="NO" id="grL-Fn-52D">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="0030.png" translatesAutoresizingMaskIntoConstraints="NO" id="grL-Fn-52D">
                                 <rect key="frame" x="432" y="122" width="160" height="160"/>
                                 <animations/>
                             </imageView>
@@ -603,13 +569,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jox-j2-5Ur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="225" y="1100"/>
+            <point key="canvasLocation" x="2425" y="1520"/>
         </scene>
     </scenes>
     <resources>
         <image name="0030.png" width="160" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3hM-Jt-7X1"/>
+        <segue reference="P6O-uy-PsX"/>
     </inferredMetricsTieBreakers>
 </document>
