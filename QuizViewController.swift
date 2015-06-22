@@ -58,12 +58,12 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
 
         ObjectList.Static.instance.populate()
-        nextQuestion()
         
         modes = [.soundToText, .soundToImage, .imageToText, .textToImage]
         modes = modes + modes + modes + modes
         modes.shuffle()
     
+        nextQuestion()
     }
     
     func updateTimer() {

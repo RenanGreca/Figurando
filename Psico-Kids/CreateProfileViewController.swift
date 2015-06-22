@@ -141,7 +141,6 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
                                                         ";" + parentsNumber.text + ";$")
 
         newProfile.writeToFile(filePath, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
-    
         
         self.navigationController?.popViewControllerAnimated(true)
     }
