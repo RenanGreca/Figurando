@@ -21,6 +21,8 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var option3Button: UIButton!
     
     var records: Array<QuestionRecord> = []
+    var timerCounter = 0
+    var timer = NSTimer.scheduledTimerWithTimeInterval(1, target: QuizViewController.self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
     
     var objects : Array<Object> = []
     var indexObjectToIdentify : Int = 0
@@ -47,6 +49,10 @@ class QuizViewController: UIViewController {
         ObjectList.Static.instance.populate()
         nextQuestion()
     
+    }
+    
+    func updateTimer() {
+        timerCounter++
     }
     
     func nextQuestion() {
@@ -106,12 +112,14 @@ class QuizViewController: UIViewController {
         option1Button.setImage(nil, forState: UIControlState.Normal)
         option2Button.setImage(nil, forState: UIControlState.Normal)
         option3Button.setImage(nil, forState: UIControlState.Normal)
+        timer.invalidate()
+        timerCounter = 0
 
     }
     
     func recordAnswer(){
 
-        var questionRecord = QuestionRecord(objectToIdentify: objects[indexObjectToIdentify].name, option1: objects[0].name, option2: objects[1].name, option3: objects[2].name, selectedOption: buttonPressed!, elapsedTimeInSeconds: 0, questionType: quizMode!.rawValue)
+        var questionRecord = QuestionRecord(objectToIdentify: objects[indexObjectToIdentify].name, option1: objects[0].name, option2: objects[1].name, option3: objects[2].name, selectedOption: buttonPressed!, elapsedTimeInSeconds: timerCounter, questionType: quizMode!.rawValue)
         
         println("Asked: \(objects[indexObjectToIdentify].name), Object selected: \(objects[buttonPressed! - 1].name)")
         
