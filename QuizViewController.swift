@@ -29,6 +29,9 @@ class QuizViewController: UIViewController {
     var quizMode: QuestionTypes?
     var buttonPressed: Int?
     var audioPlayer = AVAudioPlayer()
+    var modes: Array<QuestionTypes> = []
+    var mode: Int = 0
+    var numberOfQuestions: Int = 0
     
     enum QuestionTypes: Int {
         case soundToText, soundToImage, imageToText, textToImage
@@ -48,6 +51,10 @@ class QuizViewController: UIViewController {
 
         ObjectList.Static.instance.populate()
         nextQuestion()
+        
+        modes = [.soundToText, .soundToImage, .imageToText, .textToImage]
+        modes = modes + modes + modes + modes
+        modes.shuffle()
     
     }
     
@@ -57,11 +64,16 @@ class QuizViewController: UIViewController {
     
     func nextQuestion() {
         clearOptions()
+
+        if numberOfQuestions >= 12 {
+            println("Faça alguma coisa aqui")
+            return
+        }
         
         objects = ObjectList.Static.instance.getRandomObjects(3)
         indexObjectToIdentify = Int(arc4random_uniform(UInt32(objects.count)))
-        quizMode = QuestionTypes.random()
-        
+        //quizMode = QuestionTypes.random()
+        quizMode = modes[mode++]
         
         switch quizMode! {
         case .imageToText:
@@ -99,7 +111,7 @@ class QuizViewController: UIViewController {
 //        option1Label.text = "\(objects[0].name)"
 //        option1Label.text = "\(objects[0].name)"
 
-        
+        numberOfQuestions++
     }
 //    
 //    func repeatSound(){
