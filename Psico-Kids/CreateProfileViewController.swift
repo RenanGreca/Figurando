@@ -25,13 +25,16 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     @IBOutlet weak var yPositionForProfilePic: NSLayoutConstraint!
+    
+    var yValueForView: CGFloat = 0
+    var yValueForPhoto: CGFloat = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        saveButton.enabled = false
         
         selectPhoto.image = UIImage(named: "child.jpg")
-        selectPhoto.contentMode = UIViewContentMode.ScaleAspectFit
+        selectPhoto.contentMode = UIViewContentMode.ScaleAspectFill
 
         var tap = UITapGestureRecognizer(target: self, action: Selector("tapped:"))
         tap.numberOfTapsRequired = 1
@@ -72,13 +75,17 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
     }
     
     func keyboardWillAppear(notification: NSNotification){
-        yPositionForProfilePic.constant += 120
-        self.view.center.y -= 250
+        if yValueForView == 0 {
+            yValueForView = self.view.center.y
+            yValueForPhoto = yPositionForProfilePic.constant
+        }
+        yPositionForProfilePic.constant = yValueForPhoto + 120
+        self.view.center.y = yValueForView - 250
     }
     
     func keyboardWillDisappear(notification: NSNotification){
-            yPositionForProfilePic.constant -= 120
-            self.view.center.y += 250
+            yPositionForProfilePic.constant = yValueForPhoto
+            self.view.center.y = yValueForView
     
     }
     
@@ -96,6 +103,15 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
     }
     
     @IBAction func saveData(sender: AnyObject) {
+        
+        if ((count(kidsName.text) == 0) &&
+            (count(kidsAge.text) == 0) &&
+            (count(kidsGender.text) == 0) &&
+            (count(fathersName.text) == 0) &&
+            (count(mothersName.text) == 0) &&
+            (count(parentsNumber.text) == 0)){
+                return
+        }
         
         let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
         var filePath = documentsPath[0]
