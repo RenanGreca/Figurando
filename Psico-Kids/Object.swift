@@ -15,7 +15,7 @@ class Object {
     init(name: String) {
         self.name = name
         self.img = NSBundle.mainBundle().pathForResource(name, ofType: "png")!
-        self.sound = ""// NSBundle.mainBundle().pathForResource(name, ofType: "mp3")!
+        self.sound = ""//NSBundle.mainBundle().pathForResource(name, ofType: "mp3")!
     }
     
 }

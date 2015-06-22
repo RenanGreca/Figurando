@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import AVFoundation
 
 class QuizViewController: UIViewController {
 
@@ -25,6 +26,7 @@ class QuizViewController: UIViewController {
     var indexObjectToIdentify : Int = 0
     var quizMode: QuestionTypes?
     var buttonPressed: Int?
+    var audioPlayer = AVAudioPlayer()
     
     enum QuestionTypes: Int {
         case soundToText, soundToImage, imageToText, textToImage
@@ -54,6 +56,7 @@ class QuizViewController: UIViewController {
         indexObjectToIdentify = Int(arc4random_uniform(UInt32(objects.count)))
         quizMode = QuestionTypes.random()
         
+        
         switch quizMode! {
         case .imageToText:
             questionLabel.text = "Qual é a palavra da imagem abaixo?"
@@ -62,8 +65,16 @@ class QuizViewController: UIViewController {
             questionLabel.text = "Qual é a imagem da palavra \(objects[indexObjectToIdentify].name)?"
         case .soundToImage:
             questionLabel.text = "Qual é a imagem da palavra ouvida?"
+            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
+             audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
+            audioPlayer.play()
         case .soundToText:
             questionLabel.text = "Qual foi a palavra ouvida?"
+            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
+            audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
+            audioPlayer.play()
+            
+            println("Duracao da palavra \(objects)")
         }
 
     
