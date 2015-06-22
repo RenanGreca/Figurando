@@ -22,6 +22,9 @@ class QuizViewController: UIViewController {
     
     var records: Array<QuestionRecord> = []
     var timerCounter = 0
+    var relogioQuestoes = NSTimer.scheduledTimerWithTimeInterval(1, target: QuizViewController.self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
+    
+
 
     var objects : Array<Object> = []
     var indexObjectToIdentify : Int = 0
@@ -136,7 +139,7 @@ class QuizViewController: UIViewController {
         option1Button.setImage(nil, forState: UIControlState.Normal)
         option2Button.setImage(nil, forState: UIControlState.Normal)
         option3Button.setImage(nil, forState: UIControlState.Normal)
-        timer.invalidate()
+        relogioQuestoes.invalidate()
         timerCounter = 0
 
     }
