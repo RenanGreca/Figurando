@@ -70,6 +70,7 @@ class QuizViewController: UIViewController {
             audioPlayer.play()
         case .soundToText:
             questionLabel.text = "Qual foi a palavra ouvida?"
+            
             let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
             audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
             audioPlayer.play()
@@ -94,6 +95,11 @@ class QuizViewController: UIViewController {
 
         
     }
+//    
+//    func repeatSound(){
+//        var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: Selector("play"), userInfo: nil, repeats: true)
+//    }
+    
     
     func clearOptions(){
         questionImageView.image = nil
