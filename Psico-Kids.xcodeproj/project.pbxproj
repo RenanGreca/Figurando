@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C3A4F2D1B377F4300F7BC9F /* child.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C3A4F2C1B377F4300F7BC9F /* child.jpg */; };
 		1C9870511B34746500E54093 /* KidProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9870501B34746500E54093 /* KidProfileViewController.swift */; };
 		1C9870A81B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1C9870A61B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig */; };
 		1C9870A91B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1C9870A61B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig */; };
 		1C9870AA1B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */; };
 		1C9870AB1B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */; };
-		1C9870AD1B36FF4C00E54093 /* MagicPie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9870AC1B36FF4C00E54093 /* MagicPie.framework */; };
-		1C9870AF1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9870AE1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework */; };
+		1C9870AD1B36FF4C00E54093 /* MagicPie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9870AC1B36FF4C00E54093 /* MagicPie.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		1C9870AF1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9870AE1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1CD998E61B2F69FA000968A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD998E51B2F69FA000968A1 /* AppDelegate.swift */; };
 		1CD998E81B2F69FA000968A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD998E71B2F69FA000968A1 /* ViewController.swift */; };
 		1CD998EB1B2F69FA000968A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD998E91B2F69FA000968A1 /* Main.storyboard */; };
@@ -147,6 +148,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C3A4F2C1B377F4300F7BC9F /* child.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = child.jpg; sourceTree = "<group>"; };
 		1C9870501B34746500E54093 /* KidProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidProfileViewController.swift; sourceTree = "<group>"; };
 		1C9870531B347DF400E54093 /* BringingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BringingHeader.h; sourceTree = "<group>"; };
 		1C9870A61B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-Psico-Kids.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Psico-Kids/Pods-Psico-Kids.debug.xcconfig"; sourceTree = "<group>"; };
@@ -306,6 +308,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C3A4F2B1B377F3500F7BC9F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1C3A4F2C1B377F4300F7BC9F /* child.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		1CD998D71B2F69FA000968A1 = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +339,7 @@
 		1CD998E21B2F69FA000968A1 /* Psico-Kids */ = {
 			isa = PBXGroup;
 			children = (
+				1C3A4F2B1B377F3500F7BC9F /* Images */,
 				1F62D7301B35B17E00522021 /* sounds */,
 				1F62D6CB1B35A99900522021 /* emoji */,
 				1F2CEF191B30C769006B3D6D /* Model */,
@@ -598,10 +609,10 @@
 				TargetAttributes = {
 					1CD998DF1B2F69FA000968A1 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 6E3MXG6BSH;
 					};
 					1CD998F41B2F69FA000968A1 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = DRMM4DE3GQ;
 						TestTargetID = 1CD998DF1B2F69FA000968A1;
 					};
 				};
@@ -716,6 +727,7 @@
 				1F62D70A1B35AA8100522021 /* casa.png in Resources */,
 				1F62D7081B35AA8100522021 /* camisa.png in Resources */,
 				1F62D7181B35AA8100522021 /* mala.png in Resources */,
+				1C3A4F2D1B377F4300F7BC9F /* child.jpg in Resources */,
 				1F62D7091B35AA8100522021 /* carro.png in Resources */,
 				1F62D7031B35AA8100522021 /* barco.png in Resources */,
 				1F62D78C1B35B1F600522021 /* porta.mp3 in Resources */,
@@ -1034,6 +1046,8 @@
 			baseConfigurationReference = D3D7175110DD9D777E1BD516 /* Pods-Psico-KidsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1045,6 +1059,7 @@
 				INFOPLIST_FILE = "Psico-KidsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Psico-Kids/BringingHeader.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Psico-Kids.app/Psico-Kids";
 			};
@@ -1055,6 +1070,8 @@
 			baseConfigurationReference = D3D7175110DD9D777E1BD516 /* Pods-Psico-KidsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1062,6 +1079,7 @@
 				INFOPLIST_FILE = "Psico-KidsTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Psico-Kids/BringingHeader.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Psico-Kids.app/Psico-Kids";
 			};
