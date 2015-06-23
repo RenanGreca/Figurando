@@ -452,8 +452,8 @@
                                 <rect key="frame" x="432" y="122" width="160" height="160"/>
                                 <animations/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJO-Y6-9EM">
-                                <rect key="frame" x="476.5" y="34" width="72" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJO-Y6-9EM">
+                                <rect key="frame" x="476" y="34" width="72" height="36"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" red="0.25131624145870457" green="0.24852252486394805" blue="0.22691660636562647" alpha="1" colorSpace="calibratedRGB"/>
@@ -527,12 +527,20 @@
                                     <action selector="option3ButtonPressed:" destination="E2y-Bp-Trz" eventType="touchUpInside" id="e6g-5K-c9E"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KU4-Tm-SuJ">
+                                <rect key="frame" x="448" y="171.5" width="126.5" height="60"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" red="0.19215686274509805" green="0.18823529411764706" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="set-eE-Pdz" firstAttribute="trailing" secondItem="tuM-LR-764" secondAttribute="trailingMargin" id="11p-Ve-hcV"/>
                             <constraint firstItem="Pr1-5l-4Pc" firstAttribute="centerX" secondItem="pJO-Y6-9EM" secondAttribute="centerX" id="1t9-i7-qvq"/>
+                            <constraint firstAttribute="centerY" secondItem="KU4-Tm-SuJ" secondAttribute="centerY" constant="150.5" id="5B3-Fg-djo"/>
                             <constraint firstItem="set-eE-Pdz" firstAttribute="top" secondItem="HDx-VB-oUg" secondAttribute="bottom" constant="260" id="9RS-PR-qMF"/>
                             <constraint firstAttribute="centerY" secondItem="XCL-M5-m58" secondAttribute="centerY" constant="-105" id="D6t-dq-5Lu"/>
                             <constraint firstAttribute="centerY" secondItem="DK2-yt-WJg" secondAttribute="centerY" constant="-105" id="DeF-Hi-44t"/>
@@ -543,6 +551,7 @@
                             <constraint firstItem="vkO-83-m3r" firstAttribute="top" secondItem="grL-Fn-52D" secondAttribute="bottom" constant="88" id="N7I-ur-rOp"/>
                             <constraint firstAttribute="centerX" secondItem="set-eE-Pdz" secondAttribute="centerX" constant="-346" id="OyC-bM-9Wu"/>
                             <constraint firstItem="Pr1-5l-4Pc" firstAttribute="baseline" secondItem="set-eE-Pdz" secondAttribute="firstBaseline" id="PsG-3F-4FG"/>
+                            <constraint firstAttribute="centerX" secondItem="KU4-Tm-SuJ" secondAttribute="centerX" constant="1" id="QQH-rb-6gF"/>
                             <constraint firstAttribute="centerY" secondItem="vkO-83-m3r" secondAttribute="centerY" constant="-105" id="RtR-gX-26U"/>
                             <constraint firstAttribute="centerY" secondItem="set-eE-Pdz" secondAttribute="centerY" constant="-105" id="S49-tS-IK2"/>
                             <constraint firstItem="Pr1-5l-4Pc" firstAttribute="top" secondItem="vkO-83-m3r" secondAttribute="top" id="WRi-PN-u9F"/>
@@ -582,6 +591,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1024" height="768"/>
                     <connections>
+                        <outlet property="objectLabel" destination="KU4-Tm-SuJ" id="E03-VP-Ze6"/>
                         <outlet property="option1Button" destination="vkO-83-m3r" id="4dV-yN-fmN"/>
                         <outlet property="option2Button" destination="Pr1-5l-4Pc" id="ChP-ca-1fc"/>
                         <outlet property="option3Button" destination="set-eE-Pdz" id="JCQ-js-vls"/>
@@ -591,7 +601,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jox-j2-5Ur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2294" y="1264"/>
+            <point key="canvasLocation" x="2302" y="1392"/>
         </scene>
     </scenes>
     <resources>

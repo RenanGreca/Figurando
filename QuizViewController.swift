@@ -35,6 +35,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var questionLabel: UILabel!
     
 
+    @IBOutlet weak var objectLabel: UILabel!
     @IBOutlet weak var option1Button: UIButton!
     @IBOutlet weak var option2Button: UIButton!
     @IBOutlet weak var option3Button: UIButton!
@@ -60,6 +61,8 @@ class QuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBarHidden = true
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg_textura.png")!)
                
@@ -103,6 +106,7 @@ class QuizViewController: UIViewController {
             
         case .textToImage:
             questionLabel.text = "Qual é a imagem da palavra \(objects[indexObjectToIdentify].name)?"
+            objectLabel.text = "\(objects[indexObjectToIdentify].name)"
             
             questionToRead = "frase2"
             repeatSound()
@@ -177,6 +181,7 @@ class QuizViewController: UIViewController {
         option1Button.setTitle("", forState: UIControlState.Normal)
         option2Button.setTitle("", forState: UIControlState.Normal)
         option3Button.setTitle("", forState: UIControlState.Normal)
+        objectLabel.text = ""
 
         questionTimer.invalidate()
         timerCounter = 0
