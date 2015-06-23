@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tWJ-6x-NY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tWJ-6x-NY0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -295,7 +295,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00 anos - Genero" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTE-Ci-m59">
-                                <rect key="frame" x="220" y="103" width="152" height="24"/>
+                                <rect key="frame" x="220" y="103" width="151.5" height="24"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
                                 <color key="textColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -319,28 +319,30 @@
                                 <rect key="frame" x="16" y="250" width="736" height="712"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primeira Fase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wey-n2-yTF">
-                                        <rect key="frame" x="373" y="76" width="163" height="34"/>
+                                        <rect key="frame" x="373" y="76" width="163" height="33.5"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="28"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantidade de vezes jogadas: XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgc-iF-wMg">
-                                        <rect key="frame" x="290" y="129" width="346" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Quantidade de vezes jogadas: XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgc-iF-wMg">
+                                        <rect key="frame" x="290" y="128" width="346" height="29"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Média de segundos por partida: XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McC-EI-PPa">
-                                        <rect key="frame" x="288" y="166" width="364" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Média de segundos por partida: XX" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McC-EI-PPa">
+                                        <rect key="frame" x="288" y="165" width="363.5" height="29"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Url-n7-Bh6">
-                                        <rect key="frame" x="325" y="612" width="86" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Url-n7-Bh6">
+                                        <rect key="frame" x="278" y="520" width="179" height="52"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <state key="normal" title="Aplicar teste">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -351,14 +353,13 @@
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstItem="Url-n7-Bh6" firstAttribute="centerX" secondItem="owO-PJ-D3F" secondAttribute="centerX" id="Azg-jc-wTT"/>
                                     <constraint firstItem="Wey-n2-yTF" firstAttribute="centerX" secondItem="hgc-iF-wMg" secondAttribute="centerX" constant="-8.5" id="GcW-aM-6Cx"/>
                                     <constraint firstAttribute="trailing" secondItem="Wey-n2-yTF" secondAttribute="trailing" constant="200" id="P0N-h2-sqL"/>
-                                    <constraint firstAttribute="bottom" secondItem="Url-n7-Bh6" secondAttribute="bottom" constant="70" id="Tsc-G4-6mf"/>
+                                    <constraint firstAttribute="centerX" secondItem="Url-n7-Bh6" secondAttribute="centerX" id="X2k-pX-9gl"/>
+                                    <constraint firstAttribute="centerY" secondItem="Url-n7-Bh6" secondAttribute="centerY" constant="-191" id="YOD-Cj-nDU"/>
                                     <constraint firstItem="Wey-n2-yTF" firstAttribute="top" secondItem="owO-PJ-D3F" secondAttribute="top" constant="76" id="hk3-aX-5Xb"/>
                                     <constraint firstItem="McC-EI-PPa" firstAttribute="centerX" secondItem="hgc-iF-wMg" secondAttribute="centerX" constant="6.5" id="w8O-qw-OAT"/>
                                     <constraint firstItem="McC-EI-PPa" firstAttribute="top" secondItem="hgc-iF-wMg" secondAttribute="bottom" constant="8" id="wIN-D5-diF"/>
-                                    <constraint firstItem="Url-n7-Bh6" firstAttribute="top" secondItem="owO-PJ-D3F" secondAttribute="top" constant="612" id="wwP-rv-I4r"/>
                                     <constraint firstItem="hgc-iF-wMg" firstAttribute="top" secondItem="Wey-n2-yTF" secondAttribute="bottom" constant="19.5" id="zX7-pG-NNL"/>
                                 </constraints>
                             </view>
@@ -446,7 +447,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="0030.png" translatesAutoresizingMaskIntoConstraints="NO" id="grL-Fn-52D">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0030.png" translatesAutoresizingMaskIntoConstraints="NO" id="grL-Fn-52D">
                                 <rect key="frame" x="432" y="122" width="160" height="160"/>
                                 <animations/>
                             </imageView>
@@ -576,6 +577,6 @@
         <image name="0030.png" width="160" height="160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P6O-uy-PsX"/>
+        <segue reference="3hM-Jt-7X1"/>
     </inferredMetricsTieBreakers>
 </document>

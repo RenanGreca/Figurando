@@ -91,8 +91,16 @@ class QuizViewController: UIViewController {
         case .imageToText:
             questionLabel.text = "Qual é a palavra da imagem abaixo?"
             questionImageView.image = UIImage(contentsOfFile: "\(objects[indexObjectToIdentify].img)")
+            
+            questionToRead = "frase1"
+            repeatSound()
+            
         case .textToImage:
             questionLabel.text = "Qual é a imagem da palavra \(objects[indexObjectToIdentify].name)?"
+            
+            questionToRead = "frase2"
+            repeatSound()
+            
         case .soundToImage:
             
             questionLabel.text = "Qual é a imagem da palavra ouvida?"
@@ -143,10 +151,13 @@ class QuizViewController: UIViewController {
         if(seconds > 0)  {
             seconds--
         }else{
-            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
-            audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
-            audioPlayer.play()
+            if(questionToRead != "frase1" && questionToRead != "frase2"){
+                let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
+                audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
+                audioPlayer.play()
+            }
             timer.invalidate()
+
         }
     }
     
