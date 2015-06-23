@@ -25,6 +25,10 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
     
     @IBOutlet weak var viewGraph: UIView!
     
+    var child: Child?
+    var avg: Array<Float>?
+    var count: Array<Int>?
+    
     let graph = PieLayer()
     var shouldMovePie = true
     
@@ -35,7 +39,35 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
         self.view.addGestureRecognizer(tap)
         
         
+        readAllDataFromFiles()
         
+        let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
+        var filePath = documentsPath[0]
+        
+        //print(orderedkidsList)
+        filePath = filePath.stringByAppendingString("/" + (orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][0] as! String) + (orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][5] as! String) + ".png")
+        
+        let kid: AnyObject! = orderedkidsList[selectedIndexPath.section][selectedIndexPath.row]
+        child = Child(kid: kid)
+        
+        nameOfKid.text = child!.name
+        ageAndGenderOfKid.text = child!.age + " anos - "
+            + child!.gender
+        
+        parentsOfKid.text = "Cuidadores: " +
+            child!.fathersName + " e " +
+            child!.mothersName
+        
+        contactOfKid.text = "Telefone: " + child!.parentsNumber
+        
+        profileImage.image = UIImage(contentsOfFile: filePath)
+        backgroundImage.image =  UIImage(contentsOfFile: filePath)
+        
+        profileImage.layer.cornerRadius = profileImage.frame.size.width / 2;
+        profileImage.clipsToBounds = true;
+        
+        profileImage.layer.borderWidth = 3.0
+        profileImage.layer.borderColor = UIColor.whiteColor().CGColor
         
         
         graph.frame = CGRectMake(10, 10, 400, 400)
@@ -44,13 +76,25 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
         graph.startAngle = 180
         graph.endAngle = 0
         
-        var elementOne = PieElement(value: 50, color: UIColor(red: 228/255, green: 241/255, blue: 254/255, alpha: 1))
-        var elementTwo = PieElement(value: 20, color: UIColor(red: 197/255, green: 239/255, blue: 247/255, alpha: 1))
-        var elementThree = PieElement(value: 20, color: UIColor(red: 107/255, green: 185/255, blue: 240/255, alpha: 1))
-        var elementFour = PieElement(value: 20, color: UIColor(red: 100/255, green: 185/255, blue: 240/255, alpha: 1))
-        var elementFive = PieElement(value: 20, color: UIColor(red: 107/255, green: 175/255, blue: 240/255, alpha: 1))
-        var elementSix = PieElement(value: 20, color: UIColor(red: 107/255, green: 185/255, blue: 230/255, alpha: 1))
-        var elementSeven = PieElement(value: 20, color: UIColor(red: 107/255, green: 180/255, blue: 235/255, alpha: 1))
+        let qr = QuestionRecord.readFromCSV("\(child!.name)\(child!.parentsNumber)")
+        avg = qr.0
+        count = qr.1
+        var alpha:CGFloat = 1.0
+        
+        /*for a in avg {
+            var element = PieElement(value: avg[0], color: UIColor(red: 228/255, green: 241/255, blue: 254/255, alpha: alpha))
+            element.centrOffset += 2
+            graph.addValues([element], animated: true)
+            alpha -= 0.1
+        }*/
+        
+        var elementOne = PieElement(value: avg![0], color: UIColor(red: 228/255, green: 241/255, blue: 254/255, alpha: 1))
+        var elementTwo = PieElement(value: avg![1], color: UIColor(red: 197/255, green: 239/255, blue: 247/255, alpha: 1))
+        var elementThree = PieElement(value: avg![2], color: UIColor(red: 107/255, green: 185/255, blue: 240/255, alpha: 1))
+        var elementFour = PieElement(value: avg![3], color: UIColor(red: 100/255, green: 185/255, blue: 240/255, alpha: 1))
+        var elementFive = PieElement(value: 0, color: UIColor(red: 107/255, green: 175/255, blue: 240/255, alpha: 1))
+        var elementSix = PieElement(value: 0, color: UIColor(red: 107/255, green: 185/255, blue: 230/255, alpha: 1))
+        var elementSeven = PieElement(value: 0, color: UIColor(red: 107/255, green: 180/255, blue: 235/255, alpha: 1))
         
         elementOne.centrOffset += 2
         elementTwo.centrOffset += 2
@@ -76,36 +120,7 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
     
     override func viewWillAppear(animated: Bool) {
         isItEditing = true
-        
-        
-        readAllDataFromFiles()
-        
-        let documentsPath = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as! [String]
-        var filePath = documentsPath[0]
-        
-        print(orderedkidsList)
-        filePath = filePath.stringByAppendingString("/" + (orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][0] as! String) + (orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][5] as! String) + ".png")
-        
-        
-        nameOfKid.text = orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][0] as? String
-        ageAndGenderOfKid.text = (orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][1] as? String)! + " anos - "
-            + (orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][2] as? String)!
-        
-        parentsOfKid.text = "Cuidadores: " +
-            (orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][3] as? String)! + " e " +
-            (orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][4] as? String)!
-        
-        contactOfKid.text = "Telefone: " + (orderedkidsList[selectedIndexPath.section][selectedIndexPath.row][5] as? String)!
-        
-        profileImage.image = UIImage(contentsOfFile: filePath)
-        backgroundImage.image =  UIImage(contentsOfFile: filePath)
-        
-        profileImage.layer.cornerRadius = profileImage.frame.size.width / 2;
-        profileImage.clipsToBounds = true;
-        
-        profileImage.layer.borderWidth = 3.0
-        profileImage.layer.borderColor = UIColor.whiteColor().CGColor
-        
+    
     }
     
     func selectPie (tap : UIGestureRecognizer) {
@@ -132,19 +147,19 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
     
     func updatePieSliceInfo (pieSlice: CGPoint) {
         
-        
-        switch (graph.indexOfSliceFromPoint(pieSlice)){
+        let i = Int(graph.indexOfSliceFromPoint(pieSlice))
+        switch (i){
         case 0:
-            levelNumber.text = "Primeira Fase"
+            levelNumber.text = "Som para texto"
             break
         case 1:
-            levelNumber.text = "Segunda Fase"
+            levelNumber.text = "Som para imagem"
             break
         case 2:
-            levelNumber.text = "Terceira Fase"
+            levelNumber.text = "Imagem para texto"
             break
         case 3:
-            levelNumber.text = "Quarta Fase"
+            levelNumber.text = "Texto para imagem"
             break
         case 4:
             levelNumber.text = "Quinta Fase"
@@ -158,14 +173,28 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
         default:
             break
         }
+        
+        playedTimes.text = "Quantidade de vezes jogadas: \(count![i])"
+        medTimes.text = "Média de segundos por partida: \(avg![i])"
+
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func applyTest(sender: AnyObject) {
+        self.performSegueWithIdentifier("sgQuiz", sender: self)
+    }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "sgQuiz") {
+            var quizVC = (segue.destinationViewController as! QuizViewController)
+            quizVC.child = self.child
+        }
+    }
+
     // MARK: - Navigation
     
     

@@ -347,7 +347,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="E2y-Bp-Trz" kind="show" id="SIg-k3-Ky8"/>
+                                            <action selector="applyTest:" destination="P7x-DF-omv" eventType="touchUpInside" id="4tz-ts-Oas"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -408,6 +408,7 @@
                         <outlet property="playedTimes" destination="hgc-iF-wMg" id="B2b-iQ-2sz"/>
                         <outlet property="profileImage" destination="GY9-qJ-o7W" id="46I-34-rEm"/>
                         <outlet property="viewGraph" destination="owO-PJ-D3F" id="EWA-ZQ-c5v"/>
+                        <segue destination="E2y-Bp-Trz" kind="show" identifier="sgQuiz" id="5qa-6p-zGv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yr-rR-gho" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -480,7 +481,7 @@
                                     <action selector="option1ButtonPressed:" destination="E2y-Bp-Trz" eventType="touchUpInside" id="7g4-n9-OzZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pr1-5l-4Pc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Pr1-5l-4Pc">
                                 <rect key="frame" x="432" y="272" width="160" height="160"/>
                                 <animations/>
                                 <constraints>
@@ -570,7 +571,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jox-j2-5Ur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2425" y="1520"/>
+            <point key="canvasLocation" x="2336" y="1366"/>
         </scene>
     </scenes>
     <resources>

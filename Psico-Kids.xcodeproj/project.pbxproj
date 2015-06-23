@@ -128,6 +128,7 @@
 		1F62D7951B35B1F600522021 /* vestido.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7621B35B1F600522021 /* vestido.mp3 */; };
 		1F62D7961B35B1F600522021 /* xícara.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7631B35B1F600522021 /* xícara.mp3 */; };
 		1F62D7981B35C0A300522021 /* xícara.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D7971B35C0A300522021 /* xícara.png */; };
+		1F74A4051B38C9A100C40710 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F74A4041B38C9A100C40710 /* Child.swift */; };
 		1FE0E8BF1B3841C1002984D7 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0E8BE1B3841C1002984D7 /* Functions.swift */; };
 		1FE92A281B34DCAB00D96A15 /* CHUBBY.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */; };
 		3357A676F696D40E73491E79 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F556C33CECEDD25E7DD652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -275,6 +276,7 @@
 		1F62D7621B35B1F600522021 /* vestido.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = vestido.mp3; sourceTree = "<group>"; };
 		1F62D7631B35B1F600522021 /* xícara.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "xícara.mp3"; sourceTree = "<group>"; };
 		1F62D7971B35C0A300522021 /* xícara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xícara.png"; sourceTree = "<group>"; };
+		1F74A4041B38C9A100C40710 /* Child.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
 		1FE0E8BE1B3841C1002984D7 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = CHUBBY.TTF; sourceTree = "<group>"; };
 		340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -417,6 +419,7 @@
 				E43B17F01B30D1F5004EDDAD /* objects.json */,
 				1C9870531B347DF400E54093 /* BringingHeader.h */,
 				E49885B21B348EE100A5AFEC /* QuestionRecord.swift */,
+				1F74A4041B38C9A100C40710 /* Child.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -618,12 +621,7 @@
 				TargetAttributes = {
 					1CD998DF1B2F69FA000968A1 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = TQ57BUPEGC;
-					};
-					1CD998F41B2F69FA000968A1 = {
-						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = DRMM4DE3GQ;
-						TestTargetID = 1CD998DF1B2F69FA000968A1;
+						DevelopmentTeam = 6E3MXG6BSH;
 					};
 				};
 			};
@@ -883,6 +881,7 @@
 				E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */,
 				1CD9990C1B2F93B3000968A1 /* KidTableViewCell.swift in Sources */,
 				1F2CEF171B30C763006B3D6D /* ObjectList.swift in Sources */,
+				1F74A4051B38C9A100C40710 /* Child.swift in Sources */,
 				E49885B31B348EE100A5AFEC /* QuestionRecord.swift in Sources */,
 				1CD999081B2F6B90000968A1 /* KidsTableViewController.swift in Sources */,
 				1FE0E8BF1B3841C1002984D7 /* Functions.swift in Sources */,
@@ -944,7 +943,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -991,7 +989,6 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1019,17 +1016,17 @@
 			baseConfigurationReference = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Renan Greca (934HSMQRZ4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Psico-Kids",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
+				I = "iPhone Developer";
 				INFOPLIST_FILE = "Psico-Kids/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "f5450877-8ba2-452b-aedf-ab0ea873caa1";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
@@ -1039,8 +1036,7 @@
 			baseConfigurationReference = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Renan Greca (934HSMQRZ4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Psico-Kids",
@@ -1049,7 +1045,7 @@
 				INFOPLIST_FILE = "Psico-Kids/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "f5450877-8ba2-452b-aedf-ab0ea873caa1";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
@@ -1060,7 +1056,6 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -1084,7 +1079,6 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
