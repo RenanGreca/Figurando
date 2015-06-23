@@ -120,7 +120,8 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
     
     override func viewWillAppear(animated: Bool) {
         isItEditing = true
-    
+        self.navigationController?.navigationBarHidden = false
+
     }
     
     func selectPie (tap : UIGestureRecognizer) {
