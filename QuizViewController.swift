@@ -60,7 +60,9 @@ class QuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg_textura.png")!)
+               
         ObjectList.Static.instance.populate()
         
         modes = [.soundToText, .soundToImage, .imageToText, .textToImage]
@@ -69,8 +71,7 @@ class QuizViewController: UIViewController {
         
         nextQuestion()
     
-        nextQuestion()
-    }
+            }
     
     func updateTimer() {
         timerCounter++
@@ -172,6 +173,11 @@ class QuizViewController: UIViewController {
         option1Button.setImage(nil, forState: UIControlState.Normal)
         option2Button.setImage(nil, forState: UIControlState.Normal)
         option3Button.setImage(nil, forState: UIControlState.Normal)
+        
+        option1Button.setTitle("", forState: UIControlState.Normal)
+        option2Button.setTitle("", forState: UIControlState.Normal)
+        option3Button.setTitle("", forState: UIControlState.Normal)
+
         questionTimer.invalidate()
         timerCounter = 0
 
@@ -218,6 +224,7 @@ class QuizViewController: UIViewController {
 //        UIDevice.currentDevice().setValue(value, forKey: "orientation")
         
     }
+    
     
     
     /*
