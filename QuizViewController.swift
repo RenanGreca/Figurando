@@ -10,6 +10,25 @@ import UIKit
 import SwiftyJSON
 import AVFoundation
 
+enum QuestionTypes: Int {
+    case soundToText, soundToImage, imageToText, textToImage
+    
+    static func random() -> QuestionTypes {
+        var max: Int = 0
+        while let _ = self(rawValue: ++max) {}
+        
+        let rand = Int(arc4random_uniform(UInt32(max)))
+        return self(rawValue: rand)!
+    }
+    
+    static var count: Int {
+        var max: Int = 0
+        while let _ = self(rawValue: ++max) {}
+        return max
+    }
+
+}
+
 class QuizViewController: UIViewController {
 
     @IBOutlet weak var questionImageView: UIImageView!
@@ -23,7 +42,7 @@ class QuizViewController: UIViewController {
     var records: Array<QuestionRecord> = []
     var timerCounter = 0
     var questionTimer = NSTimer()
-
+    var child: Child?
 
     var objects : Array<Object> = []
     var indexObjectToIdentify : Int = 0
@@ -38,21 +57,6 @@ class QuizViewController: UIViewController {
     var timer = NSTimer()
     
     var questionToRead: String?
-
-    
-    
-    enum QuestionTypes: Int {
-        case soundToText, soundToImage, imageToText, textToImage
-        
-        static func random() -> QuestionTypes {  // I called this "maximumRawValue" in the post
-            var max: Int = 0
-            while let _ = self(rawValue: ++max) {}
-            
-            let rand = Int(arc4random_uniform(UInt32(max)))
-            return self(rawValue: rand)!
-        }
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,8 +64,10 @@ class QuizViewController: UIViewController {
         ObjectList.Static.instance.populate()
         
         modes = [.soundToText, .soundToImage, .imageToText, .textToImage]
-        modes = modes + modes + modes + modes
+        modes = modes + modes + modes
         modes.shuffle()
+        
+        nextQuestion()
     
         nextQuestion()
     }
@@ -165,7 +171,7 @@ class QuizViewController: UIViewController {
         var questionRecord = QuestionRecord(objectToIdentify: objects[indexObjectToIdentify].name, option1: objects[0].name, option2: objects[1].name, option3: objects[2].name, selectedOption: buttonPressed!, elapsedTimeInSeconds: timerCounter, questionType: quizMode!.rawValue)
         
         records.append(questionRecord)
-        
+        questionRecord.writeToCSV("\(child!.name)\(child!.parentsNumber)")
         
         println("Asked: \(objects[indexObjectToIdentify].name), Object selected: \(objects[buttonPressed! - 1].name), time taken: \(timerCounter)")
         

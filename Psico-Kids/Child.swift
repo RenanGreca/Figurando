@@ -14,19 +14,30 @@ class Child: NSObject {
         case male, female
     }
     
-    var name: String
-    var age: Int
-    var gender: Sex
-    var fathersName: String
-    var mothersName: String
-    var parentsNumber: String
+    let name: String
+    let age: String
+    let gender: String
+    let fathersName: String
+    let mothersName: String
+    let parentsNumber: String
     
-    init (name: String, age: Int, gender: Sex, fathersName: String, mothersName: String, parentsNumber: String) {
+    init (name: String, age: String, gender: String, fathersName: String, mothersName: String, parentsNumber: String) {
         self.name = name
         self.age = age
         self.gender = gender
         self.fathersName = fathersName
         self.mothersName = mothersName
         self.parentsNumber = parentsNumber
+    }
+    
+    init (kid: AnyObject) {
+        
+        self.name = kid[0] as! String
+        self.age = kid[1] as! String
+        self.gender = kid[2] as! String
+        self.fathersName = kid[3] as! String
+        self.mothersName = kid[4] as! String
+        self.parentsNumber = kid[5] as! String
+
     }
 }
