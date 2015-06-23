@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="15A178w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tWJ-6x-NY0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tWJ-6x-NY0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -448,7 +448,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0030.png" translatesAutoresizingMaskIntoConstraints="NO" id="grL-Fn-52D">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="0030.png" translatesAutoresizingMaskIntoConstraints="NO" id="grL-Fn-52D">
                                 <rect key="frame" x="432" y="122" width="160" height="160"/>
                                 <animations/>
                             </imageView>
@@ -459,7 +459,7 @@
                                 <color key="textColor" red="0.25131624145870457" green="0.24852252486394805" blue="0.22691660636562647" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="option_circle_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="XCL-M5-m58">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="option_circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="XCL-M5-m58">
                                 <rect key="frame" x="33" y="324" width="265" height="265"/>
                                 <animations/>
                                 <constraints>
@@ -467,7 +467,7 @@
                                     <constraint firstAttribute="height" constant="265" id="do0-AY-Ktv"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="option_circle_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ex3-t0-SbA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="option_circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ex3-t0-SbA">
                                 <rect key="frame" x="379" y="324" width="265" height="265"/>
                                 <animations/>
                                 <constraints>
@@ -475,7 +475,7 @@
                                     <constraint firstAttribute="height" constant="265" id="tg5-Bj-7mG"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkO-83-m3r">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkO-83-m3r">
                                 <rect key="frame" x="86" y="377" width="160" height="160"/>
                                 <animations/>
                                 <constraints>
@@ -495,7 +495,7 @@
                                     <action selector="option1ButtonPressed:" destination="E2y-Bp-Trz" eventType="touchUpInside" id="7g4-n9-OzZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Pr1-5l-4Pc">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Pr1-5l-4Pc">
                                 <rect key="frame" x="432" y="377" width="160" height="160"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -507,7 +507,7 @@
                                     <action selector="option2ButtonPressed:" destination="E2y-Bp-Trz" eventType="touchUpInside" id="RQv-t4-JpO"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="option_circle_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="DK2-yt-WJg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="option_circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="DK2-yt-WJg">
                                 <rect key="frame" x="725" y="324" width="265" height="265"/>
                                 <animations/>
                                 <constraints>
@@ -515,7 +515,7 @@
                                     <constraint firstAttribute="height" constant="265" id="uYp-j0-AQG"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="set-eE-Pdz">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="set-eE-Pdz">
                                 <rect key="frame" x="778" y="377" width="160" height="160"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -606,7 +606,7 @@
     </scenes>
     <resources>
         <image name="0030.png" width="160" height="160"/>
-        <image name="option_circle_2.png" width="340" height="340"/>
+        <image name="option_circle.png" width="340" height="340"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="3hM-Jt-7X1"/>
