@@ -84,7 +84,7 @@ class QuizViewController: UIViewController {
         clearOptions()
 
         if numberOfQuestions >= 12 {
-            println("Faça alguma coisa aqui")
+            navigationController?.popViewControllerAnimated(true)
             return
         }
         
