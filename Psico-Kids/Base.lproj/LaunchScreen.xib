@@ -9,12 +9,54 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_textura" translatesAutoresizingMaskIntoConstraints="NO" id="zjm-Pp-eZj">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1024" id="4lW-hX-23w"/>
+                        <constraint firstAttribute="height" constant="768" id="qdp-W3-geG"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_star" translatesAutoresizingMaskIntoConstraints="NO" id="LGm-gH-TFP">
+                    <rect key="frame" x="362" y="104" width="300" height="300"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="AaI-s1-6Bg"/>
+                        <constraint firstAttribute="height" constant="300" id="s1J-87-LV2"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="kOA-A6-ztI">
+                    <rect key="frame" x="112" y="412" width="800" height="250"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="6VP-j0-2M1"/>
+                        <constraint firstAttribute="width" constant="800" id="Mj1-aW-d1t"/>
+                    </constraints>
+                </imageView>
+            </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="kOA-A6-ztI" firstAttribute="centerX" secondItem="zjm-Pp-eZj" secondAttribute="centerX" id="4JT-Io-ZY2"/>
+                <constraint firstItem="LGm-gH-TFP" firstAttribute="centerX" secondItem="zjm-Pp-eZj" secondAttribute="centerX" id="51u-VJ-lnj"/>
+                <constraint firstItem="LGm-gH-TFP" firstAttribute="leading" secondItem="zjm-Pp-eZj" secondAttribute="trailing" constant="-632" id="572-ja-LyZ"/>
+                <constraint firstItem="kOA-A6-ztI" firstAttribute="top" secondItem="LGm-gH-TFP" secondAttribute="bottom" constant="8" id="JL0-x7-Gd4"/>
+                <constraint firstAttribute="centerX" secondItem="zjm-Pp-eZj" secondAttribute="centerX" id="gH8-3c-ey5"/>
+                <constraint firstAttribute="centerY" secondItem="zjm-Pp-eZj" secondAttribute="centerY" id="u2l-LW-mrd"/>
+                <constraint firstItem="zjm-Pp-eZj" firstAttribute="top" secondItem="LGm-gH-TFP" secondAttribute="bottom" constant="-404" id="ukk-rw-EeV"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="572-ja-LyZ"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
+    <resources>
+        <image name="bg_textura" width="2048" height="1530"/>
+        <image name="icon_star" width="600" height="600"/>
+        <image name="logo" width="1957" height="526"/>
+    </resources>
 </document>
