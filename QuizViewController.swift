@@ -148,13 +148,14 @@ class QuizViewController: UIViewController {
         audioPlayer.play()
 
         setupTimer()
+        timer.invalidate()
         timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "doCountdown:", userInfo: nil, repeats: true)
     
     }
     
     
     func setupTimer()  {
-        seconds = audioPlayer.duration - 2
+        seconds = audioPlayer.duration - 1.5
     }
     
     func doCountdown(timer: NSTimer) {

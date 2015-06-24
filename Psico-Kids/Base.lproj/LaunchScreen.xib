@@ -9,27 +9,12 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marca.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Fy4-lT-EXn">
-                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                    <animations/>
-                </imageView>
-            </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="Fy4-lT-EXn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5wy-pc-tuJ"/>
-                <constraint firstAttribute="trailing" secondItem="Fy4-lT-EXn" secondAttribute="trailing" id="fjE-8P-t1r"/>
-                <constraint firstItem="Fy4-lT-EXn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="k2m-Pn-X3s"/>
-                <constraint firstAttribute="bottom" secondItem="Fy4-lT-EXn" secondAttribute="bottom" id="mhW-pL-WOn"/>
-            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
             <point key="canvasLocation" x="548" y="455"/>
         </view>
     </objects>
-    <resources>
-        <image name="marca.jpg" width="2000" height="2000"/>
-    </resources>
 </document>
