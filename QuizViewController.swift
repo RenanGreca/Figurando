@@ -40,6 +40,12 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var option2Button: UIButton!
     @IBOutlet weak var option3Button: UIButton!
     
+    @IBOutlet weak var circle1: UIImageView!
+    @IBOutlet weak var circle2: UIImageView!
+    @IBOutlet weak var circle3: UIImageView!
+    
+    @IBOutlet weak var btnIniciar: UIButton!
+    
     var records: Array<QuestionRecord> = []
     var timerCounter = 0
     var questionTimer = NSTimer()
@@ -71,10 +77,26 @@ class QuizViewController: UIViewController {
         modes = [.soundToText, .soundToImage, .imageToText, .textToImage]
         modes = modes + modes + modes
         modes.shuffle()
+    
+    }
+    
+    @IBAction func iniciar(sender: AnyObject) {
+        btnIniciar.hidden = true
+        
+        questionImageView.hidden = false
+        questionLabel.hidden = false
+        
+        objectLabel.hidden = false
+        option1Button.hidden = false
+        option2Button.hidden = false
+        option3Button.hidden = false
+        
+        circle1.hidden = false
+        circle2.hidden = false
+        circle3.hidden = false
         
         nextQuestion()
-    
-            }
+    }
     
     func updateTimer() {
         timerCounter++
@@ -161,7 +183,8 @@ class QuizViewController: UIViewController {
     func doCountdown(timer: NSTimer) {
         if(seconds > 0)  {
             seconds--
-        }else{
+        } else {
+            doVolumeFade()
             if(questionToRead != "frase1" && questionToRead != "frase2"){
                 let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), objects[indexObjectToIdentify].name, "mp3", nil)
                 audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, fileTypeHint: "mp3", error: nil)
@@ -172,6 +195,19 @@ class QuizViewController: UIViewController {
         }
     }
     
+    
+    func doVolumeFade() {
+        if (audioPlayer.volume > 0.1) {
+            audioPlayer.volume -= 0.1;
+            
+            doVolumeFade()
+        } else {
+
+            audioPlayer.stop()
+            audioPlayer.volume = 1.0;
+        }
+    }
+
     
     func clearOptions(){
         questionImageView.image = nil
