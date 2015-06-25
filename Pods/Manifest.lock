@@ -1,13 +1,19 @@
 PODS:
   - MagicPie (1.1.1)
+  - PNChart (0.8.5):
+    - UICountingLabel (~> 1.2.0)
   - SwiftyJSON (2.2.0)
+  - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
   - MagicPie
+  - PNChart
   - SwiftyJSON (>= 2.2)
 
 SPEC CHECKSUMS:
   MagicPie: 0cfe79ae6e312d64f6799e3c2ba146b26ba5c79c
+  PNChart: 353d27a13634c94d090ed65909776d5ceab55f31
   SwiftyJSON: 0b3e6c07af17ff745e77e8e9984097b55c956e5c
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.37.1

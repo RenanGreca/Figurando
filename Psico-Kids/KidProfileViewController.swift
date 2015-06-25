@@ -9,6 +9,8 @@
 import UIKit
 import MagicPie
 
+import PNChart
+
 class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
     
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -38,6 +40,7 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
         tap.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(tap)
         
+        loadGraph()
         
         readAllDataFromFiles()
         
@@ -70,49 +73,49 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
         profileImage.layer.borderColor = UIColor.whiteColor().CGColor
         
         
-        graph.frame = CGRectMake(10, 10, 400, 400)
-        graph.maxRadius = 150
-        graph.minRadius = 25
-        graph.startAngle = 180
-        graph.endAngle = 0
-        
-        let qr = QuestionRecord.readFromCSV("\(child!.name)\(child!.parentsNumber)")
-        avg = qr.0
-        count = qr.1
-        var alpha:CGFloat = 1.0
-        
-        /*for a in avg {
-            var element = PieElement(value: avg[0], color: UIColor(red: 228/255, green: 241/255, blue: 254/255, alpha: alpha))
-            element.centrOffset += 2
-            graph.addValues([element], animated: true)
-            alpha -= 0.1
-        }*/
-        
-        var elementOne = PieElement(value: avg![0], color: UIColor(red: 228/255, green: 241/255, blue: 254/255, alpha: 1))
-        var elementTwo = PieElement(value: avg![1], color: UIColor(red: 197/255, green: 239/255, blue: 247/255, alpha: 1))
-        var elementThree = PieElement(value: avg![2], color: UIColor(red: 107/255, green: 185/255, blue: 240/255, alpha: 1))
-        var elementFour = PieElement(value: avg![3], color: UIColor(red: 100/255, green: 185/255, blue: 240/255, alpha: 1))
-        var elementFive = PieElement(value: 0, color: UIColor(red: 107/255, green: 175/255, blue: 240/255, alpha: 1))
-        var elementSix = PieElement(value: 0, color: UIColor(red: 107/255, green: 185/255, blue: 230/255, alpha: 1))
-        var elementSeven = PieElement(value: 0, color: UIColor(red: 107/255, green: 180/255, blue: 235/255, alpha: 1))
-        
-        elementOne.centrOffset += 2
-        elementTwo.centrOffset += 2
-        elementThree.centrOffset += 2
-        elementFour.centrOffset += 2
-        elementFive.centrOffset += 2
-        elementSix.centrOffset += 2
-        elementSeven.centrOffset += 2
-        
-        graph.addValues([elementOne], animated: true)
-        graph.addValues([elementTwo], animated: true)
-        graph.addValues([elementThree], animated: true)
-        graph.addValues([elementFour], animated: true)
-        graph.addValues([elementFive], animated: true)
-        graph.addValues([elementSix], animated: true)
-        graph.addValues([elementSeven], animated: true)
-        
-        viewGraph.layer.addSublayer(graph)
+//        graph.frame = CGRectMake(10, 10, 400, 400)
+//        graph.maxRadius = 150
+//        graph.minRadius = 25
+//        graph.startAngle = 180
+//        graph.endAngle = 0
+//        
+//        let qr = QuestionRecord.readFromCSV("\(child!.name)\(child!.parentsNumber)")
+//        avg = qr.0
+//        count = qr.1
+//        var alpha:CGFloat = 1.0
+//        
+//        /*for a in avg {
+//            var element = PieElement(value: avg[0], color: UIColor(red: 228/255, green: 241/255, blue: 254/255, alpha: alpha))
+//            element.centrOffset += 2
+//            graph.addValues([element], animated: true)
+//            alpha -= 0.1
+//        }*/
+//        
+//        var elementOne = PieElement(value: avg![0], color: UIColor(red: 228/255, green: 241/255, blue: 254/255, alpha: 1))
+//        var elementTwo = PieElement(value: avg![1], color: UIColor(red: 197/255, green: 239/255, blue: 247/255, alpha: 1))
+//        var elementThree = PieElement(value: avg![2], color: UIColor(red: 107/255, green: 185/255, blue: 240/255, alpha: 1))
+//        var elementFour = PieElement(value: avg![3], color: UIColor(red: 100/255, green: 185/255, blue: 240/255, alpha: 1))
+//        var elementFive = PieElement(value: 0, color: UIColor(red: 107/255, green: 175/255, blue: 240/255, alpha: 1))
+//        var elementSix = PieElement(value: 0, color: UIColor(red: 107/255, green: 185/255, blue: 230/255, alpha: 1))
+//        var elementSeven = PieElement(value: 0, color: UIColor(red: 107/255, green: 180/255, blue: 235/255, alpha: 1))
+//        
+//        elementOne.centrOffset += 2
+//        elementTwo.centrOffset += 2
+//        elementThree.centrOffset += 2
+//        elementFour.centrOffset += 2
+//        elementFive.centrOffset += 2
+//        elementSix.centrOffset += 2
+//        elementSeven.centrOffset += 2
+//        
+//        graph.addValues([elementOne], animated: true)
+//        graph.addValues([elementTwo], animated: true)
+//        graph.addValues([elementThree], animated: true)
+//        graph.addValues([elementFour], animated: true)
+//        graph.addValues([elementFive], animated: true)
+//        graph.addValues([elementSix], animated: true)
+//        graph.addValues([elementSeven], animated: true)
+//        
+//        viewGraph.layer.addSublayer(graph)
         
     }
     
@@ -143,6 +146,32 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
                 shouldMovePie = true
             }
         }
+        
+    }
+    
+    
+    func loadGraph(){
+    
+//        var chart = PNBarChart(frame: CGRectMake(0, 0, 400, 400))
+//        chart.xLabels = ["aa", "bb", "cc"]
+//        chart.yLabels = [20, 12, 311]
+//        chart.strokeChart()
+//        
+//        viewGraph.addSubview(chart)
+
+        var chart = PNLineChart(frame: CGRectMake(0, 0, 400, 400))
+        chart.xLabels = ["aa", "bb", "cc"]
+
+        var dataArray = [55.5, 50.1, 4.4]
+        var data = PNLineChartData()
+        data.color = UIColor.blueColor()
+        data.itemCount = chart.xLabels.count
+        
+        data.getData = //help
+        
+        chart.strokeChart()
+        
+        viewGraph.addSubview(chart)
         
     }
     
