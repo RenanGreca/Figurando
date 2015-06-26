@@ -159,19 +159,62 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
 //        
 //        viewGraph.addSubview(chart)
 
-        var chart = PNLineChart(frame: CGRectMake(0, 0, 400, 400))
-        chart.xLabels = ["aa", "bb", "cc"]
+        
+//        
+//        var lineChart:PNLineChart = PNLineChart(frame: CGRectMake(0, 135.0, 320, 200.0))
+//        lineChart.yLabelFormat = "%1.1f"
+//        lineChart.showLabel = true
+//        lineChart.backgroundColor = UIColor.clearColor()
+//        lineChart.xLabels = ["SEP 1","SEP 2","SEP 3","SEP 4","SEP 5","SEP 6","SEP 7"]
+//        lineChart.showCoordinateAxis = true
+//        
+//        // Line Chart Nr.1
+//        var data01Array: [CGFloat] = [60.1, 160.1, 126.4, 262.2, 186.2, 127.2, 176.2]
+//        var data01:PNLineChartData = PNLineChartData()
+//        data01.color = UIColor.greenColor()
+//        data01.itemCount = data01Array.count
+//        data01.inflexionPointStyle = PNLineChartPointStyle.Circle
+//        //.PNLineChartPointStyle.PNLineChartPointStyleCycle
+////        data01.getData = ({(index: Int) -> PNLineChartDataItem in
+////            var yValue:CGFloat = data01Array[index]
+////            var item = PNLineChartDataItem(y: yValue)
+////            return item
+////        })
+//        
+//        lineChart.chartData = [data01]
+//        lineChart.strokeChart()
+//        
+        
+        
+//works
+        var barChart = PNBarChart(frame: CGRectMake(0, 135.0, CGFloat(600), 200.0))
+        barChart.backgroundColor = UIColor.clearColor()
+        
+        barChart.xLabels = ["Lun","Mar","Mie","Jue","Vie","Sab","Dom"]
+        barChart.yValues = [83.9,204.9,102,108,300]
+        
 
-        var dataArray = [55.5, 50.1, 4.4]
-        var data = PNLineChartData()
-        data.color = UIColor.blueColor()
-        data.itemCount = chart.xLabels.count
+        barChart.strokeChart()
         
-        data.getData = //help
+        viewGraph.addSubview(barChart)
         
-        chart.strokeChart()
-        
-        viewGraph.addSubview(chart)
+//        var chart = PNLineChart(frame: CGRectMake(0, 0, 400, 400))
+//        chart.xLabels = ["aa", "bb", "cc"]
+//
+//        var dataArray = [55.5, 50.1, 4.4]
+//        var data = PNLineChartData()
+//        data.color = UIColor.blueColor()
+//        data.itemCount = UInt(chart.xLabels.count)
+//        
+//        data.getData = {
+//            index in
+//            let yValue: CGFloat = initSignalExample[UInt(index)]
+//            return PNLineChartDataItem(y: yValue)
+//        }
+//        
+//        chart.strokeChart()
+//        
+//        viewGraph.addSubview(chart)
         
     }
     
