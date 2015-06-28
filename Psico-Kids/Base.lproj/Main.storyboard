@@ -247,7 +247,7 @@
         <!--Perfil-->
         <scene sceneID="eBN-tz-hnk">
             <objects>
-                <viewController storyboardIdentifier="KidProfile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P7x-DF-omv" customClass="KidProfileViewController" customModule="Psico_Kids" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="P7x-DF-omv" customClass="KidProfileViewController" customModule="Psico_Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YPP-cE-KXR"/>
                         <viewControllerLayoutGuide type="bottom" id="wCv-RQ-wU4"/>
@@ -761,6 +761,6 @@
         <image name="option_circle.png" width="340" height="340"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="P6O-uy-PsX"/>
+        <segue reference="3hM-Jt-7X1"/>
     </inferredMetricsTieBreakers>
 </document>
