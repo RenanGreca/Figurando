@@ -94,8 +94,7 @@ class LoginViewController: UIViewController {
             
             //Verifica se as credenciais digitadas batem com as salvas no keychain
             if checkLogin(usernameTextField.text, password: passwordTextField.text) {
-              // ARRUMAR! ------>>>>>>>>> performSegueWithIdentifier("dismissLogin", sender: self)
-                //self.presentViewController(KidProfileViewController.self, animated: true, completion: nil)
+                //ARRUMAR --->>>>> self.presentViewController(KidProfileViewController.self, animated: true, completion: nil)
             } else {
                 
                 //Se falhar, dá um alert ao usuário
@@ -119,8 +118,8 @@ class LoginViewController: UIViewController {
                     
                     // Caso de sucesso
                     dispatch_async(dispatch_get_main_queue(), { if success {
-                       // ARRUMAR! ----->>>>>>>>> self.performSegueWithIdentifier("dismissLogin", sender: self)
-                        //self.presentViewController(KidProfileViewController.self, animated: true, completion: nil)
+                        
+                        //ARRUMAR --->>>>> self.presentViewController(KidProfileViewController.self, animated: true, completion: nil)
 
                         }
                         
