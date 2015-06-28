@@ -132,6 +132,7 @@
 		1FE0E8BF1B3841C1002984D7 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0E8BE1B3841C1002984D7 /* Functions.swift */; };
 		1FE92A281B34DCAB00D96A15 /* CHUBBY.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */; };
 		3357A676F696D40E73491E79 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F556C33CECEDD25E7DD652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		6C4F6D511B4042A300552E28 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4F6D501B4042A300552E28 /* LoginViewController.swift */; };
 		6C7C34A11B390BD8007DCC41 /* option_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C34A01B390BD8007DCC41 /* option_circle.png */; };
 		6C7C34A31B390C3A007DCC41 /* bg_textura.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C34A21B390C3A007DCC41 /* bg_textura.png */; };
 		6CC7CA8A1B38436C00045F23 /* marca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7CA891B38436C00045F23 /* marca.jpg */; };
@@ -283,6 +284,7 @@
 		1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = CHUBBY.TTF; sourceTree = "<group>"; };
 		340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		55F556C33CECEDD25E7DD652 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C4F6D501B4042A300552E28 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6C7C34A01B390BD8007DCC41 /* option_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = option_circle.png; sourceTree = "<group>"; };
 		6C7C34A21B390C3A007DCC41 /* bg_textura.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_textura.png; sourceTree = "<group>"; };
 		6CC7CA891B38436C00045F23 /* marca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marca.jpg; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 				E49121401B30B2E000B4DBAD /* QuizViewController.swift */,
 				1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */,
 				1C9870501B34746500E54093 /* KidProfileViewController.swift */,
+				6C4F6D501B4042A300552E28 /* LoginViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -880,6 +883,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C4F6D511B4042A300552E28 /* LoginViewController.swift in Sources */,
 				1CD9990A1B2F7251000968A1 /* CreateProfileViewController.swift in Sources */,
 				1CD998E81B2F69FA000968A1 /* ViewController.swift in Sources */,
 				E49121451B30B44400B4DBAD /* FileManager.swift in Sources */,
