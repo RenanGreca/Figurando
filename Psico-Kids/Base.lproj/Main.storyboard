@@ -665,16 +665,29 @@
                                 <state key="normal" title="Acesso">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="bQi-3n-x9f" eventType="touchUpInside" id="Myp-Sa-iXG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lna-9S-QHk">
                                 <rect key="frame" x="484" y="505" width="56" height="30"/>
                                 <state key="normal" title="TouchID">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchIDLoginAction:" destination="bQi-3n-x9f" eventType="touchUpInside" id="YBk-kp-Ncg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="createInfoLabel" destination="Sk3-gt-yOa" id="UJt-bx-jh1"/>
+                        <outlet property="loginButton" destination="OaM-Dg-uSx" id="o4O-iE-vY1"/>
+                        <outlet property="passwordTextField" destination="2rW-WS-ssw" id="oNi-re-mJR"/>
+                        <outlet property="touchIDButton" destination="Lna-9S-QHk" id="StQ-NR-qDm"/>
+                        <outlet property="usernameTextField" destination="bNg-VS-4rX" id="2rj-43-QL1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svL-Tr-YoB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -133,6 +133,7 @@
 		1FE92A281B34DCAB00D96A15 /* CHUBBY.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */; };
 		3357A676F696D40E73491E79 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F556C33CECEDD25E7DD652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6C4F6D511B4042A300552E28 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4F6D501B4042A300552E28 /* LoginViewController.swift */; };
+		6C4F6D551B40471E00552E28 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4F6D541B40471E00552E28 /* KeychainWrapper.m */; };
 		6C7C34A11B390BD8007DCC41 /* option_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C34A01B390BD8007DCC41 /* option_circle.png */; };
 		6C7C34A31B390C3A007DCC41 /* bg_textura.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C34A21B390C3A007DCC41 /* bg_textura.png */; };
 		6CC7CA8A1B38436C00045F23 /* marca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6CC7CA891B38436C00045F23 /* marca.jpg */; };
@@ -285,6 +286,9 @@
 		340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		55F556C33CECEDD25E7DD652 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C4F6D501B4042A300552E28 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6C4F6D521B40471E00552E28 /* Psico-Kids-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Psico-Kids-Bridging-Header.h"; sourceTree = "<group>"; };
+		6C4F6D531B40471E00552E28 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		6C4F6D541B40471E00552E28 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		6C7C34A01B390BD8007DCC41 /* option_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = option_circle.png; sourceTree = "<group>"; };
 		6C7C34A21B390C3A007DCC41 /* bg_textura.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_textura.png; sourceTree = "<group>"; };
 		6CC7CA891B38436C00045F23 /* marca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = marca.jpg; sourceTree = "<group>"; };
@@ -405,6 +409,9 @@
 				1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */,
 				1C9870501B34746500E54093 /* KidProfileViewController.swift */,
 				6C4F6D501B4042A300552E28 /* LoginViewController.swift */,
+				6C4F6D531B40471E00552E28 /* KeychainWrapper.h */,
+				6C4F6D541B40471E00552E28 /* KeychainWrapper.m */,
+				6C4F6D521B40471E00552E28 /* Psico-Kids-Bridging-Header.h */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -892,6 +899,7 @@
 				1F2CEF181B30C763006B3D6D /* Object.swift in Sources */,
 				E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */,
 				1CD9990C1B2F93B3000968A1 /* KidTableViewCell.swift in Sources */,
+				6C4F6D551B40471E00552E28 /* KeychainWrapper.m in Sources */,
 				1F2CEF171B30C763006B3D6D /* ObjectList.swift in Sources */,
 				1F74A4051B38C9A100C40710 /* Child.swift in Sources */,
 				E49885B31B348EE100A5AFEC /* QuestionRecord.swift in Sources */,
@@ -1028,6 +1036,7 @@
 			baseConfigurationReference = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Renan Greca (934HSMQRZ4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1039,7 +1048,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f5450877-8ba2-452b-aedf-ab0ea873caa1";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Psico-Kids/Psico-Kids-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1048,6 +1058,7 @@
 			baseConfigurationReference = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Renan Greca (934HSMQRZ4)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1058,7 +1069,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "f5450877-8ba2-452b-aedf-ab0ea873caa1";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Psico-Kids/Psico-Kids-Bridging-Header.h";
 			};
 			name = Release;
 		};
