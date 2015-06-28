@@ -67,6 +67,15 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"keyboardWillAppear:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"keyboardWillDisappear:", name: UIKeyboardWillHideNotification, object: nil)
 
+        delay(0.1, closure: {
+            let blur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+            let blurred = UIVisualEffectView(effect: blur)
+            blurred.frame = self.backgroundImage.frame
+            
+            
+            self.view.insertSubview(blurred, aboveSubview: self.backgroundImage)
+        })
+        self.navigationController?.navigationBar.translucent = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -210,5 +219,13 @@ class CreateProfileViewController: UIViewController, UIImagePickerControllerDele
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func delay(delay:Double, closure:()->()) {
+        
+        dispatch_after(
+            dispatch_time( DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), closure)
+        
+        
+    }
 
 }

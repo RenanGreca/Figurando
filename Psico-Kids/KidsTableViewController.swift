@@ -138,6 +138,15 @@ class KidsTableViewController: UITableViewController, UITableViewDelegate, UITab
         selectedIndexPath = indexPath
     }
     
+    @IBAction func credits(sender: AnyObject) {
+        let creditsView = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("Creditos") as! UIViewController
+        
+        creditsView.modalPresentationStyle = UIModalPresentationStyle.Popover
+        creditsView.popoverPresentationController?.barButtonItem = sender as! UIBarButtonItem
+        creditsView.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.Up
+        
+        self.presentViewController(creditsView, animated: true, completion: nil)
+    }
     /*
     // Override to support rearranging the table view.
     override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {

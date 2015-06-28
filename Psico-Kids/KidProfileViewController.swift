@@ -24,12 +24,15 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
     @IBOutlet weak var levelNumber: UILabel!
     @IBOutlet weak var playedTimes: UILabel!
     @IBOutlet weak var medTimes: UILabel!
+    @IBOutlet weak var imageToText: UILabel!
+    @IBOutlet weak var textToImage: UILabel!
     
     @IBOutlet weak var viewGraph: UIView!
     
     var child: Child?
     var avg: Array<Float>?
     var count: Array<Int>?
+    var graphBars: Array<PNBar>?
     
     let graph = PieLayer()
     var shouldMovePie = true
@@ -40,7 +43,6 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
         tap.numberOfTapsRequired = 1
         self.view.addGestureRecognizer(tap)
         
-        loadGraph()
         
         readAllDataFromFiles()
         
@@ -117,6 +119,19 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
 //        
 //        viewGraph.layer.addSublayer(graph)
         
+       
+        
+        delay(0.1, closure: {
+            let blur = UIBlurEffect(style: UIBlurEffectStyle.Dark)
+            let blurred = UIVisualEffectView(effect: blur)
+            blurred.frame = self.backgroundImage.frame
+            
+            
+            self.view.insertSubview(blurred, aboveSubview: self.backgroundImage)
+        })
+
+        loadGraph()
+        self.navigationController?.navigationBar.translucent = true
     }
     
     
@@ -187,17 +202,31 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
         
         
 //works
-        var barChart = PNBarChart(frame: CGRectMake(0, 135.0, CGFloat(600), 200.0))
+        
+        let qr = QuestionRecord.readFromCSV("\(child!.name)\(child!.parentsNumber)")
+        avg = qr.0
+        count = qr.1
+
+        
+        
+        var barChart = PNBarChart(frame: CGRectMake(10, 80, CGFloat(500), 250.0))
         barChart.backgroundColor = UIColor.clearColor()
         
-        barChart.xLabels = ["Lun","Mar","Mie","Jue","Vie","Sab","Dom"]
-        barChart.yValues = [83.9,204.9,102,108,300]
+        
+        barChart.xLabels = ["Som para texto", "Som para imagem", "Imagem para texto","Texto para imagem"]
+        barChart.yValues = [avg![0], avg![1], avg![2], avg![3]]
         
 
         barChart.strokeChart()
-        
+        graphBars = barChart.bars as NSArray as? Array<PNBar>
+
         viewGraph.addSubview(barChart)
         
+        
+        playedTimes.text = "Som para texto: \(count![0])"
+        medTimes.text = "Som para imagem: \(count![1])"
+        imageToText.text = "Imagem para texto: \(count![2])"
+        textToImage.text = "Texto para imagem: \(count![3])"
 //        var chart = PNLineChart(frame: CGRectMake(0, 0, 400, 400))
 //        chart.xLabels = ["aa", "bb", "cc"]
 //
@@ -218,6 +247,14 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
         
     }
     
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        let touch = touches.first
+        
+        if touch!.isEqual(graphBars![1]){
+            print("hey")
+        }
+    }
+    
     func updatePieSliceInfo (pieSlice: CGPoint) {
         
         let i = Int(graph.indexOfSliceFromPoint(pieSlice))
@@ -233,15 +270,6 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
             break
         case 3:
             levelNumber.text = "Texto para imagem"
-            break
-        case 4:
-            levelNumber.text = "Quinta Fase"
-            break
-        case 5:
-            levelNumber.text = "Sexta Fase"
-            break
-        case 6:
-            levelNumber.text = "Sétima Fase"
             break
         default:
             break
@@ -272,5 +300,11 @@ class KidProfileViewController: UIViewController, UIGestureRecognizerDelegate{
     
     
     
-    
+    func delay(delay:Double, closure:()->()) {
+        
+        dispatch_after(
+            dispatch_time( DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), closure)
+        
+        
+    }
 }

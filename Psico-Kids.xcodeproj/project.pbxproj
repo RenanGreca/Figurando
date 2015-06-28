@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C3656A01B40A56500D955ED /* Credits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C36569F1B40A56500D955ED /* Credits.swift */; };
+		1C3656A41B40A8E200D955ED /* bepid.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C3656A31B40A8E200D955ED /* bepid.png */; };
 		1C3A4F2D1B377F4300F7BC9F /* child.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1C3A4F2C1B377F4300F7BC9F /* child.jpg */; };
 		1C9870511B34746500E54093 /* KidProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9870501B34746500E54093 /* KidProfileViewController.swift */; };
 		1C9870A81B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1C9870A61B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig */; };
@@ -156,6 +158,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C36569F1B40A56500D955ED /* Credits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credits.swift; sourceTree = "<group>"; };
+		1C3656A31B40A8E200D955ED /* bepid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bepid.png; sourceTree = "<group>"; };
 		1C3A4F2C1B377F4300F7BC9F /* child.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = child.jpg; sourceTree = "<group>"; };
 		1C9870501B34746500E54093 /* KidProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidProfileViewController.swift; sourceTree = "<group>"; };
 		1C9870531B347DF400E54093 /* BringingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BringingHeader.h; sourceTree = "<group>"; };
@@ -377,6 +381,7 @@
 		1CD998E31B2F69FA000968A1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1C3656A31B40A8E200D955ED /* bepid.png */,
 				1CD998E41B2F69FA000968A1 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -412,6 +417,7 @@
 				6C4F6D531B40471E00552E28 /* KeychainWrapper.h */,
 				6C4F6D541B40471E00552E28 /* KeychainWrapper.m */,
 				6C4F6D521B40471E00552E28 /* Psico-Kids-Bridging-Header.h */,
+				1C36569F1B40A56500D955ED /* Credits.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -637,7 +643,7 @@
 				TargetAttributes = {
 					1CD998DF1B2F69FA000968A1 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = 6E3MXG6BSH;
+						DevelopmentTeam = M396QE659G;
 					};
 				};
 			};
@@ -778,6 +784,7 @@
 				1F62D72C1B35AA8100522021 /* tesoura.png in Resources */,
 				1F62D71F1B35AA8100522021 /* olhos.png in Resources */,
 				1F62D7171B35AA8100522021 /* maçã.png in Resources */,
+				1C3656A41B40A8E200D955ED /* bepid.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +903,7 @@
 				E49121451B30B44400B4DBAD /* FileManager.swift in Sources */,
 				1C9870511B34746500E54093 /* KidProfileViewController.swift in Sources */,
 				1CD998E61B2F69FA000968A1 /* AppDelegate.swift in Sources */,
+				1C3656A01B40A56500D955ED /* Credits.swift in Sources */,
 				1F2CEF181B30C763006B3D6D /* Object.swift in Sources */,
 				E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */,
 				1CD9990C1B2F93B3000968A1 /* KidTableViewCell.swift in Sources */,
@@ -1037,7 +1045,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Renan Greca (934HSMQRZ4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Psico-Kids",
@@ -1047,7 +1056,7 @@
 				INFOPLIST_FILE = "Psico-Kids/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f5450877-8ba2-452b-aedf-ab0ea873caa1";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Psico-Kids/Psico-Kids-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -1059,7 +1068,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Renan Greca (934HSMQRZ4)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Psico-Kids",
@@ -1068,7 +1078,7 @@
 				INFOPLIST_FILE = "Psico-Kids/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f5450877-8ba2-452b-aedf-ab0ea873caa1";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Psico-Kids/Psico-Kids-Bridging-Header.h";
 			};
 			name = Release;
