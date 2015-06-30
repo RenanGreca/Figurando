@@ -434,7 +434,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Tdp-4P-fhp">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tWJ-6x-NY0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navigation" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tWJ-6x-NY0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>

@@ -97,8 +97,8 @@ class LoginViewController: UIViewController {
             //Verifica se as credenciais digitadas batem com as salvas no keychain
             if checkLogin(usernameTextField.text, password: passwordTextField.text) {
                 
-                let kidProfile: KidProfileViewController = self.storyboard!.instantiateViewControllerWithIdentifier("KidProfile") as! KidProfileViewController
-                self.presentViewController(kidProfile, animated: true, completion: nil)
+                let navigator: UINavigationController = self.storyboard!.instantiateViewControllerWithIdentifier("navigation") as! UINavigationController
+                self.presentViewController(navigator, animated: true, completion: nil)
                 
             } else {
                 
