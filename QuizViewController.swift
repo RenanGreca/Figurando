@@ -106,7 +106,7 @@ class QuizViewController: UIViewController {
         clearOptions()
 
         if numberOfQuestions >= 12 {
-            navigationController?.popViewControllerAnimated(true)
+            self.performSegueWithIdentifier("showPasswordScreen", sender: self)
             return
         }
         
