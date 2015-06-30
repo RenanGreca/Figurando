@@ -89,27 +89,17 @@ class LoginViewController: UIViewController {
             NSUserDefaults.standardUserDefaults().synchronize()
             loginButton.tag = loginButtonTag
             
-            /* ARRUMAR --->>>>>
-            let kidProfile: KidProfileViewController = storyboard!.instantiateViewControllerWithIdentifier("KidProfile") as! KidProfileViewController
-            self.presentViewController(kidProfile, animated: true, completion: nil) */
-            var alert = UIAlertView()
-            alert.title = "Sucesso"
-            alert.message = "Funcionando"
-            alert.addButtonWithTitle("OK")
-            alert.show()
+            let kidProfile: KidProfileViewController = self.storyboard!.instantiateViewControllerWithIdentifier("KidProfile") as! KidProfileViewController
+            self.presentViewController(kidProfile, animated: true, completion: nil)
             
         } else if sender.tag == loginButtonTag {
             
             //Verifica se as credenciais digitadas batem com as salvas no keychain
             if checkLogin(usernameTextField.text, password: passwordTextField.text) {
-                /* ARRUMAR --->>>>>
-                let kidProfile: KidProfileViewController = storyboard!.instantiateViewControllerWithIdentifier("KidProfile") as! KidProfileViewController
-                self.presentViewController(kidProfile, animated: true, completion: nil) */
-                var alert = UIAlertView()
-                alert.title = "Sucesso"
-                alert.message = "Funcionando"
-                alert.addButtonWithTitle("OK")
-                alert.show()
+                
+                let kidProfile: KidProfileViewController = self.storyboard!.instantiateViewControllerWithIdentifier("KidProfile") as! KidProfileViewController
+                self.presentViewController(kidProfile, animated: true, completion: nil)
+                
             } else {
                 
                 //Se falhar, dá um alert ao usuário
@@ -133,14 +123,10 @@ class LoginViewController: UIViewController {
                     
                     // Caso de sucesso
                     dispatch_async(dispatch_get_main_queue(), { if success {
-                        /* ARRUMAR --->>>>> 
-                        let kidProfile: KidProfileViewController = storyboard!.instantiateViewControllerWithIdentifier("KidProfile") as! KidProfileViewController
-                        self.presentViewController(kidProfile, animated: true, completion: nil) */
-                        var alert = UIAlertView()
-                        alert.title = "Sucesso"
-                        alert.message = "Funcionando"
-                        alert.addButtonWithTitle("OK")
-                        alert.show()
+                        
+                        let kidProfile: KidProfileViewController = self.storyboard!.instantiateViewControllerWithIdentifier("KidProfile") as! KidProfileViewController
+                        self.presentViewController(kidProfile, animated: true, completion: nil)
+                        
                         }
                         
                         if error != nil {
