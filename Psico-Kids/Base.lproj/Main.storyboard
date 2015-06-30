@@ -239,7 +239,7 @@
         <!--Perfil-->
         <scene sceneID="eBN-tz-hnk">
             <objects>
-                <viewController id="P7x-DF-omv" customClass="KidProfileViewController" customModule="Psico_Kids" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="KidProfile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P7x-DF-omv" customClass="KidProfileViewController" customModule="Psico_Kids" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YPP-cE-KXR"/>
                         <viewControllerLayoutGuide type="bottom" id="wCv-RQ-wU4"/>
@@ -351,7 +351,7 @@
                                     </label>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Url-n7-Bh6" secondAttribute="bottom" constant="10" id="6xz-C5-Cxc"/>
                                     <constraint firstAttribute="trailing" secondItem="Wey-n2-yTF" secondAttribute="trailing" constant="30" id="8AU-eE-uAe"/>
