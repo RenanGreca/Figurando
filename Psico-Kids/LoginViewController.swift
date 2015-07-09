@@ -89,8 +89,8 @@ class LoginViewController: UIViewController {
             NSUserDefaults.standardUserDefaults().synchronize()
             loginButton.tag = loginButtonTag
             
-            let kidProfile: KidProfileViewController = self.storyboard!.instantiateViewControllerWithIdentifier("KidProfile") as! KidProfileViewController
-            self.presentViewController(kidProfile, animated: true, completion: nil)
+            let navigator: UINavigationController = self.storyboard!.instantiateViewControllerWithIdentifier("navigation") as! UINavigationController
+            self.presentViewController(navigator, animated: true, completion: nil)
             
         } else if sender.tag == loginButtonTag {
             
