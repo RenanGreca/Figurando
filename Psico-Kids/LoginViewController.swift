@@ -124,8 +124,8 @@ class LoginViewController: UIViewController {
                     // Caso de sucesso
                     dispatch_async(dispatch_get_main_queue(), { if success {
                         
-                        let kidProfile: KidProfileViewController = self.storyboard!.instantiateViewControllerWithIdentifier("KidProfile") as! KidProfileViewController
-                        self.presentViewController(kidProfile, animated: true, completion: nil)
+                        let navigator: UINavigationController = self.storyboard!.instantiateViewControllerWithIdentifier("navigation") as! UINavigationController
+                        self.presentViewController(navigator, animated: true, completion: nil)
                         
                         }
                         
