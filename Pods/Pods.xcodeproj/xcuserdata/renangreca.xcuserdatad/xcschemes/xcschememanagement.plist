@@ -4,105 +4,125 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Psico-Kids-MagicPie.xcscheme</key>
+		<key>Pods-PNChart.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Psico-Kids-PNChart.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Psico-Kids-SwiftyJSON.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Psico-Kids-UICountingLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Psico-Kids.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>Pods-Psico-KidsTests-MagicPie.xcscheme</key>
+		<key>Pods-Psico-KidsTests-PNChart.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>7</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Psico-KidsTests-SwiftyJSON.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>8</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Psico-KidsTests-UICountingLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-Psico-KidsTests.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>6</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods-SwiftyJSON.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-UICountingLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>092F651905E344BB73E325F5</key>
+		<key>0354DC45D2F2FAAA2A0933DF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>12191758774866A0D24D910F</key>
+		<key>04B3BFA369DE5FCA2C1994BD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>12721924AA5AE5CAB693F8AF</key>
+		<key>21532882105802A9C7905922</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>17936CB4717C6F4D999BA279</key>
+		<key>3FB2C71F9357AA20ABCFACCB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1A413BBA755EAF6013A34E7F</key>
+		<key>41CEA7E753B6EAB0F47AE8C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D3380E8F144FF6067C89564</key>
+		<key>635617C39356691B4E86AF74</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5D13C81576C54F262CE39E6D</key>
+		<key>74FD42D9093B237EB2934CCA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>73615580F890AB4423CCB6F1</key>
+		<key>83628D3FDC11F1CACC0F269F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B897BAF5FF4422020CC2F41A</key>
+		<key>86B9FCF87F2680C1272E24B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D7B1B0286F18DA1C090E7722</key>
+		<key>9113569F3957A7BD99D479EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ECDB9DC358BF96E0799352CF</key>
+		<key>E87D672971C1C59673F99E28</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EF58EB8DAD78422512FC8C4E</key>
+		<key>EF67A9C7DB04D9696C1C8293</key>
 		<dict>
 			<key>primary</key>
 			<true/>

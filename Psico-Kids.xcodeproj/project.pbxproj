@@ -15,8 +15,6 @@
 		1C9870A91B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1C9870A61B36FDF700E54093 /* Pods-Psico-Kids.debug.xcconfig */; };
 		1C9870AA1B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */; };
 		1C9870AB1B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */; };
-		1C9870AD1B36FF4C00E54093 /* MagicPie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9870AC1B36FF4C00E54093 /* MagicPie.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		1C9870AF1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9870AE1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1CD998E61B2F69FA000968A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD998E51B2F69FA000968A1 /* AppDelegate.swift */; };
 		1CD998E81B2F69FA000968A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD998E71B2F69FA000968A1 /* ViewController.swift */; };
 		1CD998EB1B2F69FA000968A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CD998E91B2F69FA000968A1 /* Main.storyboard */; };
@@ -28,6 +26,10 @@
 		1CD9990C1B2F93B3000968A1 /* KidTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */; };
 		1F2CEF171B30C763006B3D6D /* ObjectList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CEF151B30C763006B3D6D /* ObjectList.swift */; };
 		1F2CEF181B30C763006B3D6D /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2CEF161B30C763006B3D6D /* Object.swift */; };
+		1F348A761B5D35CE00E3E09E /* PNChart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F348A731B5D35CE00E3E09E /* PNChart.framework */; };
+		1F348A771B5D35CE00E3E09E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F348A741B5D35CE00E3E09E /* SwiftyJSON.framework */; };
+		1F348A781B5D35CE00E3E09E /* UICountingLabel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F348A751B5D35CE00E3E09E /* UICountingLabel.framework */; };
+		1F348A7A1B5D35F400E3E09E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F348A791B5D35F400E3E09E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1F62D6FE1B35AA8100522021 /* anel.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D6CC1B35AA8100522021 /* anel.png */; };
 		1F62D6FF1B35AA8100522021 /* árvore.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D6CD1B35AA8100522021 /* árvore.png */; };
 		1F62D7001B35AA8100522021 /* avião.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F62D6CE1B35AA8100522021 /* avião.png */; };
@@ -133,7 +135,6 @@
 		1F74A4051B38C9A100C40710 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F74A4041B38C9A100C40710 /* Child.swift */; };
 		1FE0E8BF1B3841C1002984D7 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE0E8BE1B3841C1002984D7 /* Functions.swift */; };
 		1FE92A281B34DCAB00D96A15 /* CHUBBY.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 1FE92A271B34DC9900D96A15 /* CHUBBY.TTF */; };
-		3357A676F696D40E73491E79 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55F556C33CECEDD25E7DD652 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		6C4F6D511B4042A300552E28 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4F6D501B4042A300552E28 /* LoginViewController.swift */; };
 		6C4F6D551B40471E00552E28 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4F6D541B40471E00552E28 /* KeychainWrapper.m */; };
 		6C7C34A11B390BD8007DCC41 /* option_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C7C34A01B390BD8007DCC41 /* option_circle.png */; };
@@ -144,7 +145,6 @@
 		E49121411B30B2E000B4DBAD /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121401B30B2E000B4DBAD /* QuizViewController.swift */; };
 		E49121451B30B44400B4DBAD /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49121441B30B44400B4DBAD /* FileManager.swift */; };
 		E49885B31B348EE100A5AFEC /* QuestionRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49885B21B348EE100A5AFEC /* QuestionRecord.swift */; };
-		FA7C5931E4D200736AC9BE67 /* Pods_Psico_Kids.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB967F466B5751415E7F2FC3 /* Pods_Psico_Kids.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +182,10 @@
 		1CD9990B1B2F93B3000968A1 /* KidTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KidTableViewCell.swift; sourceTree = "<group>"; };
 		1F2CEF151B30C763006B3D6D /* ObjectList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectList.swift; sourceTree = "<group>"; };
 		1F2CEF161B30C763006B3D6D /* Object.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
+		1F348A731B5D35CE00E3E09E /* PNChart.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PNChart.framework; path = "Pods/../build/Release-iphoneos/Pods/PNChart.framework"; sourceTree = "<group>"; };
+		1F348A741B5D35CE00E3E09E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Pods/../build/Release-iphoneos/Pods/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		1F348A751B5D35CE00E3E09E /* UICountingLabel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UICountingLabel.framework; path = "Pods/../build/Release-iphoneos/Pods/UICountingLabel.framework"; sourceTree = "<group>"; };
+		1F348A791B5D35F400E3E09E /* Pods.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods.framework; path = "Pods/../build/Release-iphoneos/Pods.framework"; sourceTree = "<group>"; };
 		1F62D6CC1B35AA8100522021 /* anel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = anel.png; sourceTree = "<group>"; };
 		1F62D6CD1B35AA8100522021 /* árvore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "árvore.png"; sourceTree = "<group>"; };
 		1F62D6CE1B35AA8100522021 /* avião.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avião.png"; sourceTree = "<group>"; };
@@ -312,10 +316,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C9870AF1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework in Frameworks */,
-				1C9870AD1B36FF4C00E54093 /* MagicPie.framework in Frameworks */,
-				3357A676F696D40E73491E79 /* Pods.framework in Frameworks */,
-				FA7C5931E4D200736AC9BE67 /* Pods_Psico_Kids.framework in Frameworks */,
+				1F348A7A1B5D35F400E3E09E /* Pods.framework in Frameworks */,
+				1F348A761B5D35CE00E3E09E /* PNChart.framework in Frameworks */,
+				1F348A771B5D35CE00E3E09E /* SwiftyJSON.framework in Frameworks */,
+				1F348A781B5D35CE00E3E09E /* UICountingLabel.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +569,10 @@
 		77F90B21E011A35335DD801A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1F348A791B5D35F400E3E09E /* Pods.framework */,
+				1F348A731B5D35CE00E3E09E /* PNChart.framework */,
+				1F348A741B5D35CE00E3E09E /* SwiftyJSON.framework */,
+				1F348A751B5D35CE00E3E09E /* UICountingLabel.framework */,
 				1C9870AE1B36FF6F00E54093 /* Pods_Psico_KidsTests.framework */,
 				1C9870AC1B36FF4C00E54093 /* MagicPie.framework */,
 				55F556C33CECEDD25E7DD652 /* Pods.framework */,
@@ -643,7 +651,7 @@
 				TargetAttributes = {
 					1CD998DF1B2F69FA000968A1 = {
 						CreatedOnToolsVersion = 6.3.2;
-						DevelopmentTeam = M396QE659G;
+						DevelopmentTeam = 6E3MXG6BSH;
 					};
 				};
 			};
@@ -827,7 +835,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Psico-Kids/Pods-Psico-Kids-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2D0A1FBA5A119472CD8F5E2C /* Copy Pods Resources */ = {
@@ -1041,7 +1049,7 @@
 		};
 		1CD999001B2F69FA000968A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */;
+			baseConfigurationReference = 9AFD421ACDD95BA0F95168C0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
@@ -1051,6 +1059,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Psico-Kids",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Release-iphoneos/Pods",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
 				);
 				I = "iPhone Developer";
 				INFOPLIST_FILE = "Psico-Kids/Info.plist";
@@ -1064,7 +1074,7 @@
 		};
 		1CD999011B2F69FA000968A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C9870A71B36FDF700E54093 /* Pods-Psico-Kids.release.xcconfig */;
+			baseConfigurationReference = 340FF0044D7C242DFB8F2C7A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
@@ -1074,6 +1084,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos/Pods-Psico-Kids",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/build/Release-iphoneos/Pods",
+					"$(PROJECT_DIR)/build/Release-iphoneos",
 				);
 				INFOPLIST_FILE = "Psico-Kids/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -6,12 +6,6 @@
 // project.
 
 
-// MagicPie
-#define COCOAPODS_POD_AVAILABLE_MagicPie
-#define COCOAPODS_VERSION_MAJOR_MagicPie 1
-#define COCOAPODS_VERSION_MINOR_MagicPie 1
-#define COCOAPODS_VERSION_PATCH_MagicPie 1
-
 // PNChart
 #define COCOAPODS_POD_AVAILABLE_PNChart
 #define COCOAPODS_VERSION_MAJOR_PNChart 0

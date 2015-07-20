@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EF67A9C7DB04D9696C1C8293"
-               BuildableName = "SwiftyJSON.framework"
-               BlueprintName = "Pods-Psico-Kids-SwiftyJSON"
+               BlueprintIdentifier = "74FD42D9093B237EB2934CCA"
+               BuildableName = "UICountingLabel.framework"
+               BlueprintName = "Pods-Psico-Kids-UICountingLabel"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
